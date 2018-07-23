@@ -18,7 +18,22 @@
 \chapter{Basic Financial Concepts}                % Print a "chapter" heading
 
 This chapter summarizes some basic financial concepts you should know about.
+
+
+
+\section{Asset Management}
+
+Asset Owners : From conservative to active: Banks, Insurance Company, Defined Contribution Plan, Pension, Endowment/Foundations
+
+Investment Purpose Statement(IPS): Consider Return, Risk, Time Horizon, Tax, Liquidity, Legal and Unique. 
+
+
+
+\chapter{Economics and Econometrics}
+
 \section{Corporate Finance and Fundamental Analysis}
+
+\chapter{Asset Valuation Theory}
 
 \begin{enumerate}
  \item NPV and IRR 
@@ -30,8 +45,8 @@ This chapter summarizes some basic financial concepts you should know about.
  \item Valuation using Multiples - P/E, P/B 
  \end{enumerate}
 
+\chapter{Portfolio Optimization Study}
 
-\section{Asset Management}
 
 \begin{enumerate}
  \item Efficient Market Hypothesis (Weak, Semi-strong, Strong forms)
@@ -57,8 +72,27 @@ This chapter summarizes some basic financial concepts you should know about.
  \end{enumerate}
 
 
-\chapter{Portfolio Optimization Study}
 
+
+Mainframe Portfolio Optimization Models Include
+
+    1. portfolio optimization - mean-variance short-comings and 
+        1. Monte-Carlo simulation
+        2. reverse optimization and black-litterman(less sensitive to inputs)
+        3. resampled mean-variance optimization
+        4. add additional constriants (other than budget) - concentrated position
+        5. resampled mean-variance
+        6. non-normal optimization approach
+        7. allocating to less liquid asset class - (no investable benchmark)
+        8. risk budgeting vs factor based asset allocation(risk parity)
+
+
+    1. liability-relative
+        1. surplus optimization
+        2. hedging/risk-seeking portfolio
+        3. integrated asset-liability (non-linear correlation)
+    2. goal-based approach
+        1. describing goals, constructing sub-portfolios (selecting a module)
   One-fund theorem, two fund theorem 
 
 
@@ -66,8 +100,7 @@ This chapter summarizes some basic financial concepts you should know about.
 
 
   Multi-factor Risk Model 
-    r = Bf + u ~ V = Bcov(f)B^T + cov(u) 
-
+    $$r = \mathbf{B}f + u ~ V = \mathbf{B}cov(f)\mathbf{B}^T + cov(u)$$ 
    
    Mixed Integer Optimization
 
@@ -164,15 +197,24 @@ unfair coin to create 1/3 probability - combine two toss as one
 intraday mean-reversion
 
 
-\chapter{Volatility Trading and Dispersion Trading}
 
-\section{Volatility Models and Time-Series Models}
+
 
 Volatility Clustering and Leverage Effect 
 
-\chapter{Index and Smart Beta}
+\chapter{Factor Investing}
  
 \section{Smart beta and Smart Alpha}                  % Print a "section" heading
+
+long-short STS strategy
+short extension( 120/20 ) Strategy
+alpha and beta separation
+portable alpha 
+
+long short equities (factor) 
+convertible arbitrage
+
+
 \section{Key things to Notice in Index Making}
 \section{factor analysis and risk premia}
 
@@ -200,7 +242,30 @@ Market Ineffciency Analysis: funding constraint of financial institutions, grand
 
 \section{Market Anomalies}
 
+\subsection{Behavioral Finance}
+
+Behavioral Finance Theories Includes Prospect Theory( People suffice rather than optimize, the utility curve is concave at the gain part and convex at the loss part(loss aversion). Bounded Rationality and 
 Behavioral Market Anomalies/bias
+
+\begin{enumerate}
+ \item loss aversion(herding)
+ \item illusion of control(TAA) 
+ \item Mental accounting(goal),
+ \item availability bias(familiarity, home-bias)
+ \item recency bias(tactical shifts)
+ \item framing(risk-return presented in a different way)
+\end{enumerate}
+
+
+
+
+other: liquidity risk premia
+\begin{enumerate}
+ \item Risk Management and Hedging 
+ \item Leverage 
+ \item Correlation
+ \item Strategy replacements, leverage rebalancing and rebalancing frequency, leverage reset
+\end{enumerate}
 
 
 other: liquidity risk premia
@@ -213,18 +278,24 @@ other: liquidity risk premia
 
 
 
-The following sectioning commands are available:
-\begin{quote}                           % The following text will be
- part \\                                %    set off and indented.
- chapter \\                             % \\ forces a new line
- section \\ 
- subsection \\ 
- subsubsection \\ 
- paragraph \\ 
- subparagraph 
-\end{quote}                             % End of indented text
-But note that---unlike the \texttt{book} and \texttt{report} classes---the
-\texttt{article} class does not have a ``chapter" command.
+\chapter{Single (Asset Class) Trading Strategies}
+\section{Equity}
+\section{Volatility and Dispersion Trades}
+	\subsection{Volatility Models and Time-Series Models}
+	
+\section{fixed income + macro}
+\section{fixed income derivatives}
+
+MBS Convexity Trade
+
+    1. real estate-direct vs indirect environment  
+    2. benchmarks of real estate
+    3. other alternative, commodity to hedge
+
+\section{credit}
+\section{commodities} 
+
+
 
 \chapter{Strategies Implementation/Platform Building}
 \section{ Trading System }
@@ -316,7 +387,7 @@ For example, based on fundemental ratio and technical indicators - design a form
 2. Use Monte Carlo Simulation to do permutation test of effectiveness of indicator
 3. Very very hard - detect sensentivity to market regime change(osicallation and trend) and identify market regime change. 
 
-\subssubsection{Integration of single indicators and portfolio theory}
+\subsubsection{Integration of single indicators and portfolio theory}
 
 Form indicator as factors: standardization to mean-0, normal/t-distributed scores. Select powerful ones (ones that passed the permutation test). Optimize to maximize holdings exposure to factor with risk penalty. The key is still feature engineering.
 
@@ -336,7 +407,70 @@ Hedging and Market Exposture Management - Volatility Control and Automatic de-le
 
 together with cost consdieration. 
 
+\section{Backtesting}
 
-\chapter{Alternative Data}
+\begin{enumerate}
+ \item Surviorship-bias
+ \item Look ahead-bias
+ \item In-sample bias
+\end{enumerate}
+
+\chapter{Portfolio Risk Management}
+
+\section{Derivatives and Hedging Strategies}
+
+2. risk management
+    1. Var - historical, analytical, MC good and bad
+    2. credit risk exposure (pv only swap has)
+3. derivatives  
+    1. futures, hedge, synthetic equity/cash, pre-investing
+    2. options
+        1. spread-bull bear, butterfly   
+        2. straddle, collar, box spread( bull, bear spread- risk free rate)
+        3. interest rate swap - leveraged floating-rate notes, inverse floater; currency swap
+        4. swaption - payer, receiver - use receiver to add/remove callable bond features 
+
+
+1. fixed income
+    1. duration matching 
+        1. requirements
+        2. vs cashflow matching(tenor offer), contingent immunization, horizon matching
+    2. index and challenges 
+        1. index vs mutual fund,ETF, synthetic strategies(total return swap, less cash but counterparyt risk )
+    3. yield curve strategies
+        1. laddered, bullet, barbell vs level slope curvature
+        2. barbell vs bullet, condor and butterfly long short at level change, slope change, curvature change, yield volatility change performance and strategy (wing and body)
+    4. high yield and credit stprad
+        1. IGB HYB : credit risk, credit migration risk, interest rate risk, liquidity risk
+        2. access liquidity risk and tail risk 
+        3. emerging market difference 
+
+
+\section{FX risk management}
+    1. currency management 
+        1. forward price (long/short base currency) 
+        2. options- risk reversal, put spread, seagull spread
+    2. index and benchmark
+        1. capitalization-weighted, price-weighted, equal-weighted index, fundamental-weighted indexes 
+
+
+
+\chapter{Monitoring and Performance Evaluation}
+
+\section{Monitoring}
+    1. rebalancing corridor width
+    2. CPPI/ swaption etc
+
+\section{Performance Evaluation}
+
+\subsection{Equity}
+
+Factor Model (Axima, Barra) 
+\subsection{Fixed Income}
+
+    1. fixed income - no contribution-risk-free-asset categories-benchmark level(style)-manger-allocation effects(residual) 
+
+
+\chapter{Alternative Data and General Machine Learning}
  
 \end{document}                          % The required last line 

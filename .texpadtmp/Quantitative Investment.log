@@ -1,0 +1,370 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 JUL 2018 23:30
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"Quantitative Investment.tex"
+(./Quantitative Investment.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.aux)
+\openout1 = `"Quantitative Investment.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count89
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count92
+\MPscratchDim=\dimen106
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
+\everyMPtoPDFconversion=\toks16
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 13.
+ [1
+
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2
+
+] [3])
+\tf@toc=\write3
+\openout3 = `"Quantitative Investment.toc"'.
+
+ [4]
+Chapter 1.
+[1
+
+
+]
+Chapter 2.
+[2
+
+]
+Chapter 3.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
+ [3
+
+]
+Chapter 4.
+[4
+
+]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+ [5] <Cov.JPG, id=39, 826.08624pt x 229.85875pt>
+File: Cov.JPG Graphic file (type jpg)
+ <use Cov.JPG>
+Package pdftex.def Info: Cov.JPG used on input line 171.
+(pdftex.def)             Requested size: 413.0421pt x 114.92908pt.
+
+Overfull \hbox (53.0421pt too wide) in paragraph at lines 171--172
+[]  
+ []
+
+[6 <./Cov.JPG>] [7]
+Chapter 5.
+[8
+
+]
+Chapter 6.
+[9
+
+]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+ [10] [11]
+Chapter 7.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12
+
+] [13]
+Chapter 8.
+<1.JPG, id=65, 721.69624pt x 485.815pt>
+File: 1.JPG Graphic file (type jpg)
+ <use 1.JPG>
+Package pdftex.def Info: 1.JPG used on input line 304.
+(pdftex.def)             Requested size: 360.84724pt x 242.9069pt.
+ <2.JPG, id=66, 692.5875pt x 548.0475pt>
+File: 2.JPG Graphic file (type jpg)
+ <use 2.JPG>
+Package pdftex.def Info: 2.JPG used on input line 305.
+(pdftex.def)             Requested size: 346.2929pt x 274.02307pt.
+ <3.JPG, id=67, 829.0975pt x 599.23875pt>
+File: 3.JPG Graphic file (type jpg)
+ <use 3.JPG>
+Package pdftex.def Info: 3.JPG used on input line 306.
+(pdftex.def)             Requested size: 414.54774pt x 299.61864pt.
+ <4.JPG, id=68, 226.8475pt x 334.24875pt>
+File: 4.JPG Graphic file (type jpg)
+ <use 4.JPG>
+Package pdftex.def Info: 4.JPG used on input line 307.
+(pdftex.def)             Requested size: 113.42346pt x 167.12396pt.
+ <5.JPG, id=69, 284.06125pt x 455.7025pt>
+File: 5.JPG Graphic file (type jpg)
+ <use 5.JPG>
+Package pdftex.def Info: 5.JPG used on input line 308.
+(pdftex.def)             Requested size: 142.03026pt x 227.85068pt.
+ <6.JPG, id=70, 327.2225pt x 273.02pt>
+File: 6.JPG Graphic file (type jpg)
+ <use 6.JPG>
+Package pdftex.def Info: 6.JPG used on input line 309.
+(pdftex.def)             Requested size: 163.61084pt x 136.50966pt.
+
+Overfull \hbox (0.84724pt too wide) in paragraph at lines 304--310
+[] 
+ []
+
+
+Overfull \hbox (54.54774pt too wide) in paragraph at lines 304--310
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14
+
+]
+Overfull \vbox (98.26556pt too high) has occurred while \output is active []
+
+ [15 <./1.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (28.3174pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 16 \OT1/cmr/m/sl/10.95 CHAPTER 8.  STRATEGIES IMPLEMENTATION/PLATFORM BUILDING
+ []
+
+[16 <./2.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (50.64594pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 8.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/cmr/m/n/10.95 17
+ []
+
+[17 <./3.JPG> <./4.JPG> <./5.JPG>]
+Overfull \hbox (28.3174pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 18 \OT1/cmr/m/sl/10.95 CHAPTER 8.  STRATEGIES IMPLEMENTATION/PLATFORM BUILDING
+ []
+
+[18 <./6.JPG>]
+Overfull \hbox (50.64594pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 8.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/cmr/m/n/10.95 19
+ []
+
+[19] <7.JPG, id=90, 493.845pt x 501.875pt>
+File: 7.JPG Graphic file (type jpg)
+ <use 7.JPG>
+Package pdftex.def Info: 7.JPG used on input line 377.
+(pdftex.def)             Requested size: 246.92189pt x 250.93687pt.
+ <8.JPG, id=91, 747.79375pt x 743.77875pt>
+File: 8.JPG Graphic file (type jpg)
+ <use 8.JPG>
+Package pdftex.def Info: 8.JPG used on input line 379.
+(pdftex.def)             Requested size: 373.89595pt x 371.88846pt.
+ <9.JPG, id=92, 561.09625pt x 728.7225pt>
+File: 9.JPG Graphic file (type jpg)
+ <use 9.JPG>
+Package pdftex.def Info: 9.JPG used on input line 382.
+(pdftex.def)             Requested size: 280.54744pt x 364.36035pt.
+ <10.JPG, id=93, 832.10875pt x 844.15375pt>
+File: 10.JPG Graphic file (type jpg)
+ <use 10.JPG>
+Package pdftex.def Info: 10.JPG used on input line 383.
+(pdftex.def)             Requested size: 416.05336pt x 422.07584pt.
+
+Overfull \hbox (13.89595pt too wide) in paragraph at lines 374--389
+[] 
+ []
+
+
+Overfull \hbox (56.05336pt too wide) in paragraph at lines 374--389
+[] 
+ []
+
+
+Overfull \hbox (28.3174pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 20 \OT1/cmr/m/sl/10.95 CHAPTER 8.  STRATEGIES IMPLEMENTATION/PLATFORM BUILDING
+ []
+
+[20 <./7.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (50.64594pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 8.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/cmr/m/n/10.95 21
+ []
+
+[21 <./8.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (28.3174pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 22 \OT1/cmr/m/sl/10.95 CHAPTER 8.  STRATEGIES IMPLEMENTATION/PLATFORM BUILDING
+ []
+
+[22 <./9.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (50.64594pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 8.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/cmr/m/n/10.95 23
+ []
+
+[23 <./10.JPG>] <11.JPG, id=107, 619.31375pt x 365.365pt>
+File: 11.JPG Graphic file (type jpg)
+ <use 11.JPG>
+Package pdftex.def Info: 11.JPG used on input line 394.
+(pdftex.def)             Requested size: 309.65611pt x 182.68205pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (28.3174pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 24 \OT1/cmr/m/sl/10.95 CHAPTER 8.  STRATEGIES IMPLEMENTATION/PLATFORM BUILDING
+ []
+
+[24 <./11.JPG>] [25]
+Chapter 9.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26
+
+] [27]
+Chapter 10.
+[28
+
+]
+Chapter 11.
+[29
+
+] (/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.aux) ) 
+Here is how much of TeX's memory you used:
+ 1604 strings out of 493014
+ 23435 string characters out of 6133351
+ 81960 words of memory out of 5000000
+ 5134 multiletter control sequences out of 15000+600000
+ 11304 words of font info for 39 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,6n,23p,424b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.pdf" (33 pages, 1311810 bytes).
+PDF statistics:
+ 154 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+
