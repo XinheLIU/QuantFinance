@@ -14,6 +14,9 @@
 \tableofcontents                        % Print table of contents
 \mainmatter                             % only in book class (arabic page #s)
 
+\part{Financial Market and Investment Tools}
+
+\chapter{Economics and Econometrics}
 
 \chapter{Basic Financial Concepts}                % Print a "chapter" heading
 
@@ -23,17 +26,68 @@ This chapter summarizes some basic financial concepts you should know about.
 
 \section{Asset Management}
 
-Asset Owners : From conservative to active: Banks, Insurance Company, Defined Contribution Plan, Pension, Endowment/Foundations
+Asset Owners(Real Money): From conservative to active: Banks, Insurance Company, Defined Contribution Plan, Pension, Endowment/Foundations 
+
+Hedge Funds(Fast Money)
 
 Investment Purpose Statement(IPS): Consider Return, Risk, Time Horizon, Tax, Liquidity, Legal and Unique. 
 
+\section{Accounting, Corporate Finance and Fundamental Analysis}
+
+Accounting:
+\begin{itemize}
+    \item Balance Sheet, Income Statement, Cash flow Statement Basics
+    \item EBIT = operating profit + non recurring expense - non-recurring income, EBITDA, Operating profit, normalized net income = NI + non recurring items
+    \item Gross Profit, Operating profit, profit before tax, net income
+    \item Gross Margin, EBIT Margin, EBIT Margin, Net Profit Margin 
+    \item Cash flow from Operations = NI + DA +- change in inventory/accounts payable, receivable, operating items
+    \item CF from investing, CF from financing calculate
+    \item Equity: Preferred shares, authorized shares (maximum shares the board can issue), Treasury stock, buy back book value, Free float Market capitalization = share price * ( shares outstanding - shares not traded), Small free float: little share holder control, volatile share price, high premium in M\&A 
+\end{itemize}
+
+Capital Structure:
+
+\begin{itemize}
+	\item Operating items vs financing items ( cash, financial asset/liability, equity)
+	\item Working Capital = Current Assets - Current Liabilities, Operating Working Capital (exclude cash)
+	\item Inventory COGS LIFO FIFO inventory turnover
+	\item Payable days, receivable days, working capital cycle (payable days - inventory days + receivable days)
+	\item Leverage ratios: Debt/Equity, Total Debt/EBITDA, EBITDA/inst expense	
+\end{itemize}
+
+Tax:  Effective Tax Rate, Loss Harvesting and Tax-Aware investment 
+
+Valutaion fundamentals: 
+
+\begin{itemize}
+	\item Enterprise Value = Debt + Equity Value - Cash/Cash Equivalent
+	\item Equity Value (affected by performance (operating), investing and financing (leverage)) = Price x Shares Outstanding
+	\item Asset = Enterprise Value + Non-core assets(not valued by Multiples/DCF models, like cash)
+	\item Free Cash Flow Calculation: EBIT - tax on EBIT (LT tax rate x EBIT) = NOPAT (net operating profit after tax )/EBIAT, Free Cash flow = NOPAT + D\&A - capex - increase in OWC + decrease in OWC - Increase in Other net operating assets + Decrease in other net operating assets 
+	\item FCFF, FCFE 
+	\item Discount Rate- Weighted Average Cost of Capital (WACC) - CAPM / required rate of return, WACC = D/(D+E) cost of net debt x (1-t) + $(rf+(r_m-r_f)\times beta)\times E/(D+E)$, D is net debt
+	\item Gordon Growth Model
+\end{itemize}
+
+\chapter{Major Asset Classes and Asset Valuation Theories}
+\section{Equity}
+\section{Currency/Foreign Exchange}
+\section{Fixed-Income}
+
+Basic Concepts:
+\begin{itemize}
+    \item Day Count Convention, Dirty Price
+    \item Macaulay Duration, Modified Duration, DV01, Dollar Duration, Effective Duration
+    \item Maturity Effect, Coupon Effect, Yield Effect, Coupon Frequency Effect on Duration
+    \item Term Structure of Yield Curve, Expectation Theory, Liquidity Preference Hypothesis, Segmented Markets/Preferred Habitat Theory. Bond Markets: < 1 y (money market) 1-3, 3-10 (bellwehter of market movements, the major contributor for “beta” in the fixed-income portfolio) 10(long end, relatively illiquid and sensitive) 
+    \item long end risks: liquidity, credit( sovereign credit), inflation, growth
+    \item Carry and Roll Down(no yield curve shift)
+    \item yield curve trading/fly trading, steepner, flatener, positive/negative butterfly, Barbell and Bullet
+    \item Inflation Linked bonds(Linkers) UK Index-Linked Gilts, French OATi, US TIPS, JGBi. Breakeven Inflation: The difference in linker yields and nominal bond yields ( linker coupon is always lower under positive inflation) 
+\end{itemize}
 
 
-\chapter{Economics and Econometrics}
-
-\section{Corporate Finance and Fundamental Analysis}
-
-\chapter{Asset Valuation Theory}
+\section{Commodities}
 
 \begin{enumerate}
  \item NPV and IRR 
@@ -45,6 +99,7 @@ Investment Purpose Statement(IPS): Consider Return, Risk, Time Horizon, Tax, Liq
  \item Valuation using Multiples - P/E, P/B 
  \end{enumerate}
 
+\part{Quantitative Portfolio Management}
 \chapter{Portfolio Optimization Study}
 
 
