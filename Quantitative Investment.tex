@@ -5,7 +5,7 @@
 %\graphicspath{ {./images/} }
 \title{\bf Quantitative Investment Handbook}    % Supply information
 \author{Xinhe Liu}              %   for the title page.
-\date{2018-2-28}                           %   Use current date. 
+\date{2018-5-28}                           %   Use current date. 
 
 % Note that book class by default is formatted to be printed back-to-back.
 \begin{document}                        % End of preamble, start of text.
@@ -135,14 +135,21 @@ Tax:  Effective Tax Rate, Loss Harvesting and Tax-Aware investment
 Valutaion fundamentals: 
 
 \begin{itemize}
-	\item Enterprise Value = Debt + Equity Value - Cash/Cash Equivalent
+	\item Intrinsic Value and two approaches - absolute valuation and relative valuation 
+	\item Enterprise Value = Debt + Equity Value - Cash/Cash Equivalent = Net Debt Value + Equity Value
 	\item Equity Value (affected by performance (operating), investing and financing (leverage)) = Price x Shares Outstanding
 	\item Asset = Enterprise Value + Non-core assets(not valued by Multiples/DCF models, like cash)
-	\item Free Cash Flow Calculation: EBIT - tax on EBIT (LT tax rate x EBIT) = NOPAT (net operating profit after tax )/EBIAT, Free Cash flow = NOPAT + D\&A - capex - increase in OWC + decrease in OWC - Increase in Other net operating assets + Decrease in other net operating assets 
+	\item Free Cash Flow Calculation: EBIT - tax on EBIT (LT tax rate x EBIT) = NOPAT (net operating profit after tax )/EBIAT, Free Cash flow = NOPAT + D\&A - capex - increase in OWC + decrease in OWC - Increase in Other net operating assets + Decrease in other net operating assets -+ change in Long term tax liabilities
 	\item FCFF, FCFE 
 	\item Discount Rate- Weighted Average Cost of Capital (WACC) - CAPM / required rate of return, WACC = D/(D+E) cost of net debt x (1-t) + $(rf+(r_m-r_f)\times beta)\times E/(D+E)$, D is net debt
 	\item Gordon Growth Model
+	\item EV multipliers : EV/Sales, EV/EBIT，EV/EBITDA
 \end{itemize}
+
+
+Fundamental Analysis, Company Analysis and Value Investing
+
+Management/Strategic Analysis(SWOT, Five forces etc), Industry/Region/ Sector Analysis + competitor Analysis 
 
 \chapter{Major Asset Classes and Asset Valuation Theories}
 \section{Money Market}
@@ -162,10 +169,25 @@ Valutaion fundamentals:
 \end{itemize}
 
 \section{FX}
+
+Basic Concepts:
+\begin{itemize}
+    \item FX Market is Extremely liquid (smaller bid ask spread on equity) 
+    \item Market Size High to Low: USD, EUR, Cheap Currencies: JPY(safe currency), CHF, GBP, Rich(high rate) currencies: ZAR, MXN, AUD 
+    \item Uncovered Interest Rate Parity and Covered IRP
+    \item Interest Rate Forward/Futures, Non-deliverable forwards(NDF)
+    \item FX Drivers: Interest rate differential, inflation rate differential, Global M\&A/Capital Flows, Technical Drivers(Indicators), Central Bank Policies, Risk Appetite
+    \item Purchasing Power Parity
+\end{itemize}
+
 \section{Equity}
+Sell Side Services
+\begin{itemize}
+    \item Traditionally, Sales and Trading Service build around research (content stream)
+    \item New Model -automation: Algo-trading, Dark pools, MiFID
+\end{itemize}
 \section{Currency/Foreign Exchange}
 \section{Fixed-Income}
-
 Basic Concepts:
 \begin{itemize}
     \item Day Count Convention, Dirty Price
@@ -176,10 +198,37 @@ Basic Concepts:
     \item Carry and Roll Down(no yield curve shift)
     \item yield curve trading/fly trading, steepner, flatener, positive/negative butterfly, Barbell and Bullet
     \item Inflation Linked bonds(Linkers) UK Index-Linked Gilts, French OATi, US TIPS, JGBi. Breakeven Inflation: The difference in linker yields and nominal bond yields ( linker coupon is always lower under positive inflation) 
+    \item Treasury Strips, UK Gilt Strips 
 \end{itemize}
 
+Calculations
+\begin{itemize}
+    \item Spot yield, par yield, forward rate, Bootstrapping
+\end{itemize}
 
 \section{Commodities}
+
+\begin{itemize}
+    \item Much more volatile than other major asset classes.(volatility from both supply/demand side)
+    \item Low correlation with traditional asset classes
+    \item Market drivers
+    \begin{itemize}
+    	\item Fear: Reduced risk appetite/ fight to real assets. Geopolitics shuts down supply chains
+    	\item Currencies; Gold-USD, Oil-USD
+    	\item OPEC, Freak weather, earthquake
+    \end{itemize}
+    \item Commodity Currencies: IMF found 22 commodity currencies ( CHF-copper, AUD-Iron Ore,uranium)
+    \item Stocks-to-Use Ratio, Reverse-to-Production Ratio
+    \item Oil: Brent
+    \item Physical Trade vs Derivatives(liquidity and leverage, low cost, less exotic)
+    \item BSCOM, GSCI 
+    \item Commodity Futures, Convenience Yield, Contango(normal), Backwardation(Reversed)
+\end{itemize}
+
+Calculations
+\begin{itemize}
+    \item Yield = Collateral Yield + Roll Yield/Cost + Spot Return
+\end{itemize}
 
 \begin{enumerate}
  \item NPV and IRR 
