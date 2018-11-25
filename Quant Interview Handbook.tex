@@ -166,6 +166,172 @@ Linear Algebra
 \section{Hard}
 
 
+Numerical Methods & PDE
+
+1. Stochastic Calculus
+  	Infinitesimal generator
+		(Lf) x= \lim_{\Delta t \to 0}\frac{E(f(X_{t + \Delta t| X_t = x} - f(x)}{\Delta t}
+  		adjoint opeator L*
+				\int (L g1)(x) g_2 (x) dx = \int (L* g2)(x) g_1 (x) dx
+	Markov Process and Markov Property
+  		
+	SDE and PDE
+	u(t,x) = E(\phi(X)|X_t = x] 
+	\partial_t \Gamma + L\Gamma = 0 (backward)
+        \partial_t \Gamma = L* \Gamma(t,x) 
+         \Gamma - the density( t,x;T,y)
+	\partial_t u + Lu  = 0
+
+        Komoglov  forward and backward equations  - fix t,X ( look at t,y) 
+               fix t,Y 
+
+
+ 2. PDE 
+    transport equation
+    heat equation 
+
+
+3. Finite Different Method
+   
+   Taylor Expansion    
+  
+	Explicit Method      
+	Implicit Method
+	Crank-Nicholson
+
+   Local Truncation Error 
+     Consistency
+     Stability 
+    COnvergence
+
+Fourier Transformation
+Fourier Method
+
+CFL condition
+  
+
+数据库
+CRSP - stock price and quotes
+Compustats - lots of fundemental data 
+     B/M
+      cash flow to market
+       earnings to market price
+       five year growth rate of sales 
+
+   Asness measures
+	B/M log(BV/MV) 
+	D/P = dividend ratio to price
+
+test a strategy
+
+formation period- trading period (rolling) - validation period (separted) OR use a different universe to validate the strategy
+hypothesis test will demonstrate whether the strategy gives significant alpha return z
+
+pitfalls in testing quant-strategy
+
+1. Surviorship bias - non-anticipative trading 
+2. bid ask spread 
+3. transaction cost and liquidity (market impact and liquidity risk) - Almgren and Criss model 
+
+ETF 
+
+Avellaneda and Lee 
+   stochastic stock return on ETF model 
+physical ETF
+synthetic ETF - use derivatives and structured products 
+
+——————————
+
+“Real World” Statistical Arbitrage / Asset Management
+
+target : sharpe ratio/neutrality to benchmarks
+
+always conduct research on residual space!
+
+“real-world” constraints:  
+	budget constrains - financing/borrowing cost
+         factor risk vs idiosyncratic single name risk
+         transaction cost
+         liquidity constraints: market impact/ portfolio turnover
+
+ ** Fundamental Law of Active Management 
+
+      Use the most “top 1000” active stocks
+            “attention” vs juice trade-off of stocks 
+
+     Data cleaning
+         huge tail 
+        erroneous prices can create large outliers
+        clean outliers
+           winsorization and truncating
+           mean absolute devidation 
+
+
+     Weighting Schemes:
+          to account for different residual volatility
+          market capitalization and liquidity based weighting scheme / inversely proportional to volatility weights
+         
+      Visualization is very very important 
+
+      Transaction Cost bid0ask spread, volume participation, stock volatility, alpha: momentum trades will be running away
+       ** Almgren TC models (efficient frontier of optimal execution/ temporary vs permanent market impact) 
+
+
+
+Pairs Trading
+
+Dickey-Fuller Test 
+  stationarity and VAR(p) process
+
+Time_Series
+differencing and integration of order k
+conintegration of order(d,b)\
+
+find con-integration 
+    Granger-Engle Method
+     Johansen Method
+ 
+decide position to trade - 
+	Graphical Lasso
+	
+	
+	—————————————————————————————————————
+Multi-factor models
+Factor Loadings
+
+regression  - known factor returns
+cross-sectional - known loadings
+PCA
+Hidden
+
+
+Famous Factor Models
+
+size: SMB
+vlaue: HML
+Momentum: UMD MOM WML
+profitability: RMW Investment: CMA
+Low Volatility  BAB
+Short-term Reversal 
+
+
+
+
+
+** estimating covariance ( factor covariance/ return covariances)
+  exponential smoothing
+  GARCH and Bayesian adjustments
+  random matrix theory
+
+
+
+change asktbt
+
+asktbf  
+
+etc
+
+longshare short share
 
  
 \end{document}                          % The required last line 
