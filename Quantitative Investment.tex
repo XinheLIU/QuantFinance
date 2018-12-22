@@ -189,6 +189,51 @@ Management/Strategic Analysis(SWOT, Five forces etc), Industry/Region/ Sector An
     \end{itemize}
 \end{itemize}
 
+\section{Asset Management Overview}
+factor investors
+
+market - CAPM + APT
+
+value - HML
+  FX carry trade
+  commodity - roll returns
+  Fixed Income - riding the yield curve 
+  
+momentum 
+   UMD - up minus down
+   WML - winner minus losers
+
+size -SML 
+
+
+volatility risk premium ( a negative risk premium)
+illiquidity risk premium ‘
+
+
+alpha and active investing
+
+
+Fundamental Theorem of Active Management
+
+
+backtesting
+
+  surviorship bias
+  sample selection bias
+  infrequent trading (report same price/ missing price) 
+
+
+
+hedge fund strategies
+
+  merger/risk arbitrage
+
+   fixed income arbitrage
+       swap spread arbitrage
+       yield-curve spread arbitrage
+      mortgage spread arbitrage ( on prepayment rates)
+      capital structure/credit arbitrage 
+      volatility trading （interest cap vol) arbitrage
 \section{FX}
 
 Basic Concepts:
@@ -207,6 +252,9 @@ Sell Side Services
     \item Traditionally, Sales and Trading Service build around research (content stream)
     \item New Model -automation: Algo-trading, Dark pools, MiFID
 \end{itemize}
+
+
+
 \section{Currency/Foreign Exchange}
 \section{Fixed-Income}
 Basic Concepts:
@@ -260,6 +308,39 @@ Calculations
    \end{itemize}
  \item Valuation using Multiples - P/E, P/B 
  \end{enumerate}
+
+\section{Derivatives}
+
+Swap
+\begin{itemize}
+    \item Interest Rate Swap - fixed bond + floating bond (received swap position: long fixed bond, short floating/FRA, duration/DV01 is the difference of these two)
+    \item Asset swap: Asset manager pay fixed, receive float, subject to credit risk
+ \end{itemize}
+
+Futures
+\begin{itemize}
+    \item long futures/ long cash = "funded beta"
+     \item Used in asset-management: Tactical Asset Allocation, Beta management, Volatility Management
+     \item Mark-to-market : "A martingale", variation margin changes everyday, fixed on EDSP -Exchange Delivery Settlement Price at the last day, cash settlement
+     \item Open interest(# of net short contracts) vs volume(activity)
+     \item Basis and Basis Risk: divergence of futures and underlying
+\end{itemize}
+
+CDS(Derivative)
+ \begin{itemize}
+    \item Reference entity(borrower or obligor), reference obligation, obligations(trigger to credit event), deliverable obligations(usually pari-passu or senior in priority of payment to the reference entity), portfolio(deliverable obligations the protection buyer elects to deliver, execute accrued interest), conditions to payment(Entity party must have deliveredL Credit Event Notice, Notice to Public Info, Physical Settlement, etc)
+    \item Fixed Coupon CDS: standardized (not "par spred") CDS: 100, 500bp(High Yield): T0 payment moves
+    \item CDS pricing: probability of default x exposure of default x Loss Given Default  - driven by time, rates, spread
+ \end{itemize}
+
+Credit Value Adjustment(CVA)
+ \begin{itemize}
+    \item pricing according to credit worthness of the counter-party
+    \item Volatility ~ market volatility, probability of counterparty default 
+    \item Funding Value Adjustement(FVA): uncollatteralised position hedge with collateralised
+    
+\end{itemize}
+
 
 \part{Quantitative Portfolio Management}
 \chapter{Portfolio Optimization Study}
@@ -634,6 +715,75 @@ together with cost consdieration.
 \chapter{Portfolio Risk Management}
 
 \section{Derivatives and Hedging Strategies}
+
+
+Sell Side Risk
+
+Coherent  Risk measure
+
+monotonicity
+
+subadditivity
+
+positive homogeneity
+
+translation invariance
+
+
+
+liquidity risk
+
+
+funding liduitdity
+market liquidity ( brokerage fees, execution price compared to mid-point, impact of transaction in the market price, the speed of transaction execution)
+
+
+evidence that liquidity good: stable quoted bid-ask spread, order book depth deep, falling realized bid-ask spread, 
+evidence for bad liquidity: large trades have more market impact, average trade size fall, increased bifurcation in the corporate bond market( different liquidity preferring on-the-run)
+
+
+influncers
+
+regulators( e.g. leverage, Volker Rule)
+
+Central bank
+  bank funding channel
+  market functioning channel
+ risk appetite channel
+
+liquidity measures
+bid-ask spread
+effective spread
+Roll’s price reversal 
+Corwin and Schultz high-low spread 
+price impact
+turnover
+Amihud’s measure
+Markit’s liquidity score
+Dealer count
+Quote depth
+Imputed round-trip cost
+
+
+
+
+
+
+tightness: cost of a round-trip transaction
+market depth: how much moved by a large order
+resiliency : length of time for which a lumpy order moves the market away from the equilibrium price
+adverse price impact
+slippage( the amount of deterioration in the market price induced by the amount of time it takes to get a trade done)  
+
+
+model validation（quantitative)
+
+validation of inputs and parameters(assumptions)
+model replication
+benchmarking and hypothetical portfolio testing (with another strategy)
+backtesting
+profit and loss distribution
+stress testing\
 
 2. risk management
     1. Var - historical, analytical, MC good and bad
