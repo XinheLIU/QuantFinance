@@ -251,6 +251,11 @@ Sell Side Services
 \begin{itemize}
     \item Traditionally, Sales and Trading Service build around research (content stream)
     \item New Model -automation: Algo-trading, Dark pools, MiFID
+    \item ETF Market: Market Maker/Specialist who issue ETF Shares to investors, buy underlying stocks with ETF or money from fund and stock exchange.
+    	\subitem Physical ETF: generate return from holding all, or samples of underlying shares like index funds. Kept safe by a custodian.
+    	\subitem Synthetic ETF: Entering into total return swaps with counterparty issuer. 
+   		\subitem ETFs fo pay dividends monthly, quarterly, half-yearly or annual. Based on funds income net of expense and distribute to share holders on the register on record date. Paid via brokerage account. 
+   		\subitem Tracking error: Annual fees are deducted Reflecting daily NAVs. 
 \end{itemize}
 
 
@@ -322,7 +327,7 @@ Futures
     \item long futures/ long cash = "funded beta"
      \item Used in asset-management: Tactical Asset Allocation, Beta management, Volatility Management
      \item Mark-to-market : "A martingale", variation margin changes everyday, fixed on EDSP -Exchange Delivery Settlement Price at the last day, cash settlement
-     \item Open interest(# of net short contracts) vs volume(activity)
+     \item Open interest(\# of net short contracts) vs volume(activity)
      \item Basis and Basis Risk: divergence of futures and underlying
 \end{itemize}
 
@@ -340,6 +345,24 @@ Credit Value Adjustment(CVA)
     \item Funding Value Adjustement(FVA): uncollatteralised position hedge with collateralised
     
 \end{itemize}
+
+\subsection{Option}
+
+Credit Value Adjustment(CVA)
+ \begin{itemize}
+    \item Black-Scholes Model, Black's Model, Black-Scholes Equation (Heat Equation)
+    \item Pricing factors and Greeks $\Delta,\Gamma, \theta, \nu$(vega), vanna, $\rho,\epsilon$ 
+    \item Pricing American Option
+    $$\frac{\partial V}{\partial t} + \frac{\sigma^2 S^2}{2} \frac{\partial^2 V}{\partial S^2}+ r S \frac{\partial V}{\partial S} - rV < 0 $$
+    \item Option Trading Strategies
+     \subitem put call parity c+pv(K) = p + S
+     \subitem protective put, covered call, collar
+     \subitem 1x1 spread(bull/bear), 2x1 spread, calendar spread
+     \subitem risk-reversal(short p, long c)
+     \subitem straddle, strangle, butterfly, iron butterfly
+     \subitem volatility carry, dispersion trade
+\end{itemize}
+
 
 
 \part{Quantitative Portfolio Management}
