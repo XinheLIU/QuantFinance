@@ -11,12 +11,12 @@
 \contentsline {section}{\numberline {3.2}Asset Management Overview}{10}
 \contentsline {section}{\numberline {3.3}FX}{10}
 \contentsline {section}{\numberline {3.4}Equity}{11}
-\contentsline {section}{\numberline {3.5}Currency/Foreign Exchange}{11}
-\contentsline {section}{\numberline {3.6}Fixed-Income}{11}
-\contentsline {section}{\numberline {3.7}Commodities}{12}
-\contentsline {section}{\numberline {3.8}Derivatives}{13}
+\contentsline {section}{\numberline {3.5}Currency/Foreign Exchange}{12}
+\contentsline {section}{\numberline {3.6}Fixed-Income}{12}
+\contentsline {section}{\numberline {3.7}Commodities}{13}
+\contentsline {section}{\numberline {3.8}Derivatives}{14}
 \contentsline {subsection}{\numberline {3.8.1}Option}{15}
-\contentsline {part}{II\hspace {1em}Quantitative Portfolio Management}{16}
+\contentsline {part}{II\hspace {1em}Quantitative Investment Theories}{16}
 \contentsline {chapter}{\numberline {4}Portfolio Optimization Study}{17}
 \contentsline {section}{\numberline {4.1}Estimating Return and Co-variance Matrix}{19}
 \contentsline {section}{\numberline {4.2}Transaction Cost}{19}
@@ -25,47 +25,48 @@
 \contentsline {section}{\numberline {4.5}Covariance Matrix}{19}
 \contentsline {section}{\numberline {4.6}Easy}{19}
 \contentsline {section}{\numberline {4.7}Medium}{20}
-\contentsline {section}{\numberline {4.8}Hard}{20}
-\contentsline {chapter}{\numberline {5}Statistical Arbitrage}{21}
-\contentsline {section}{\numberline {5.1}mean-reversion}{21}
-\contentsline {chapter}{\numberline {6}Factor Investing}{22}
-\contentsline {section}{\numberline {6.1}Smart beta and Smart Alpha}{22}
-\contentsline {section}{\numberline {6.2}Key things to Notice in Index Making}{22}
-\contentsline {section}{\numberline {6.3}factor analysis and risk premia}{22}
-\contentsline {section}{\numberline {6.4}Market Anomalies}{23}
-\contentsline {subsection}{\numberline {6.4.1}Behavioral Finance}{23}
-\contentsline {chapter}{\numberline {7}Single (Asset Class) Trading Strategies}{25}
-\contentsline {section}{\numberline {7.1}Equity}{25}
-\contentsline {section}{\numberline {7.2}Volatility and Dispersion Trades}{25}
-\contentsline {subsection}{\numberline {7.2.1}Volatility Models and Time-Series Models}{25}
-\contentsline {section}{\numberline {7.3}fixed income + macro}{25}
-\contentsline {section}{\numberline {7.4}fixed income derivatives}{25}
-\contentsline {section}{\numberline {7.5}credit}{26}
-\contentsline {section}{\numberline {7.6}commodities}{26}
-\contentsline {chapter}{\numberline {8}Quant Strategies and Long-short Strategies}{27}
-\contentsline {chapter}{\numberline {9}Strategies Implementation/Platform Building}{28}
-\contentsline {section}{\numberline {9.1} Trading System }{29}
-\contentsline {section}{\numberline {9.2} Strategy Development Pipeline(Single/Linear Strategy) }{29}
-\contentsline {subsection}{\numberline {9.2.1}Basic Architecture/System}{29}
-\contentsline {subsection}{\numberline {9.2.2}Data}{31}
-\contentsline {subsection}{\numberline {9.2.3}Backtester/Simulator}{31}
-\contentsline {subsection}{\numberline {9.2.4}Trade Record and Money Management}{32}
-\contentsline {subsection}{\numberline {9.2.5}Analytics}{32}
-\contentsline {subsubsection}{ Strategy Management }{32}
-\contentsline {subsubsection}{Execution Analysis and Cost}{32}
-\contentsline {subsection}{\numberline {9.2.6}Research Team}{32}
-\contentsline {subsubsection}{Parameter Optmization and Control}{33}
-\contentsline {subsubsection}{Signal Indicator Design}{33}
-\contentsline {subsubsection}{Integration of single indicators and portfolio theory}{37}
-\contentsline {subsubsection}{Strategy Risk Management and Money management}{37}
-\contentsline {section}{\numberline {9.3}Backtesting}{38}
-\contentsline {chapter}{\numberline {10}Portfolio Risk Management}{39}
-\contentsline {section}{\numberline {10.1}Derivatives and Hedging Strategies}{39}
-\contentsline {section}{\numberline {10.2}FX risk management}{41}
-\contentsline {chapter}{\numberline {11}Monitoring and Performance Evaluation}{42}
-\contentsline {section}{\numberline {11.1}Monitoring}{42}
-\contentsline {section}{\numberline {11.2}Performance Evaluation}{42}
-\contentsline {subsection}{\numberline {11.2.1}Equity}{42}
-\contentsline {subsection}{\numberline {11.2.2}Fixed Income}{42}
-\contentsline {chapter}{\numberline {12}Alternative Data and General Machine Learning}{43}
-\contentsline {chapter}{\numberline {13}E-trading and Execution}{44}
+\contentsline {chapter}{\numberline {5}Quantitative Portfolio Mangement}{21}
+\contentsline {chapter}{\numberline {6}Statistical Arbitrage}{22}
+\contentsline {section}{\numberline {6.1}mean-reversion}{22}
+\contentsline {chapter}{\numberline {7}Factor Investing}{23}
+\contentsline {section}{\numberline {7.1}Smart beta and Smart Alpha}{23}
+\contentsline {section}{\numberline {7.2}Key things to Notice in Index Making}{23}
+\contentsline {section}{\numberline {7.3}factor analysis and risk premia}{23}
+\contentsline {section}{\numberline {7.4}Market Anomalies}{24}
+\contentsline {subsection}{\numberline {7.4.1}Behavioral Finance}{24}
+\contentsline {chapter}{\numberline {8}Single (Asset Class) Trading Strategies}{26}
+\contentsline {section}{\numberline {8.1}Equity}{26}
+\contentsline {section}{\numberline {8.2}Volatility and Dispersion Trades}{26}
+\contentsline {subsection}{\numberline {8.2.1}Volatility Models and Time-Series Models}{26}
+\contentsline {section}{\numberline {8.3}fixed income + macro}{26}
+\contentsline {section}{\numberline {8.4}fixed income derivatives}{26}
+\contentsline {section}{\numberline {8.5}credit}{27}
+\contentsline {section}{\numberline {8.6}commodities}{27}
+\contentsline {chapter}{\numberline {9}Quant Strategies and Long-short Strategies}{28}
+\contentsline {part}{III\hspace {1em}Quantitative Modeling and Strategies Implementation}{29}
+\contentsline {chapter}{\numberline {10} Trading System }{30}
+\contentsline {chapter}{\numberline {11} Strategy Development Overview}{31}
+\contentsline {section}{\numberline {11.1} Strategy Development Pipeline(Single/Linear Strategy) }{32}
+\contentsline {subsection}{\numberline {11.1.1}Basic Architecture/System}{32}
+\contentsline {subsection}{\numberline {11.1.2}Data}{34}
+\contentsline {subsection}{\numberline {11.1.3}Backtester/Simulator}{34}
+\contentsline {subsection}{\numberline {11.1.4}Trade Record and Money Management}{35}
+\contentsline {subsection}{\numberline {11.1.5}Analytics}{35}
+\contentsline {subsubsection}{ Strategy Management }{35}
+\contentsline {subsubsection}{Execution Analysis and Cost}{35}
+\contentsline {subsection}{\numberline {11.1.6}Research Team}{35}
+\contentsline {subsubsection}{Parameter Optmization and Control}{36}
+\contentsline {subsubsection}{Signal Indicator Design}{36}
+\contentsline {subsubsection}{Integration of single indicators and portfolio theory}{40}
+\contentsline {subsubsection}{Strategy Risk Management and Money management}{40}
+\contentsline {section}{\numberline {11.2}Backtesting}{41}
+\contentsline {chapter}{\numberline {12}Portfolio Risk Management}{42}
+\contentsline {section}{\numberline {12.1}Derivatives and Hedging Strategies}{42}
+\contentsline {section}{\numberline {12.2}FX risk management}{44}
+\contentsline {chapter}{\numberline {13}Monitoring and Performance Evaluation}{45}
+\contentsline {section}{\numberline {13.1}Monitoring}{45}
+\contentsline {section}{\numberline {13.2}Performance Evaluation}{45}
+\contentsline {subsection}{\numberline {13.2.1}Equity}{45}
+\contentsline {subsection}{\numberline {13.2.2}Fixed Income}{45}
+\contentsline {chapter}{\numberline {14}Alternative Data and General Machine Learning}{46}
+\contentsline {chapter}{\numberline {15}E-trading and Execution}{47}

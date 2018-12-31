@@ -365,9 +365,8 @@ Credit Value Adjustment(CVA)
 
 
 
-\part{Quantitative Portfolio Management}
+\part{Quantitative Investment Theories}
 \chapter{Portfolio Optimization Study}
-
 
 \begin{enumerate}
  \item Efficient Market Hypothesis (Weak, Semi-strong, Strong forms)
@@ -510,7 +509,8 @@ unfair coin to create 1/3 probability - combine two toss as one
 
  \end{enumerate}
  
-\section{Hard}
+\chapter{Quantitative Portfolio Mangement}
+
 \chapter{Statistical Arbitrage}
 
 \section{mean-reversion}
@@ -617,8 +617,47 @@ MBS Convexity Trade
 Stat Arb (typically high volume), Merger Arb, Relative Value, IntraCap Pairs 
  
 
-\chapter{Strategies Implementation/Platform Building}
-\section{ Trading System }
+\part{Quantitative Modeling and Strategies Implementation}
+
+\chapter{ Trading System }
+
+\chapter{ Strategy Development Overview}
+
+\section{Strategy Teams}
+
+Typically, need the sub functions/sub teams including:
+
+\begin{enumerate}
+ \item Data Curator: Data collection, cleaning, indexing, storing, adjusting and delivering 
+ \item Feature Engineering and Analytics: Data Mining, Signal Extraction and Processing using information theory, Data visualization, labeling, filtering, classifiers building - try to extract features
+ \item Strategies Research: Make sense of features, market observation, instrument knowledge and try to formulate general theory/intuition that explains market mechanics. Submit code to the backtesting team
+ \item Backtesting: Statistical, Stochastic, Econometric tests of strategies/portfolios
+ \item Deployment: Rely heavily on computing, process schedulers, automation servers, vectorization, multithreading, multiprocessing, Big Data, Machine Learning on Big Data and High-performance computing 
+\end{enumerate}
+
+Also, teams should also maintain and select current strategies, typically, a strategy experiences Embargo, Paper Trading, Real-money trading, Re-allocation and Decommission.
+
+Data Problems
+\begin{itemize}
+ \item Bonds: Recall, Termination (Aging), Exchanged
+ \item Stock: Corporate Actions (Splits, Reverse Splits, Voting Rights, etc)
+ \item Futures and Options: Termination and Rolling
+ \item Currencies: Not Traded in centralized order book 
+\end{itemize}
+
+Signals
+
+\begin{itemize}
+ \item Quote Offers canceling/replacing with sell orders 0 potnetial sell off information
+ \item Limit Orders vs Market Orders 
+\end{itemize}}
+
+ 
+
+
+
+
+
 \section{ Strategy Development Pipeline(Single/Linear Strategy) }
 \subsection{Basic Architecture/System}
 \includegraphics[scale=0.5]{1.JPG}
