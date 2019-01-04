@@ -594,7 +594,6 @@ other: liquidity risk premia
 \end{enumerate}
 
 
-
 \chapter{Single (Asset Class) Trading Strategies}
 \section{Equity}
 \section{Volatility and Dispersion Trades}
@@ -619,11 +618,7 @@ Stat Arb (typically high volume), Merger Arb, Relative Value, IntraCap Pairs
 
 \part{Quantitative Modeling and Strategies Implementation}
 
-\chapter{ Trading System }
-
-\chapter{ Strategy Development Overview}
-
-\section{Strategy Teams}
+\chapter{Strategy Development Overview}
 
 Typically, need the sub functions/sub teams including:
 
@@ -636,6 +631,43 @@ Typically, need the sub functions/sub teams including:
 \end{enumerate}
 
 Also, teams should also maintain and select current strategies, typically, a strategy experiences Embargo, Paper Trading, Real-money trading, Re-allocation and Decommission.
+
+Some Major Challenges:
+
+\begin{enumerate}
+ \item Traditional Portfolio Mangers work in silos and make decisions alone. While quant investing need to cut-down the decision making process to small research projects and run as a strategy factor
+ \item Combine "black-box" PM views/market intuition with quant research results from data/math. 
+ \item Combine machine learning algorithm with existing traditional strategies. 	
+ \item "Backtest overfitting": Without limitation on number of trials, Sharpe ratio in back test could be very high. 
+\end{enumerate}
+
+
+\chapter{Financial Data Modeling}
+
+\section{Financial Data Structure}
+
+\section{Financial Data Sampling}
+
+\subsection{Data Sampling Methods}
+
+\subsection{Data Sampling Weights}
+
+\section{Time-series Data Modeling}
+
+\section{Data Labeling in Strategy Research}
+
+
+
+
+\chapter{ Trading System }
+
+\chapter{ Strategy Development Overview}
+
+\section{Strategy Teams}
+
+
+
+
 
 Data Problems
 \begin{itemize}
@@ -650,13 +682,7 @@ Signals
 \begin{itemize}
  \item Quote Offers canceling/replacing with sell orders 0 potnetial sell off information
  \item Limit Orders vs Market Orders 
-\end{itemize}}
-
- 
-
-
-
-
+\end{itemize}
 
 \section{ Strategy Development Pipeline(Single/Linear Strategy) }
 \subsection{Basic Architecture/System}
@@ -909,5 +935,17 @@ Hedge Funds use it as part of Stat Arb (typically high volume), Merger Arb, Rela
 
 
 Execution, Market Impact, VWAP 
+
+
+\begin{thebibliography}{999}
+
+\bibitem{lamport94}
+  Marcos Lopez De Pardo, 
+  \emph{Advances in Financial Machine Learning}.
+  Wiley,
+  1st Edition,
+  2018
+
+\end{thebibliography}
  
 \end{document}                          % The required last line 

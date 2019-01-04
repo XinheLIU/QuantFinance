@@ -44,29 +44,37 @@
 \contentsline {section}{\numberline {8.6}commodities}{27}
 \contentsline {chapter}{\numberline {9}Quant Strategies and Long-short Strategies}{28}
 \contentsline {part}{III\hspace {1em}Quantitative Modeling and Strategies Implementation}{29}
-\contentsline {chapter}{\numberline {10} Trading System }{30}
-\contentsline {chapter}{\numberline {11} Strategy Development Overview}{31}
-\contentsline {section}{\numberline {11.1} Strategy Development Pipeline(Single/Linear Strategy) }{32}
-\contentsline {subsection}{\numberline {11.1.1}Basic Architecture/System}{32}
-\contentsline {subsection}{\numberline {11.1.2}Data}{34}
-\contentsline {subsection}{\numberline {11.1.3}Backtester/Simulator}{34}
-\contentsline {subsection}{\numberline {11.1.4}Trade Record and Money Management}{35}
-\contentsline {subsection}{\numberline {11.1.5}Analytics}{35}
-\contentsline {subsubsection}{ Strategy Management }{35}
-\contentsline {subsubsection}{Execution Analysis and Cost}{35}
-\contentsline {subsection}{\numberline {11.1.6}Research Team}{35}
-\contentsline {subsubsection}{Parameter Optmization and Control}{36}
-\contentsline {subsubsection}{Signal Indicator Design}{36}
-\contentsline {subsubsection}{Integration of single indicators and portfolio theory}{40}
-\contentsline {subsubsection}{Strategy Risk Management and Money management}{40}
-\contentsline {section}{\numberline {11.2}Backtesting}{41}
-\contentsline {chapter}{\numberline {12}Portfolio Risk Management}{42}
-\contentsline {section}{\numberline {12.1}Derivatives and Hedging Strategies}{42}
-\contentsline {section}{\numberline {12.2}FX risk management}{44}
-\contentsline {chapter}{\numberline {13}Monitoring and Performance Evaluation}{45}
-\contentsline {section}{\numberline {13.1}Monitoring}{45}
-\contentsline {section}{\numberline {13.2}Performance Evaluation}{45}
-\contentsline {subsection}{\numberline {13.2.1}Equity}{45}
-\contentsline {subsection}{\numberline {13.2.2}Fixed Income}{45}
-\contentsline {chapter}{\numberline {14}Alternative Data and General Machine Learning}{46}
-\contentsline {chapter}{\numberline {15}E-trading and Execution}{47}
+\contentsline {chapter}{\numberline {10}Financial Data Modeling}{31}
+\contentsline {section}{\numberline {10.1}Financial Data Structure}{31}
+\contentsline {section}{\numberline {10.2}Financial Data Sampling}{31}
+\contentsline {subsection}{\numberline {10.2.1}Data Sampling Methods}{31}
+\contentsline {subsection}{\numberline {10.2.2}Data Sampling Weights}{31}
+\contentsline {section}{\numberline {10.3}Time-series Data Modeling}{31}
+\contentsline {section}{\numberline {10.4}Data Labeling in Strategy Research}{31}
+\contentsline {chapter}{\numberline {11} Trading System }{32}
+\contentsline {chapter}{\numberline {12} Strategy Development Overview}{33}
+\contentsline {section}{\numberline {12.1}Strategy Teams}{33}
+\contentsline {section}{\numberline {12.2} Strategy Development Pipeline(Single/Linear Strategy) }{34}
+\contentsline {subsection}{\numberline {12.2.1}Basic Architecture/System}{34}
+\contentsline {subsection}{\numberline {12.2.2}Data}{37}
+\contentsline {subsection}{\numberline {12.2.3}Backtester/Simulator}{37}
+\contentsline {subsection}{\numberline {12.2.4}Trade Record and Money Management}{38}
+\contentsline {subsection}{\numberline {12.2.5}Analytics}{38}
+\contentsline {subsubsection}{ Strategy Management }{38}
+\contentsline {subsubsection}{Execution Analysis and Cost}{38}
+\contentsline {subsection}{\numberline {12.2.6}Research Team}{38}
+\contentsline {subsubsection}{Parameter Optmization and Control}{39}
+\contentsline {subsubsection}{Signal Indicator Design}{39}
+\contentsline {subsubsection}{Integration of single indicators and portfolio theory}{43}
+\contentsline {subsubsection}{Strategy Risk Management and Money management}{43}
+\contentsline {section}{\numberline {12.3}Backtesting}{44}
+\contentsline {chapter}{\numberline {13}Portfolio Risk Management}{45}
+\contentsline {section}{\numberline {13.1}Derivatives and Hedging Strategies}{45}
+\contentsline {section}{\numberline {13.2}FX risk management}{47}
+\contentsline {chapter}{\numberline {14}Monitoring and Performance Evaluation}{48}
+\contentsline {section}{\numberline {14.1}Monitoring}{48}
+\contentsline {section}{\numberline {14.2}Performance Evaluation}{48}
+\contentsline {subsection}{\numberline {14.2.1}Equity}{48}
+\contentsline {subsection}{\numberline {14.2.2}Fixed Income}{48}
+\contentsline {chapter}{\numberline {15}Alternative Data and General Machine Learning}{49}
+\contentsline {chapter}{\numberline {16}E-trading and Execution}{50}
