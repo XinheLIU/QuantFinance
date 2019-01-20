@@ -1,7 +1,18 @@
 \documentclass[11pt, openany]{book}              % Book class in 11 points
 \parindent0pt  \parskip10pt             % make block paragraphs
 \raggedright                            % do not right justify
-\usepackage{graphicx}
+\usepackage{graphicx}\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}
+\usepackage[sc,osf]{mathpazo}
+
+\let\oldnorm\norm   % <-- Store original \norm as \oldnorm
+\let\norm\undefined % <-- "Undefine" \norm
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclareMathOperator*{\argmax}{arg\,max}  % in your preamble
+\DeclareMathOperator*{\argmin}{arg\,min}  % in your preamble 
+
+
 %\graphicspath{ {./images/} }
 \title{\bf Quantitative Investment Handbook}    % Supply information
 \author{Xinhe Liu}              %   for the title page.
@@ -924,22 +935,70 @@ stress testing\
 
 
 
-\chapter{Monitoring and Performance Evaluation}
+
+\chapter{Monitoring and Performance Attribution}
 
 \section{Monitoring}
     1. rebalancing corridor width
     2. CPPI/ swaption etc
 
-\section{Performance Evaluation}
+\section{Performance Analysis}
+
+\subsection{Measure Performance}
+Measure Performance Steps
+\begin{itemize}
+ \item Measure returns: Time-weighted(TWRR) or money-weighted (MWRR)
+ \item Choose Benchmark: Customized, Broad Indices, Market Indices, Factor Models, Manager Universe or absolute return (Long-short risk neutral fund)
+ \item Performance Attribution (next section)
+\end{itemize}
+
+Common Performance Measures
+
+\begin{itemize}
+ \item Jensen's Alpha (expost $E(r_p) - E(r_b)$
+ $$ r_p(t) = \alpha_p + \beta_P r_B(t) + \epsilon_p(t) $$
+ t-test on $\frac{\alpha_P}{SE_{\alpha_p}}$ usually use 2 as a thredhold \\
+ Rule of Thumb:
+ $$IR = \frac{t-stat}{\sqrt{T}}$$
+ Can be used with a single benchmark, sector or style multi-factor models
+ \item Ratio Measures
+	\subitem Total Risk: Sharpe, M2 Measure
+	\subitem Systematic Risk: Treynor Ratio
+	\subitem Information Ratio: $$ \frac{r_A - r_B}{\sigma_{A/B}}$$
+\end{itemize}
+
+\subsection{Performance Attribution and Style Analysis} 
+
+\begin{itemize}
+ \item Macro Performance Attribution
+ \item Micro Performance Attribution
+ \item Style Analysis
+ $$r_p(t) = \sum w_i f_i(t) + u_p(t)$$
+ Solve quadratic optimization
+ $$\argmin var(u_p(t))$$
+ $$w_i \geq 0, \sum w_i = 1$$
+ (notice, not minimize squared error, use $t-T$ period to estimate $w_i$, then get the selection return(specific risk) \\
+  Variations include
+  \begin{itemize}
+  	\item weight change over time, the will cause the solution to be undetermined, need to discourage large movements by regularization. 
+  	\item factors usage: 
+  	\subitem  fundamental factor model 
+  		\subsubitem sector factor: from return to get exposure
+  		\subsubitem style factor: from exposure (factor loading/factor scores) to get return. (See Factor Models)
+  	\subitem macroeconomic factor models(economic factors as GDP, rates)
+  	\subitem statistical factor models(PCA, Asymptotic PCAs and time varying factors) 
+  \end{itemize} 
+  Then decompose the risk with factors: the risk of k-th exposure weighted factor:
+  $$\sqrt{\frac{1}{T}\sum_{l=1}^T (w_k f_k(l) - \overline{w_k f_k})^2}$$
+  
+  
+\end{itemize}
 
 \subsection{Equity}
 
 Factor Model (Axima, Barra) 
 \subsection{Fixed Income}
-
     1. fixed income - no contribution-risk-free-asset categories-benchmark level(style)-manger-allocation effects(residual) 
-
-
 \chapter{Alternative Data and General Machine Learning}
 
 \chapter{E-trading and Execution}
