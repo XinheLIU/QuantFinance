@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 JAN 2019 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 JAN 2019 22:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -420,66 +420,61 @@ Chapter 10.
 Chapter 11.
 [32
 
-]
+] [33]
 Chapter 12.
-[33
-
-]
-Chapter 13.
-<1.JPG, id=138, 721.69624pt x 485.815pt>
-File: 1.JPG Graphic file (type jpg)
- <use 1.JPG>
-Package pdftex.def Info: 1.JPG used on input line 715.
-(pdftex.def)             Requested size: 360.84724pt x 242.9069pt.
- <2.JPG, id=139, 692.5875pt x 548.0475pt>
-File: 2.JPG Graphic file (type jpg)
- <use 2.JPG>
-Package pdftex.def Info: 2.JPG used on input line 716.
-(pdftex.def)             Requested size: 346.2929pt x 274.02307pt.
- <3.JPG, id=140, 829.0975pt x 599.23875pt>
-File: 3.JPG Graphic file (type jpg)
- <use 3.JPG>
-Package pdftex.def Info: 3.JPG used on input line 717.
-(pdftex.def)             Requested size: 414.54774pt x 299.61864pt.
- <4.JPG, id=141, 226.8475pt x 334.24875pt>
-File: 4.JPG Graphic file (type jpg)
- <use 4.JPG>
-Package pdftex.def Info: 4.JPG used on input line 718.
-(pdftex.def)             Requested size: 113.42346pt x 167.12396pt.
- <5.JPG, id=142, 284.06125pt x 455.7025pt>
-File: 5.JPG Graphic file (type jpg)
- <use 5.JPG>
-Package pdftex.def Info: 5.JPG used on input line 719.
-(pdftex.def)             Requested size: 142.03026pt x 227.85068pt.
- <6.JPG, id=143, 327.2225pt x 273.02pt>
-File: 6.JPG Graphic file (type jpg)
- <use 6.JPG>
-Package pdftex.def Info: 6.JPG used on input line 720.
-(pdftex.def)             Requested size: 163.61084pt x 136.50966pt.
-
-Overfull \hbox (0.84724pt too wide) in paragraph at lines 715--721
-[] 
- []
-
-
-Overfull \hbox (54.54774pt too wide) in paragraph at lines 715--721
-[] 
- []
-
 [34
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Chapter 13.
+<1.JPG, id=141, 721.69624pt x 485.815pt>
+File: 1.JPG Graphic file (type jpg)
+ <use 1.JPG>
+Package pdftex.def Info: 1.JPG used on input line 721.
+(pdftex.def)             Requested size: 360.84724pt x 242.9069pt.
+ <2.JPG, id=142, 692.5875pt x 548.0475pt>
+File: 2.JPG Graphic file (type jpg)
+ <use 2.JPG>
+Package pdftex.def Info: 2.JPG used on input line 722.
+(pdftex.def)             Requested size: 346.2929pt x 274.02307pt.
+ <3.JPG, id=143, 829.0975pt x 599.23875pt>
+File: 3.JPG Graphic file (type jpg)
+ <use 3.JPG>
+Package pdftex.def Info: 3.JPG used on input line 723.
+(pdftex.def)             Requested size: 414.54774pt x 299.61864pt.
+ <4.JPG, id=144, 226.8475pt x 334.24875pt>
+File: 4.JPG Graphic file (type jpg)
+ <use 4.JPG>
+Package pdftex.def Info: 4.JPG used on input line 724.
+(pdftex.def)             Requested size: 113.42346pt x 167.12396pt.
+ <5.JPG, id=145, 284.06125pt x 455.7025pt>
+File: 5.JPG Graphic file (type jpg)
+ <use 5.JPG>
+Package pdftex.def Info: 5.JPG used on input line 725.
+(pdftex.def)             Requested size: 142.03026pt x 227.85068pt.
+ <6.JPG, id=146, 327.2225pt x 273.02pt>
+File: 6.JPG Graphic file (type jpg)
+ <use 6.JPG>
+Package pdftex.def Info: 6.JPG used on input line 726.
+(pdftex.def)             Requested size: 163.61084pt x 136.50966pt.
 
-
-Overfull \hbox (25.04593pt too wide) has occurred while \output is active
-\OT1/pplj/m/it/10.95 13.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 35
+Overfull \hbox (0.84724pt too wide) in paragraph at lines 721--727
+[] 
  []
 
-[35 <./1.JPG>]
+
+Overfull \hbox (54.54774pt too wide) in paragraph at lines 721--727
+[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36 <./2.JPG>]
+ [35
+
+]
+Overfull \vbox (70.97748pt too high) has occurred while \output is active []
+
+ [36 <./1.JPG>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -487,45 +482,45 @@ Overfull \hbox (25.04593pt too wide) has occurred while \output is active
 \OT1/pplj/m/it/10.95 13.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 37
  []
 
-[37 <./3.JPG> <./4.JPG> <./5.JPG>] [38 <./6.JPG>]
+[37 <./2.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38 <./3.JPG> <./4.JPG> <./5.JPG>]
 Overfull \hbox (25.04593pt too wide) has occurred while \output is active
 \OT1/pplj/m/it/10.95 13.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 39
  []
 
-[39] <7.JPG, id=163, 493.845pt x 501.875pt>
+[39 <./6.JPG>] [40] <7.JPG, id=166, 493.845pt x 501.875pt>
 File: 7.JPG Graphic file (type jpg)
  <use 7.JPG>
-Package pdftex.def Info: 7.JPG used on input line 788.
+Package pdftex.def Info: 7.JPG used on input line 794.
 (pdftex.def)             Requested size: 246.92189pt x 250.93687pt.
- <8.JPG, id=164, 747.79375pt x 743.77875pt>
+ <8.JPG, id=167, 747.79375pt x 743.77875pt>
 File: 8.JPG Graphic file (type jpg)
  <use 8.JPG>
-Package pdftex.def Info: 8.JPG used on input line 790.
+Package pdftex.def Info: 8.JPG used on input line 796.
 (pdftex.def)             Requested size: 373.89595pt x 371.88846pt.
- <9.JPG, id=165, 561.09625pt x 728.7225pt>
+ <9.JPG, id=168, 561.09625pt x 728.7225pt>
 File: 9.JPG Graphic file (type jpg)
  <use 9.JPG>
-Package pdftex.def Info: 9.JPG used on input line 793.
+Package pdftex.def Info: 9.JPG used on input line 799.
 (pdftex.def)             Requested size: 280.54744pt x 364.36035pt.
- <10.JPG, id=166, 832.10875pt x 844.15375pt>
+ <10.JPG, id=169, 832.10875pt x 844.15375pt>
 File: 10.JPG Graphic file (type jpg)
  <use 10.JPG>
-Package pdftex.def Info: 10.JPG used on input line 794.
+Package pdftex.def Info: 10.JPG used on input line 800.
 (pdftex.def)             Requested size: 416.05336pt x 422.07584pt.
 
-Overfull \hbox (13.89595pt too wide) in paragraph at lines 785--800
+Overfull \hbox (13.89595pt too wide) in paragraph at lines 791--806
 [] 
  []
 
 
-Overfull \hbox (56.05336pt too wide) in paragraph at lines 785--800
+Overfull \hbox (56.05336pt too wide) in paragraph at lines 791--806
 [] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -533,10 +528,10 @@ Overfull \hbox (25.04593pt too wide) has occurred while \output is active
 \OT1/pplj/m/it/10.95 13.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 41
  []
 
-[41 <./7.JPG>]
+[41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42 <./8.JPG>]
+ [42 <./7.JPG>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -544,25 +539,28 @@ Overfull \hbox (25.04593pt too wide) has occurred while \output is active
 \OT1/pplj/m/it/10.95 13.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 43
  []
 
-[43 <./9.JPG>]
+[43 <./8.JPG>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44 <./10.JPG>] <11.JPG, id=183, 619.31375pt x 365.365pt>
-File: 11.JPG Graphic file (type jpg)
- <use 11.JPG>
-Package pdftex.def Info: 11.JPG used on input line 805.
-(pdftex.def)             Requested size: 309.65611pt x 182.68205pt.
+ [44 <./9.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (25.04593pt too wide) has occurred while \output is active
 \OT1/pplj/m/it/10.95 13.2.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 45
  []
 
-[45 <./11.JPG>] [46]
+[45 <./10.JPG>] <11.JPG, id=187, 619.31375pt x 365.365pt>
+File: 11.JPG Graphic file (type jpg)
+ <use 11.JPG>
+Package pdftex.def Info: 11.JPG used on input line 811.
+(pdftex.def)             Requested size: 309.65611pt x 182.68205pt.
+ [46 <./11.JPG>] [47]
 Chapter 14.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47
+ [48
 
 ]
 Missing character: There is no â in font pplr9o!
@@ -580,19 +578,27 @@ Missing character: There is no ˆ in font pplr9o!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48] [49]
+ [49] [50]
 Chapter 15.
-[50
 
-] [51] [52]
+Underfull \vbox (badness 1997) has occurred while \output is active []
+
+ [51
+
+]
+Overfull \hbox (16.6498pt too wide) detected at line 984
+\OML/zplm/m/it/10.95 r[] \OT1/zplm/m/n/10.95 = [](\OML/zplm/m/it/10.95 w[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 w[]\OT1/zplm/m/n/10.95 )(\OML/zplm/m/it/10.95 r[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 r[]\OT1/zplm/m/n/10.95 ) + [](\OML/zplm/m/it/10.95 w[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 w[]\OT1/zplm/m/n/10.95 )(\OML/zplm/m/it/10.95 r[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 r[]\OT1/zplm/m/n/10.95 ) + [] \OML/zplm/m/it/10.95 w[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 r[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 r[]\OT1/zplm/m/n/10.95 )
+ []
+
+[52] [53] [54]
 Chapter 16.
-[53
+[55
 
 ]
 Chapter 17.
-[54
+[56
 
-] [55
+] [57
 
 ] (/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.aux)
 
@@ -608,10 +614,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  38i,6n,24p,502b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.pdf" (61 pages, 1343545 bytes).
+Output written on "/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.pdf" (63 pages, 1345463 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
+ 269 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

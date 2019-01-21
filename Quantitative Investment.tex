@@ -672,6 +672,25 @@ Some Major Challenges:
 
 \section{Financial Data Structure}
 
+Data Problems
+\begin{itemize}
+ \item return measured less than a year includes implicit extrapolation
+ \item illiquid and infrequent priced assets may be priced with
+ 	\subitem Matrix pricing (common in bond market)
+ 	\subitem Consensus/Expert Data
+ \item Bonds: Recall, Termination (Aging), Exchanged
+ \item Stock: Corporate Actions (Splits, Reverse Splits, Voting Rights, etc)
+ \item Futures and Options: Termination and Rolling
+ \item Currencies: Not Traded in centralized order book 
+\end{itemize}
+
+Signals
+
+\begin{itemize}
+ \item Quote Offers canceling/replacing with sell orders 0 potnetial sell off information
+ \item Limit Orders vs Market Orders 
+\end{itemize}
+
 \section{Financial Data Sampling}
 
 \subsection{Data Sampling Methods}
@@ -695,20 +714,7 @@ Some Major Challenges:
 
 
 
-Data Problems
-\begin{itemize}
- \item Bonds: Recall, Termination (Aging), Exchanged
- \item Stock: Corporate Actions (Splits, Reverse Splits, Voting Rights, etc)
- \item Futures and Options: Termination and Rolling
- \item Currencies: Not Traded in centralized order book 
-\end{itemize}
 
-Signals
-
-\begin{itemize}
- \item Quote Offers canceling/replacing with sell orders 0 potnetial sell off information
- \item Limit Orders vs Market Orders 
-\end{itemize}
 
 \section{ Strategy Development Pipeline(Single/Linear Strategy) }
 \subsection{Basic Architecture/System}
@@ -936,7 +942,7 @@ stress testing\
 
 
 
-\chapter{Monitoring and Performance Attribution}
+\chapter{Monitoring and Performance Evaluation}
 
 \section{Monitoring}
     1. rebalancing corridor width
@@ -944,13 +950,73 @@ stress testing\
 
 \section{Performance Analysis}
 
-\subsection{Measure Performance}
-Measure Performance Steps
+\begin{enumerate}
+ \item Performance Measurement
+ \subitem Measure returns: Time-weighted(TWRR) or money-weighted (MWRR)
+ \item Performance Attribution
+ \subitem Key is benchmark
+ \item Performance Appraisal 
+ \subitem Different Performance Measures
+\end{enumerate}
+
+
+\subsection{Performance Attribution and Style Analysis} 
+
+Key to do performance attribution and portfolio risk management is the selection of benchmarks (ideally liquid, investable, and reflects style). Common ones like indices, manager's universe, factor model or customized benchmark can be tested by
+
 \begin{itemize}
- \item Measure returns: Time-weighted(TWRR) or money-weighted (MWRR)
- \item Choose Benchmark: Customized, Broad Indices, Market Indices, Factor Models, Manager Universe or absolute return (Long-short risk neutral fund)
- \item Performance Attribution (next section)
+ \item Minimal systematic bias: (historical beta of portfolio of benchmark should be close to 1, correlation between P-B and B-M should be zero
+ \item Tracking Error should be minimal
+ \item Exposure to systematic risks should be similar to the portfolio
+ \item Coverage (percent of market value of portfolio) should be maximal
+ \item Turn over should not be excessive
+ \item Active positions should be measurable and positive
+ \end{itemize} 
+
+Performance Attribution
+
+\begin{itemize}	
+
+ \item Macro Performance Attribution : From fund sponsor's perspective. 
+ 	\subitem Usually from asset class perspective: Policy Allocation + benchmark asset return + fund returns, variations, cash flows
+ \item Micro Performance Attribution: To stock/asset level or to factor level (see: style analysis).
+ e.g.
+ $$r_v = \sum_j(w_{Pj} - w_{Bj})(r_{Bj}- r_B) + \sum _j(w_{Pj} - w_{Bj})(r_{Pj} - r_{Bj}) + \sum_j w_B (r_{Pj} - r_{Bj}) $$
+ \item Style Analysis
+ 	$$r_p(t) = \sum w_i f_i(t) + u_p(t)$$
+ 	Solve quadratic optimization
+ 	$$\argmin var(u_p(t))$$
+ 	$$w_i \geq 0, \sum w_i = 1$$
+ 	(notice, not minimize squared error, use $t-T$ period to estimate $w_i$, then get the selection return(specific risk) \\
+  \item Variations include
+  
+    \begin{itemize}
+  	\item weight change over time, the will cause the solution to be undetermined, need to discourage large movements by regularization. 
+  	\item factors usage: 
+  	\subitem  fundamental factor model 
+  		\subsubitem sector factor: from return to get exposure
+  		\subsubitem style factor: from exposure (factor loading/factor scores) to get return. (See Factor Models)
+  	\subitem macroeconomic factor models(economic factors as GDP, rates)
+  	\subitem statistical factor models(PCA, Asymptotic PCAs and time varying factors) 
+  \end{itemize} 
+  
+  \item Then decompose the risk with factors: the risk of k-th exposure weighted factor: $$\sqrt{\frac{1}{T}\sum_{l=1}^T (w_k f_k(l) - \overline{w_k f_k})^2}$$
+  \item Bond portfolio performance Attribution: Same spirit but more complicated than equity portfolio: Need to separate 
+  	\subitem External Interest Rate Enviroment
+  	  	\subsubitem returns on default free bonds with no forward rate change
+  		\subsubitem return due to the change of forward curves
+  	\subitem Management Process
+  		\subsubitem Interest Rate Management Effect: treat as if default free bonds
+  		\subsubitem Sector Quality Effect: sector and quality group
+  		\subsubitem Security Selection: within group selection
+  		\subsubitem Trading Activity: residual
 \end{itemize}
+
+
+  
+\subsection{Measure Performance}
+
+The key purpose is to collect data and do statistical tests on alpha. 
 
 Common Performance Measures
 
@@ -966,39 +1032,9 @@ Common Performance Measures
 	\subitem Systematic Risk: Treynor Ratio
 	\subitem Information Ratio: $$ \frac{r_A - r_B}{\sigma_{A/B}}$$
 \end{itemize}
-
-\subsection{Performance Attribution and Style Analysis} 
-
-\begin{itemize}
- \item Macro Performance Attribution
- \item Micro Performance Attribution
- \item Style Analysis
- $$r_p(t) = \sum w_i f_i(t) + u_p(t)$$
- Solve quadratic optimization
- $$\argmin var(u_p(t))$$
- $$w_i \geq 0, \sum w_i = 1$$
- (notice, not minimize squared error, use $t-T$ period to estimate $w_i$, then get the selection return(specific risk) \\
-  Variations include
-  \begin{itemize}
-  	\item weight change over time, the will cause the solution to be undetermined, need to discourage large movements by regularization. 
-  	\item factors usage: 
-  	\subitem  fundamental factor model 
-  		\subsubitem sector factor: from return to get exposure
-  		\subsubitem style factor: from exposure (factor loading/factor scores) to get return. (See Factor Models)
-  	\subitem macroeconomic factor models(economic factors as GDP, rates)
-  	\subitem statistical factor models(PCA, Asymptotic PCAs and time varying factors) 
-  \end{itemize} 
-  Then decompose the risk with factors: the risk of k-th exposure weighted factor:
-  $$\sqrt{\frac{1}{T}\sum_{l=1}^T (w_k f_k(l) - \overline{w_k f_k})^2}$$
   
-  
-\end{itemize}
 
-\subsection{Equity}
 
-Factor Model (Axima, Barra) 
-\subsection{Fixed Income}
-    1. fixed income - no contribution-risk-free-asset categories-benchmark level(style)-manger-allocation effects(residual) 
 \chapter{Alternative Data and General Machine Learning}
 
 \chapter{E-trading and Execution}
