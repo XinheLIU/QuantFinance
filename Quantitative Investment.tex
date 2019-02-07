@@ -10,7 +10,8 @@
 \let\norm\undefined % <-- "Undefine" \norm
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 \DeclareMathOperator*{\argmax}{arg\,max}  % in your preamble
-\DeclareMathOperator*{\argmin}{arg\,min}  % in your preamble 
+\DeclareMathOperator*{\argmin}{arg\,min}  % in your preamble
+\DeclareMathOperator{\E}{\mathbb{E}}
 
 
 %\graphicspath{ {./images/} }
@@ -578,6 +579,81 @@ intraday mean-reversion
 Volatility Clustering and Leverage Effect 
 
 \chapter{Factor Investing}
+
+\section{Factor Models}
+
+Factor Models plays a key role in all components of asset management
+
+\begin{itemize}
+	\item Valuation and Market Expectation: CAPM, APT, alpha signals
+	\item Risk Management: Risk attribution, stress test, risk modelling
+	\item Portfolio Management: Smart beta, portfolio construction
+	\item Performance: Performance attribution, style analysis
+\end{itemize}
+
+Major Types of Factor Models
+
+\begin{itemize}
+	\item Regression Model: Observable factor returns
+	$$ \mathbf{X} =  \mathbf{a} +  \mathbf{BZ} +  \mathbf{U}$$ ,where $\mathbf{Z}$ is observable, estimate $\mathbf{B, a}$($\beta, \alpha$)
+	$$(\mathbf{a,B}) = \argmin \E( \norm{\mathbf{a} + \mathbf{BZ} - \mathbf{X}}^2)$$
+	$$ B = cov(\mathbf{X,Z}) var^{-1} (\mathbf{Z}), a = \E(\mathbf{X} - \mathbf{B}\E(\mathbf{Z}))$$
+	Example: CAPM (CAPM beta can be improved by shrinking towards 1
+	\item Cross-sectional Model: $\mathbf{B}$ (factor loadings) is observed. Usually use weighted list squares
+	$$ \mathbf{X} =  \mathbf{a} +  \mathbf{BZ} +  \mathbf{U}$$ 
+	Usually solved with Weighted Least Squares:
+	$$(\mathbf{a,Z}) = \argmin \E( \norm{\mathbf{a} + \mathbf{BZ} - \mathbf{X}}^2_{\Delta^{-1}})$$
+	$$ Z = (\mathbf{B}^T \mathbf{\Delta}^{-1} \mathbf{B})^{-1} \mathbf{B}^T \mathbf{\Delta}^{-1} \mathbf{X}, a = \E(\mathbf{X} - \mathbf{B}\E(\mathbf{Z}))$$
+	$\mathbf{\Delta}$ is often diagonal - associated to preassumed residual sizes.
+	Example: most common models, and risk models such as Aximoa and Barra $\mathbf{r} = \mathbf{Bf} + \mathbf{u}$, use time series data of r to compute time series data of f
+	
+	\item Principal Components Model
+	$$ \mathbf{X} =  \mathbf{a} +  \mathbf{BZ} +  \mathbf{U}$$
+	 $$\mathbf{Z} = [Z_1, Z_2, ..., Z_n]^T$$
+	 $$ Z_i = \mathbf{e}_i^T(\mathbf{X} - \E(\mathbf{X})$$
+	 $$ \mathbf{e}_i = \argmax _{\mathbf{e}} var(\mathbf{e}^T\mathbf{X})$$
+	 $$\norm{\mathbf{e}}^2 = 1$$
+	 $$ \mathbf{e}_k^T \mathbf{e} = 0, k = 1,...,i-1$$
+	 then 
+	 $$\mathbf{V} = var(\mathbf{X}) = [\mathbf{e_1}, \mathbf{e_2},...\mathbf{e_n}]
+	 \begin{bmatrix} 
+  				 \lambda_1^2 & & \\ 
+  				  & \ddots & \\
+  				 &  & \lambda_n^2
+	\end{bmatrix} [\mathbf{e_1}, \mathbf{e_2},...\mathbf{e_n}]
+	 $$
+	 Principal Components
+	 $$X_i^{PC} = \mathbf{e}_i z_i = \mathbf{e}_i \mathbf{e}_i^ T(\mathbf{X} - \E( \mathbf{X})$$
+	 $$\mathbf{B}= [\mathbf{e_1}, \mathbf{e_2},...\mathbf{e_n}], \mathbf{a} = \E( \mathbf{X})$$
+	 
+	\item Hidden Model: Try to distinguish between systematic and idiosyncratic risk 
+	$$ \mathbf{X} =  \mathbf{a} +  \mathbf{BZ} +  \mathbf{U}$$ 
+	want $cov(\mathbf{Z}, \mathbf{U})$ to be 0 and $var{U}$ diagonal,
+	want $\mathbf{V} = var(\mathbf{X}) = \mathbf{B}^T var(\mathbf{Z}) \mathbf{B}^T + \mathbf{\Delta}$
+	Example: the APT Model
+\end{itemize}
+
+From a factor portfolio
+
+\begin{itemize}
+	\item Signal portfolio: from factor signals, From a fractile(divide the universe to fractile, form equal weighed portfolios for each fractile) or long-short( long equal weight portfolio with high score, short with low score)
+	\item Factor Mimicking Portfolios: with only exposure to one of alpha singal/factor attributes $\mathbf{a}$
+	$$ min  \mathbf{h}^T  \mathbf{V}  \mathbf{h}$$, $$ \mathbf{a}^T  \mathbf{h} = 1$$
+	$$ \mathbf{h} = \frac{1}{ \mathbf{a}^T \mathbf{V} \mathbf{a}} \mathbf{V}^{-1}a$$
+	in additional, be cash neutral or factor neutral
+	$$ \mathbf{1}T\mathbf{h} = 0$$ or $$\mathbf{B}^T \mathbf{h} = 0 $$
+\end{itemize}
+
+
+\section{Alpha}
+
+Grinold and Kahn’s rule of thumb
+
+$$ \alpha = IC \times score \times volatility$$
+
+Fundamental law of active management
+
+$$ IR = IC \sqrt{BR}$$
  
 \section{Smart beta and Smart Alpha}                  % Print a "section" heading
 
@@ -589,7 +665,7 @@ portable alpha
 long short equities (factor) 
 convertible arbitrage
 
-\section{factor analysis and risk Premia}
+\section{Risk Premia Factors}
 
 \begin{itemize}
 	\item Value
@@ -741,6 +817,14 @@ Typically, need the sub functions/sub teams including:
  \item Deployment: Rely heavily on computing, process schedulers, automation servers, vectorization, multithreading, multiprocessing, Big Data, Machine Learning on Big Data and High-performance computing 
 \end{enumerate}
 
+Backoffice and Risk Management (See Risk Management chapter)
+
+\begin{enumerate}
+ \item Portfolio Aggregation
+ \item Portfolio Evaluation
+ \item Performance/Risk Attribution
+\end{enumerate}
+
 Also, teams should also maintain and select current strategies, typically, a strategy experiences Embargo, Paper Trading, Real-money trading, Re-allocation and Decommission.
 
 Some Major Challenges:
@@ -756,6 +840,15 @@ Some Major Challenges:
 \chapter{Financial Data Modeling}
 
 \section{Financial Data Structure}
+
+Basic Assumptions: Most time should check implicit assumptions
+
+\begin{itemize}
+\item Equities $log(\frac{V_{t+1}}{V_t}$ i.i.d
+\item Fixed Income $Y_t(\tau) = -\frac{1}{\tau} log(V_t(t+\tau))$ i.i.d shock on interest rate (bond yield)
+\item Risk drivers/factors $\mathbf{X}_t = [X_{1,t}...X_{\bar{d},t}]$ homogeneous in time, and determines the joint PnL of instruments
+
+\end{itemize}
 
 Data Problems
 \begin{itemize}
@@ -790,14 +883,6 @@ Signals
 
 
 \chapter{ Trading System }
-
-\chapter{ Strategy Development Overview}
-
-\section{Strategy Teams}
-
-
-
-
 
 
 
