@@ -8,6 +8,7 @@
 
 \let\oldnorm\norm   % <-- Store original \norm as \oldnorm
 \let\norm\undefined % <-- "Undefine" \norm
+\newcommand\tab[1][1cm]{\hspace*{#1}}
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 \DeclareMathOperator*{\argmax}{arg\,max}  % in your preamble
 \DeclareMathOperator*{\argmin}{arg\,min}  % in your preamble
@@ -425,7 +426,24 @@ Credit Value Adjustment(CVA)
 
 
 \part{Quantitative Investment Theories}
+
 \chapter{Quantitative Portfolio Mangement}
+
+
+\section{Overview and Baseline Theories}
+
+A Basic Quant-trading System needs the following components (maybe from some teams, but need to be integrated)
+
+\begin{enumerate}
+\item Benchmark against appropriate total return index
+\item Asset Allocation and Portfolio Management	framework
+\item Rebalance and account for dynamic risk 
+\item Risk tolerance and position sizing quantitatively (Kelly's Criterion)
+\item (Optional) Market Regime Filter 
+\item Cash Management and Cash-like Instruments Management
+\end{enumerate}
+
+Financial Theories involved
 
 \begin{enumerate}
  \item Efficient Market Hypothesis (Weak, Semi-strong, Strong forms)
@@ -434,7 +452,6 @@ Credit Value Adjustment(CVA)
     \item Minimum Variance Portfolio / Tangency Portfolio 
     \item Jensen's alpha
   \end{itemize}
-
   \item Capital Asset Pricing Model(CAPM) Model \\
         $$ r = \beta(r_m - r_f) + r_f $$
  		$$\beta = \frac{cov(r,r_M)}{var(r_M)}$$
@@ -449,115 +466,131 @@ Credit Value Adjustment(CVA)
    \end{itemize}
  \item Valuation using Multiples - P/E, P/B 
  \end{enumerate}
+ 
+ 
+\section{Portfolio Optimization}
 
+\subsection{Problems}
 
+\begin{itemize}
+	\item goal-based approach
+        \subitem describing goals, constructing sub-portfolios (selecting a module)
+        \subitem Active Holding Optimization - Goal based
+	 \item liability-relative
+         \subitem surplus optimization
+        \subitem hedging/risk-seeking portfolio
+         \subitem integrated asset-liability (non-linear correlation)
+\end{itemize}
 
+\subsection{Models}
 
-Mainframe Portfolio Optimization Models Include
+\begin{enumerate}
+	\item Single Period Models: Mean-variance models, Stochastic Optimization Models
+		\subitem  Mixed Integer Optimization
+	\item Multi-period Models: Kelly Criterion, Dynamic Portfolio Optimization, Transaction Cost \& Taxes
+		\subitem  Stochastic and Dynamic Optimization
+\end{enumerate}
 
-    1. portfolio optimization - mean-variance short-comings and 
-        1. Monte-Carlo simulation
-        2. reverse optimization and black-litterman(less sensitive to inputs)
-        3. resampled mean-variance optimization
-        4. add additional constriants (other than budget) - concentrated position
-        5. resampled mean-variance
-        6. non-normal optimization approach
-        7. allocating to less liquid asset class - (no investable benchmark)
-        8. risk budgeting vs factor based asset allocation(risk parity)
+\subsubsection{Mean-variance model}
 
+\begin{itemize}
+	\item Optimization
+$$ \min_{\mathbf{x}} \mathbf{x^TVx} $$
+$$ \boldsymbol{ \mu^T x} \geq \bar{\mu}, x \in \chi$$
+equivalent to 
+$$ \max_{\mathbf{x}} \boldsymbol{ \mu^T x} $$
+$$  \mathbf{x^TVx} \leq \bar{\sigma^2}, x \in \chi$$
+or
+$$ \max_{\mathbf{x}} \boldsymbol{ \mu^T x}  - \frac{\gamma}{2} \mathbf{x^TVx} $$
+$$ x \in \chi$$
 
-    1. liability-relative
-        1. surplus optimization
-        2. hedging/risk-seeking portfolio
-        3. integrated asset-liability (non-linear correlation)
-    2. goal-based approach
-        1. describing goals, constructing sub-portfolios (selecting a module)
-  One-fund theorem, two fund theorem 
+\item Two Fund Theorem
 
+$$ \max_{\mathbf{x}} \boldsymbol{\mu^T x}  - \frac{\gamma}{2} \mathbf{x^TVx} $$
+$$ \mathbf{1^Tx} = 1$$
 
-   convex reformulation of maximizing Sharpe ratio problem(normalizing) 
+Solution 
 
+$$ \mathbf{x^*} = \lambda \frac{1}{\boldsymbol{1^TV^{-1}\mu}}\boldsymbol{V^{-1}\mu} + (1 - \lambda)\frac{1}{\mathbf{1^TV^{-1}1}}\mathbf{V^{-1}1}$$
 
-  Multi-factor Risk Model 
-    $$r = \mathbf{B}f + u ~ V = \mathbf{B}cov(f)\mathbf{B}^T + cov(u)$$ 
-   
-   Mixed Integer Optimization
+$$\lambda = \frac{\boldsymbol{1^TV^{-1}\mu}}{\gamma}$$
 
+Notice, 
 
-   Stochastic and Dynamic Optmization
+\tab $\frac{1}{\mathbf{1^TV^{-1}\mu}}\boldsymbol{V^{-1}\mu}$ is the solution of $\min_{\mathbf{x}} \mathbf{x^TVx}, \mathbf{1^Tx} = 1$
 
+\item One Fund Theorem
 
-Issue 
+Add a risk-free asset into the portfolio
 
+$$ \max_{\mathbf{x}} (\boldsymbol{\mu} - r_f\mathbf{1^T}) \mathbf{x} - \frac{\gamma}{2} \mathbf{x^TVx} $$
 
-	Active Holding Optimization
-              optimize alpha holdings and tracking error
+Solution
 
+$$ \mathbf{x^*} = \lambda \frac{1}{\mathbf{1^TV^{-1}}(\boldsymbol{\mu} - r_f\mathbf{1^T})}\boldsymbol{V^{-1}}(\boldsymbol{\mu} - r_f \mathbf{1^T})$$
 
+$$\lambda = \frac{\mathbf{1^TV^{-1}}(\boldsymbol{\mu} - r_f\mathbf{1^T})}{\gamma}$$
 
-Improvements on MVO
-   estimation error
-  	Shrinkage estimators
-		Jason-Stein Estimator  
-	Black-Litterman Model
-	Robust Estimators
+\item Characteristic Portfolio
 
-    optimization issue
-	add constraints
-	resampled efficiency
-	use other diversification approach 
-		risk-parity 
-  		maximize diversification		
+$$\frac{1}{\boldsymbol{1^TV^{-1}a}}\boldsymbol{V^{-1}a}$$
 
+for attribute $\mathbf{a}$
 
+\item Common Constraints imposed on portfolio optimization would be
+	\begin{itemize}
+		\item Long-only
+		\item Budget Constraint 
+		\item Bounds on exposure to sectors
+		\item Bounds on individual positions (idiosyncratic risk)
+		\item Turnover constraints
+	\end{itemize}
+\end{itemize}
 
+\subsubsection{Mean-variance short-comings and solutions}
 
-Mixed Integer Optimization
+Problems
+\begin{itemize}
+	\item Markowitz's Curse: Underperformance to market-cap weighted portfolio and concentration on assets.
+	\item Estimation of mean and covariance matrix
+	\item  allocating to less liquid asset class - (no investable benchmark)
+\end{itemize}
 
-Heuristic
-  forward
-  backward selection
-  clustering
+Solutions
+\begin{itemize}
+	\item Monte-Carlo simulation
+	\item resampled mean-variance optimization
+    \item add additional constriants (other than budget) - concentrated position
+    \item resampled mean-variance
+    \item  non-normal optimization approach
+     \item Covariance matrix shrinkage estimators
+      \subitem Stein's Paradox 
+      $$\hat{mu} := (1-\omega) \bar{\mathbf{r}} + \omega(\mu_0 \mathbf{1}),\omega \in [0,1]$$
+      \subitem Ledoit-Wolf
+      $$\hat{\mathbf{V}} := \omega\hat{\mathbf{V}} + (1-\omega)\mathbf{V}_0 ,\omega \in [0,1]$$
+      $\mathbf{V}_0$ is prior estimator(constant or single-factor implied cov matrix) 
+     \item Black-Litterman Model (Reverse Optimization - Also less sensitive to inputs)
+     $$ \mu \sim N(\mathbf{\pi}, \mathbf{Q})$$
+     $$ \boldsymbol{P\mu} = q$$ (views)
+     $$ \hat{\boldsymbol{\mu}} = \E[\boldsymbol{\mu} | views] = \boldsymbol{\pi} + \mathbf{QP^T}(\mathbf{PQP^T})^{-1}(\mathbf{q} - \boldsymbol{P\pi})$$
+     By Solving
+     $$ \min_{\boldsymbol{\mu}}(\boldsymbol{\mu} - \boldsymbol{\pi})^T \mathbf{Q}^{-1}(\boldsymbol{\mu} - \boldsymbol{\pi}) $$
+	$$\boldsymbol{P\mu} = q$$
+     $\pi$ is market consensus returns, $\mathbf{Q} = \tau\mathbf{V}$
+     \item Robust Estimatiors
+     \item  risk budgeting vs factor based asset allocation(risk parity) to maximize diversification
+     \subitem Marginal Contribution to Risk $$MRC_i = \frac{\partial \sigma_p}{\partial x_i} = \frac{\boldsymbol{Vx}_i}{\sqrt{\mathbf{x^TVx}}}$$
+     \subitem Risk Contribution $$ x_i \dot MRC_i = \frac{x_i \boldsymbol{Vx}_i}{\sqrt{\mathbf{x^TVx}}} = \frac{\sigma_p}{n}$$
+\end{itemize}	
 
+\includegraphics[scale=0.5]{Cov.JPG}
 
-Stochastic Optimization
-scenario optmization approach
-Var
-cVar
-
- Kelly’s Crirterion 
-
-Multi-period optmization room
-
-
-
-
-Excel solver
- CVX matlab
-CVXOPT python
-optmization toolbox matlab
-Gorubi
-
-
-
-
-\section{Estimating Return and Co-variance Matrix}
 \section{Transaction Cost}
 \section{Tax}
 \section{Dynamic Portfolio Choice}
 \section{Covariance Matrix}
 
-\includegraphics[scale=0.5]{Cov.JPG}
 
-\section{Easy}
-\begin{enumerate}
- \item Two coins, one is double tail, you see one \\
-  \begin{itemize}
-    \item three pancakes: golden-golden, golden-brunt, brunt-brunt, see one golden, probability that the other side is golden two
-    \item 
-   \end{itemize}
- \item Two coins - one toss n+1, one toss n, probability that n+1 gets more tail than n man?
-\end{enumerate}
 
 
 \section{Medium}
@@ -570,11 +603,6 @@ unfair coin to create 1/3 probability - combine two toss as one
  
 
 
-\chapter{Statistical Arbitrage}
-
-\section{mean-reversion}
-
-intraday mean-reversion
 
 Volatility Clustering and Leverage Effect 
 
@@ -591,7 +619,7 @@ Factor Models plays a key role in all components of asset management
 	\item Performance: Performance attribution, style analysis
 \end{itemize}
 
-Major Types of Factor Models
+\subsection{Major Types of Factor Models}
 
 \begin{itemize}
 	\item Regression Model: Observable factor returns
@@ -628,17 +656,17 @@ Major Types of Factor Models
 	 
 	\item Hidden Model: Try to distinguish between systematic and idiosyncratic risk 
 	$$ \mathbf{X} =  \mathbf{a} +  \mathbf{BZ} +  \mathbf{U}$$ 
-	want $cov(\mathbf{Z}, \mathbf{U})$ to be 0 and $var{U}$ diagonal,
+	want $cov(\mathbf{Z}, \mathbf{U})$ to be 0 and $var(U) = \Delta$ diagonal,
 	want $\mathbf{V} = var(\mathbf{X}) = \mathbf{B}^T var(\mathbf{Z}) \mathbf{B}^T + \mathbf{\Delta}$
 	Example: the APT Model
 \end{itemize}
 
-From a factor portfolio
+\subsection{From a factor portfolio}
 
 \begin{itemize}
-	\item Signal portfolio: from factor signals, From a fractile(divide the universe to fractile, form equal weighed portfolios for each fractile) or long-short( long equal weight portfolio with high score, short with low score)
+	\item Signal portfolio: from factor signals, From a fractile(divide the universe to fractile, form equal weighed portfolios for each fractile) or long-short( long equal weight portfolio with high score, short with low score) (Fama-French's Approach)
 	\item Factor Mimicking Portfolios: with only exposure to one of alpha singal/factor attributes $\mathbf{a}$
-	$$ min  \mathbf{h}^T  \mathbf{V}  \mathbf{h}$$, $$ \mathbf{a}^T  \mathbf{h} = 1$$
+	$$ \min_{\mathbf{h}}  \mathbf{h}^T  \mathbf{V}  \mathbf{h}$$, $$ \mathbf{a}^T  \mathbf{h} = 1$$
 	$$ \mathbf{h} = \frac{1}{ \mathbf{a}^T \mathbf{V} \mathbf{a}} \mathbf{V}^{-1}a$$
 	in additional, be cash neutral or factor neutral
 	$$ \mathbf{1}T\mathbf{h} = 0$$ or $$\mathbf{B}^T \mathbf{h} = 0 $$
@@ -647,14 +675,37 @@ From a factor portfolio
 
 \section{Alpha}
 
-Grinold and Kahn’s rule of thumb
+\begin{itemize}
+\item alpha is from signal and based on benchmark/factor models. For example find some signal to score stocks, then compute alpha from z-scores (neutralize for risk factors)
+$$\mathbf{\alpha} = \mathbf{z} - (\mathbf{z^T}\mathbf{x}_B) \mathbf{\beta}$$
 
+\item Information Coefficient(IC) : Correlation between factor score/prediction and actual outcome (realized return). IC $\geq$ 0.05 is considered good
+\item Grinold and Kahn’s rule of thumb (Alpha scaling)
 $$ \alpha = IC \times score \times volatility$$
 
-Fundamental law of active management
+Usually get covariance from risk model providers (Axioma, Bloomberg, Northfield, Barra)
 
-$$ IR = IC \sqrt{BR}$$
+\item Benchmarkmark-relative mean-variance models 
+
+$$ \min_{\mathbf{x}} \mathbf{x^TVx} $$
+$$ \boldsymbol{ \alpha^T x} \geq \bar{\alpha}, x \in \chi$$
+equivalent to 
+$$ \max_{\mathbf{x}} \boldsymbol{ \alpha^T x}  - \frac{\gamma}{2} \mathbf{x^TVx} $$
+$$ x \in \chi$$
+
+we get $$ \mathbf{x} = \frac{1}{\gamma} \boldsymbol{V^{-1}\alpha}$$
+
+\item Fundamental law of active management
+\subitem From above solution $$IR = \sqrt{\alpha^T\boldsymbol{V^{-1}\alpha}}$$
+$$\alpha_i = IC \dot \alpha_i \dot z_i, \mathbf{V} = diag(\sigma_1^2, ..., \sigma_N^2)$$
+$$IR = \sqrt{\boldsymbol{\alpha^T V^{-1}\alpha}} = IC \sqrt{N} = IC \sqrt{BR}$$
  
+ \item The Fundamental Law and Transfer Coefficient
+ 
+$$IR = \frac{\boldsymbol{\alpha^T h}}{\sqrt{\boldsymbol{h^TVh}}} = \frac{\boldsymbol{\alpha^T h}}{\sqrt{\boldsymbol{\alpha^T V^{-1}\alpha}}\sqrt{\boldsymbol{h^TVh}}} \sqrt{\boldsymbol{\alpha^T V^{-1}\alpha}}$$
+
+
+\end{itemize}
 \section{Smart beta and Smart Alpha}                  % Print a "section" heading
 
 long-short STS strategy
@@ -668,14 +719,32 @@ convertible arbitrage
 \section{Risk Premia Factors}
 
 \begin{itemize}
+	\item Size
+		\subitem Small-Minus-Big factor in equity class
 	\item Value
+		\subitem High-Minus-Low 
+		\subitem
 	\item Momentum
+		\subitem
 	\item Carry
 		\subitem Credit: beta-neutral relative value trade
-	\item Betting-against Beta: Long low beta equity
+	\item Betting-against Beta: 
+		\subitem From Margin CAPM Model(Black): Security Market Line is flatter than it should be because of margin constraints of investors
+		\subitem Frazzini-Pedersen construction 
+		$$ \hat{\beta} = \hat{\beta}_i = \hat{\rho}_i \frac{\sigma_i}{\hat{\sigma}_M}, \beta_i = \omega + (1-\omega) \hat{\beta}_i$$
+		$$ \boldsymbol{z} = rank(\boldsymbol{\beta}), \boldsymbol{\hat{z}} = \frac{\boldsymbol{1^Tz}}{n}\boldsymbol{1}$$
+		$$ w_{H/L} := \frac{1}{\boldsymbol{1^T}(\boldsymbol{z}-\boldsymbol{\hat{z}})^{+/-}}(\boldsymbol{z}-\boldsymbol{\hat{z}})^{+/-} $$ 
+		$$ r_{BAB,t} = \frac{1}{\beta_{L,t}}r_{L,t} -\frac{1}{\beta_{H,t}}r_{H,t}$$
+		Solve
+		$$ \max_{x} (\E(\mathbf{P^1} - \mathbf{P^0})^T \mathbf{x} - \frac{\gamma_i}{2} \bold{x^T\Omega x}$$
+		$$ m_i (\mathbf{P^0})^T \mathbf{x} \leq W_i$$
+		$$ \mathbf{x^*} = \frac{1}{\gamma}(\E(\mathbf{P^1}) - (1+\phi)\mathbf{P^0})$$
+		$$ \E(r_{BAB}) = \frac{\beta_H - \beta_L}{\beta_H \beta_L}$$
 		\subitem Credit: Jump-to-Default
 	\item Volatility Carry
 		\subitem CVA Desk vs Real Trade
+	\item Others
+		\subitem Five Factor Model by Fama-French: Profitability (RMW-robustness, high OP), Investment(CMA-conservative, low INV)
 \end{itemize}
 
 
@@ -756,6 +825,12 @@ other: liquidity risk premia
  \item Strategy replacements, leverage rebalancing and rebalancing frequency, leverage reset
 \end{enumerate}
 
+\chapter{Statistical Arbitrage}
+
+\section{mean-reversion}
+
+intraday mean-reversion
+
 
 \chapter{Quantitative Trading Strategies}
 
@@ -817,7 +892,7 @@ Typically, need the sub functions/sub teams including:
  \item Deployment: Rely heavily on computing, process schedulers, automation servers, vectorization, multithreading, multiprocessing, Big Data, Machine Learning on Big Data and High-performance computing 
 \end{enumerate}
 
-Backoffice and Risk Management (See Risk Management chapter)
+Back office and Risk Management (See Risk Management chapter)
 
 \begin{enumerate}
  \item Portfolio Aggregation
@@ -844,7 +919,7 @@ Some Major Challenges:
 Basic Assumptions: Most time should check implicit assumptions
 
 \begin{itemize}
-\item Equities $log(\frac{V_{t+1}}{V_t}$ i.i.d
+\item Equities $log(\frac{V_{t+1}}{V_t}$ i.i.d. Liquidity varies a lot. Benchmark indices can be misleading: eg. DJIA is priced-weighted. S\&P 500 leans towards large market cap companies and not include \textbf{dividend reinvestment} (S\&P Total Return Index include)
 \item Fixed Income $Y_t(\tau) = -\frac{1}{\tau} log(V_t(t+\tau))$ i.i.d shock on interest rate (bond yield)
 \item Risk drivers/factors $\mathbf{X}_t = [X_{1,t}...X_{\bar{d},t}]$ homogeneous in time, and determines the joint PnL of instruments
 
@@ -1003,6 +1078,16 @@ together with cost consdieration.
 \end{enumerate}
 
 \chapter{Portfolio Risk Management}
+
+\section{Key Questions}
+
+\begin{itemize}
+\item Position Sizing: How much to bet per desired asset?
+\item Vol, Skew and Kurtosis - The historical distribution of portfolio returns
+\item Non-stationarity of Returns: Regime Filtering, Back Testing Results
+\item Counter-party Risk
+\item Operation Risk (Trading Infra fails)
+\end{itemize}
 
 \section{Derivatives and Hedging Strategies}
 

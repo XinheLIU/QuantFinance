@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  3 FEB 2019 17:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  10 FEB 2019 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -159,19 +159,19 @@ Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS)
 ) (/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.aux)
 \openout1 = `"Quantitative Investment.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Try loading font information for OT1+pplj on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Try loading font information for OT1+pplj on input line 24.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pplj.fd
 File: ot1pplj.fd 2004/09/06 font definitions for OT1/pplj.
 ) (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -223,36 +223,36 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    Font shape `OT1/pplj/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 25.
-LaTeX Font Info:    Try loading font information for OT1+pplx on input line 25.
+(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 26.
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 26.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 25.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 26.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 25.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 26.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 25.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 26.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 25.
+(Font)              scaled to size 12.50409pt on input line 26.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 25.
+(Font)              scaled to size 9.37807pt on input line 26.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 25.
+(Font)              scaled to size 7.29405pt on input line 26.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 25.
+(Font)              scaled to size 12.50409pt on input line 26.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 25.
+(Font)              scaled to size 9.37807pt on input line 26.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 25.
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 25.
+(Font)              scaled to size 7.29405pt on input line 26.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 26.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 ) [1
@@ -260,7 +260,7 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/pplj/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 26.
+(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 27.
  (/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.toc
 LaTeX Font Info:    Font shape `OT1/pplj/bx/n' in size <12> not available
 (Font)              Font shape `OT1/pplj/b/n' tried instead on input line 1.
@@ -285,9 +285,9 @@ Underfull \vbox (badness 1762) has occurred while \output is active []
 
 ]
 LaTeX Font Info:    Font shape `OT1/pplj/m/sl' in size <10.95> not available
-(Font)              Font shape `OT1/pplj/m/it' tried instead on input line 39.
+(Font)              Font shape `OT1/pplj/m/it' tried instead on input line 40.
  [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1097) has occurred while \output is active []
 
  [4] [5])
 \tf@toc=\write3
@@ -295,25 +295,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
 LaTeX Font Info:    Font shape `OT1/pplj/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 29.
+(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 30.
  [1
 
 
 ]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/pplj/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 33.
-LaTeX Font Info:    Try loading font information for OMS+pplj on input line 38.
-LaTeX Font Info:    No file OMSpplj.fd. on input line 38.
+(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 34.
+LaTeX Font Info:    Try loading font information for OMS+pplj on input line 39.
+LaTeX Font Info:    No file OMSpplj.fd. on input line 39.
 
 LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 38.
+(Font)              for symbol `textbullet' on input line 39.
 
 [2
 
 ]
-Overfull \hbox (73.37929pt too wide) in paragraph at lines 60--70
+Overfull \hbox (73.37929pt too wide) in paragraph at lines 61--71
  [] 
  []
 
@@ -372,163 +372,112 @@ Overfull \hbox (25.05904pt too wide) has occurred while \output is active
 Chapter 4.
 [19
 
-]
-Missing character: There is no â in font pplr9o!
-Missing character: There is no € in font pplr9o!
-Missing character: There is no ™ in font pplr9o!
- [20] <Cov.JPG, id=96, 826.08624pt x 229.85875pt>
+] [20] [21] [22]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 575.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+) [23] <Cov.JPG, id=109, 826.08624pt x 229.85875pt>
 File: Cov.JPG Graphic file (type jpg)
  <use Cov.JPG>
-Package pdftex.def Info: Cov.JPG used on input line 550.
+Package pdftex.def Info: Cov.JPG used on input line 586.
 (pdftex.def)             Requested size: 413.0421pt x 114.92908pt.
 
-Overfull \hbox (53.0421pt too wide) in paragraph at lines 550--551
-[]  
+Overfull \hbox (53.0421pt too wide) in paragraph at lines 586--587
+[][]  
  []
 
-[21 <./Cov.JPG>] [22]
+[24 <./Cov.JPG>] [25]
 Chapter 5.
-[23
+[26
+
+] [27]
+Missing character: There is no â in font pplr9o!
+Missing character: There is no € in font pplr9o!
+Missing character: There is no ™ in font pplr9o!
+ [28] [29]
+
+Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instead on input line 739.
+
+[30] [31]
+Missing character: There is no â in font pplr9o!
+Missing character: There is no € in font pplr9o!
+Missing character: There is no ™ in font pplr9o!
+ [32] [33]
+Chapter 6.
+[34
 
 ]
-Chapter 6.
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 599.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [24
-
-] [25]
-Missing character: There is no â in font pplr9o!
-Missing character: There is no € in font pplr9o!
-Missing character: There is no ™ in font pplr9o!
- [26]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27]
-Missing character: There is no â in font pplr9o!
-Missing character: There is no € in font pplr9o!
-Missing character: There is no ™ in font pplr9o!
-
-Underfull \vbox (badness 1521) has occurred while \output is active []
-
- [28] [29] [30]
 Chapter 7.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31
+ [35
 
-] [32]
+] [36]
 Chapter 8.
-[33
+[37
 
-] [34
+] [38
 
 ]
 Chapter 9.
-[35
+[39
 
-] [36]
+] [40]
 Chapter 10.
-[37
+[41
 
-] [38]
+] [42]
 Chapter 11.
-<1.JPG, id=157, 721.69624pt x 485.815pt>
+<1.JPG, id=172, 721.69624pt x 485.815pt>
 File: 1.JPG Graphic file (type jpg)
  <use 1.JPG>
-Package pdftex.def Info: 1.JPG used on input line 891.
+Package pdftex.def Info: 1.JPG used on input line 966.
 (pdftex.def)             Requested size: 360.84724pt x 242.9069pt.
- <2.JPG, id=158, 692.5875pt x 548.0475pt>
+ <2.JPG, id=173, 692.5875pt x 548.0475pt>
 File: 2.JPG Graphic file (type jpg)
  <use 2.JPG>
-Package pdftex.def Info: 2.JPG used on input line 892.
+Package pdftex.def Info: 2.JPG used on input line 967.
 (pdftex.def)             Requested size: 346.2929pt x 274.02307pt.
- <3.JPG, id=159, 829.0975pt x 599.23875pt>
+ <3.JPG, id=174, 829.0975pt x 599.23875pt>
 File: 3.JPG Graphic file (type jpg)
  <use 3.JPG>
-Package pdftex.def Info: 3.JPG used on input line 893.
+Package pdftex.def Info: 3.JPG used on input line 968.
 (pdftex.def)             Requested size: 414.54774pt x 299.61864pt.
- <4.JPG, id=160, 226.8475pt x 334.24875pt>
+ <4.JPG, id=175, 226.8475pt x 334.24875pt>
 File: 4.JPG Graphic file (type jpg)
  <use 4.JPG>
-Package pdftex.def Info: 4.JPG used on input line 894.
+Package pdftex.def Info: 4.JPG used on input line 969.
 (pdftex.def)             Requested size: 113.42346pt x 167.12396pt.
- <5.JPG, id=161, 284.06125pt x 455.7025pt>
+ <5.JPG, id=176, 284.06125pt x 455.7025pt>
 File: 5.JPG Graphic file (type jpg)
  <use 5.JPG>
-Package pdftex.def Info: 5.JPG used on input line 895.
+Package pdftex.def Info: 5.JPG used on input line 970.
 (pdftex.def)             Requested size: 142.03026pt x 227.85068pt.
- <6.JPG, id=162, 327.2225pt x 273.02pt>
+ <6.JPG, id=177, 327.2225pt x 273.02pt>
 File: 6.JPG Graphic file (type jpg)
  <use 6.JPG>
-Package pdftex.def Info: 6.JPG used on input line 896.
+Package pdftex.def Info: 6.JPG used on input line 971.
 (pdftex.def)             Requested size: 163.61084pt x 136.50966pt.
 
-Overfull \hbox (0.84724pt too wide) in paragraph at lines 891--897
+Overfull \hbox (0.84724pt too wide) in paragraph at lines 966--972
 [] 
  []
 
 
-Overfull \hbox (54.54774pt too wide) in paragraph at lines 891--897
+Overfull \hbox (54.54774pt too wide) in paragraph at lines 966--972
 [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39
+ [43
 
 ]
 Overfull \vbox (1.16573pt too high) has occurred while \output is active []
 
- [40 <./1.JPG>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (25.04593pt too wide) has occurred while \output is active
-\OT1/pplj/m/it/10.95 11.1.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 41
- []
-
-[41 <./2.JPG>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42 <./3.JPG> <./4.JPG> <./5.JPG>]
-Overfull \hbox (25.04593pt too wide) has occurred while \output is active
-\OT1/pplj/m/it/10.95 11.1.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 43
- []
-
-[43 <./6.JPG>] [44] <7.JPG, id=182, 493.845pt x 501.875pt>
-File: 7.JPG Graphic file (type jpg)
- <use 7.JPG>
-Package pdftex.def Info: 7.JPG used on input line 964.
-(pdftex.def)             Requested size: 246.92189pt x 250.93687pt.
- <8.JPG, id=183, 747.79375pt x 743.77875pt>
-File: 8.JPG Graphic file (type jpg)
- <use 8.JPG>
-Package pdftex.def Info: 8.JPG used on input line 966.
-(pdftex.def)             Requested size: 373.89595pt x 371.88846pt.
- <9.JPG, id=184, 561.09625pt x 728.7225pt>
-File: 9.JPG Graphic file (type jpg)
- <use 9.JPG>
-Package pdftex.def Info: 9.JPG used on input line 969.
-(pdftex.def)             Requested size: 280.54744pt x 364.36035pt.
- <10.JPG, id=185, 832.10875pt x 844.15375pt>
-File: 10.JPG Graphic file (type jpg)
- <use 10.JPG>
-Package pdftex.def Info: 10.JPG used on input line 970.
-(pdftex.def)             Requested size: 416.05336pt x 422.07584pt.
-
-Overfull \hbox (13.89595pt too wide) in paragraph at lines 961--976
-[] 
- []
-
-
-Overfull \hbox (56.05336pt too wide) in paragraph at lines 961--976
-[] 
- []
-
-
+ [44 <./1.JPG>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -536,21 +485,45 @@ Overfull \hbox (25.04593pt too wide) has occurred while \output is active
 \OT1/pplj/m/it/10.95 11.1.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 45
  []
 
-[45]
+[45 <./2.JPG>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46 <./7.JPG>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+ [46 <./3.JPG> <./4.JPG> <./5.JPG>]
 Overfull \hbox (25.04593pt too wide) has occurred while \output is active
 \OT1/pplj/m/it/10.95 11.1.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 47
  []
 
-[47 <./8.JPG>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[47 <./6.JPG>] [48] <7.JPG, id=198, 493.845pt x 501.875pt>
+File: 7.JPG Graphic file (type jpg)
+ <use 7.JPG>
+Package pdftex.def Info: 7.JPG used on input line 1039.
+(pdftex.def)             Requested size: 246.92189pt x 250.93687pt.
+ <8.JPG, id=199, 747.79375pt x 743.77875pt>
+File: 8.JPG Graphic file (type jpg)
+ <use 8.JPG>
+Package pdftex.def Info: 8.JPG used on input line 1041.
+(pdftex.def)             Requested size: 373.89595pt x 371.88846pt.
+ <9.JPG, id=200, 561.09625pt x 728.7225pt>
+File: 9.JPG Graphic file (type jpg)
+ <use 9.JPG>
+Package pdftex.def Info: 9.JPG used on input line 1044.
+(pdftex.def)             Requested size: 280.54744pt x 364.36035pt.
+ <10.JPG, id=201, 832.10875pt x 844.15375pt>
+File: 10.JPG Graphic file (type jpg)
+ <use 10.JPG>
+Package pdftex.def Info: 10.JPG used on input line 1045.
+(pdftex.def)             Requested size: 416.05336pt x 422.07584pt.
 
- [48 <./9.JPG>]
+Overfull \hbox (13.89595pt too wide) in paragraph at lines 1036--1051
+[] 
+ []
+
+
+Overfull \hbox (56.05336pt too wide) in paragraph at lines 1036--1051
+[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -558,17 +531,36 @@ Overfull \hbox (25.04593pt too wide) has occurred while \output is active
 \OT1/pplj/m/it/10.95 11.1.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 49
  []
 
-[49 <./10.JPG>] <11.JPG, id=203, 619.31375pt x 365.365pt>
-File: 11.JPG Graphic file (type jpg)
- <use 11.JPG>
-Package pdftex.def Info: 11.JPG used on input line 981.
-(pdftex.def)             Requested size: 309.65611pt x 182.68205pt.
- [50 <./11.JPG>] [51]
-Chapter 12.
-
+[49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52
+ [50 <./7.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (25.04593pt too wide) has occurred while \output is active
+\OT1/pplj/m/it/10.95 11.1.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 51
+ []
+
+[51 <./8.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52 <./9.JPG>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (25.04593pt too wide) has occurred while \output is active
+\OT1/pplj/m/it/10.95 11.1.   STRATEGY DEVELOPMENT PIPELINE(SINGLE/LINEAR STRATEGY)  \OT1/pplj/m/n/10.95 53
+ []
+
+[53 <./10.JPG>] <11.JPG, id=218, 619.31375pt x 365.365pt>
+File: 11.JPG Graphic file (type jpg)
+ <use 11.JPG>
+Package pdftex.def Info: 11.JPG used on input line 1056.
+(pdftex.def)             Requested size: 309.65611pt x 182.68205pt.
+ [54 <./11.JPG>] [55]
+Chapter 12.
+[56
 
 ]
 Missing character: There is no â in font pplr9o!
@@ -586,27 +578,27 @@ Missing character: There is no ˆ in font pplr9o!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53] [54]
+ [57] [58]
 Chapter 13.
 
 Underfull \vbox (badness 1997) has occurred while \output is active []
 
- [55
+ [59
 
 ]
-Overfull \hbox (16.6498pt too wide) detected at line 1154
+Overfull \hbox (16.6498pt too wide) detected at line 1239
 \OML/zplm/m/it/10.95 r[] \OT1/zplm/m/n/10.95 = [](\OML/zplm/m/it/10.95 w[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 w[]\OT1/zplm/m/n/10.95 )(\OML/zplm/m/it/10.95 r[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 r[]\OT1/zplm/m/n/10.95 ) + [](\OML/zplm/m/it/10.95 w[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 w[]\OT1/zplm/m/n/10.95 )(\OML/zplm/m/it/10.95 r[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 r[]\OT1/zplm/m/n/10.95 ) + [] \OML/zplm/m/it/10.95 w[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 r[] \OMS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 r[]\OT1/zplm/m/n/10.95 )
  []
 
-[56] [57] [58]
+[60] [61] [62]
 Chapter 14.
-[59
+[63
 
 ]
 Chapter 15.
-[60
+[64
 
-] [61
+] [65
 
 ] (/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.aux)
 
@@ -614,18 +606,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3440 strings out of 493014
- 47999 string characters out of 6133351
- 110621 words of memory out of 5000000
- 6851 multiletter control sequences out of 15000+600000
- 49555 words of font info for 129 fonts, out of 8000000 for 9000
+ 3464 strings out of 493014
+ 48231 string characters out of 6133351
+ 110641 words of memory out of 5000000
+ 6862 multiletter control sequences out of 15000+600000
+ 57428 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,24p,502b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmb.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.pdf" (67 pages, 1362065 bytes).
+ 38i,9n,24p,502b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmb.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on "/Users/lIUxinhe/Documents/Github/QuantTrading/.texpadtmp/Quantitative Investment.pdf" (71 pages, 1396518 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
+ 315 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
