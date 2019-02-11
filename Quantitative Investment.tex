@@ -721,14 +721,87 @@ convertible arbitrage
 \begin{itemize}
 	\item Size
 		\subitem Small-Minus-Big factor in equity class
+		\subitem No longer significant as value
+		\subitem Structural Bias - Less information from smaller business 
+		\subitem Risk Sharing - Investor's Reluctance to invest in smaller firms
 	\item Value
 		\subitem High-Minus-Low 
-		\subitem
-	\item Momentum
-		\subitem
+		\subitem Behavior Bias - Rebalancing Contrarian Timing Reversals
+		\begin{itemize}
+			\item Over-extrapolation of past growth
+			\item Delayed overreaction to price trends
+			\item Discomfort with "dogs" and distress
+			\item generic risk premium (1/P)
+			\item rational based on distress risk, dynamic betas
+		\end{itemize}
+		\subitem Who is on the other side
+		\begin{itemize}
+			\item Over-extrapolation or multi-year growth
+			\item Long Term overreactors( chasing returns at 3-5 yr when reversal dominate)
+			\item Managers attracted to glamor stocks
+			\item Investors averse to some risks in value stocks
+		\end{itemize}
+		\subitem in Equity and FX 
+	\item Momentum 
+		\subitem Behavior Bias 
+			\begin{itemize}
+				\item Herding, Confirmation Bias, Fund Flows
+				\item Under-reaction to public news
+				\item over-reaction to price trends
+				\item Pro-cyclical risk tolerance or risk management
+				\item Disposition effect
+			\end{itemize}
+		\subitem Who is on the other side
+			\begin{itemize} 
+			 \item Inattentioned, conservative, overconfident
+			 \item contrarians resisting the herd
+			 \item investors without stop-loss rules
+			 \item those handing on the losers
+			\end{itemize}
 	\item Carry
-		\subitem Credit: beta-neutral relative value trade
+		\subitem Behavior Bias
+		\begin{itemize}
+			\item Skew/Tail Preference volatility jump premia
+			\item Overconfident expectations of capital losses (mkt moves) that would offset the carry trade non-profit-driven flows supporting high carry
+			\item generic risk premium(1/P)
+			\item liquidity needs, price pressure
+		\end{itemize}
+		\subitem Who is the other side
+		\begin{itemize}
+			\item tail insurance buyers, skewness lovers, crash protection seekers
+			\item overconfident holders of salient macro views
+			\item non-profit driven actors(central banks)
+			\item Impatient/short-horizon investors, those needing immediacy in trading
+		\end{itemize}
+		\subitem Risk Sharing 
+		\begin{itemize}
+			\item Options: Volatility Carry, Volatility Selling
+			\item Credit beta-neutral relative value trade, benefit from investor's portfolio limits(structural) providing market with insurance against credit(risk sharing)
+			\item CO Curve - provide liquidity to hedgers/producers (risk sharing), higher demand from investors on near dated contracts and supply from hedgers on far dated
+		\end{itemize}
+		\subitem Structural
+		\begin{itemize}
+			\item Commodity Carry: Imbalance in inventory levels and subsequent hedging pressure as reflected in time spreads (eg. contango suggests selling pressure due to inventory surplus with the expectation of future price depreciation)
+		\end{itemize}
 	\item Betting-against Beta: 
+		\subitem	
+		\begin{itemize}
+			\item Quality, Risk Parity
+			\item Behavior Bias
+			\item leverage aversion
+			\item lottery seeking
+			\item relative risk preferences, conventionality
+			\item active managers seeking maximal bang for the (unlevered) buck
+			\item underreaction to quality
+		\end{itemize}
+		\subitem The other side
+		\begin{itemize}
+			\item constrained investors who avoid levering up low-risk opportunities with better SRs and instread choose concentrated high-risk exposures
+			\item investors who prefer lotteries and positive skewness
+			\item benchmarked managers who care more about tracking error than total portfolio risk
+			\item overconfident and constrained active managers
+			\item inattentioned, story-telling investors
+		\end{itemize}
 		\subitem From Margin CAPM Model(Black): Security Market Line is flatter than it should be because of margin constraints of investors
 		\subitem Frazzini-Pedersen construction 
 		$$ \hat{\beta} = \hat{\beta}_i = \hat{\rho}_i \frac{\sigma_i}{\hat{\sigma}_M}, \beta_i = \omega + (1-\omega) \hat{\beta}_i$$
@@ -740,56 +813,24 @@ convertible arbitrage
 		$$ m_i (\mathbf{P^0})^T \mathbf{x} \leq W_i$$
 		$$ \mathbf{x^*} = \frac{1}{\gamma}(\E(\mathbf{P^1}) - (1+\phi)\mathbf{P^0})$$
 		$$ \E(r_{BAB}) = \frac{\beta_H - \beta_L}{\beta_H \beta_L}$$
-		\subitem Credit: Jump-to-Default
+		\subitem 
+			\begin{itemize}
+		 	\item Credit: Jump-to-Default
+		 	\item IR Curve/CR Curve - Benediting from the average investor's leverage constraints
+			\end{itemize}		
 	\item Volatility Carry
 		\subitem CVA Desk vs Real Trade
+	\item Liquidity Risk Premia 
 	\item Others
 		\subitem Five Factor Model by Fama-French: Profitability (RMW-robustness, high OP), Investment(CMA-conservative, low INV)
+		\subitem Seasonality: Benefiting from the market's ability to correctly estimate the seasonality of commodities (behavioral) and assume seasonality risk
+		\subitem: COT : benefiting from the market's inability to process positioning data (behavioral） and the average investor's constraints in positioning according to such data
+		\subitem Equity Intraday Momentum
 \end{itemize}
 
 
 
-\subsubsection{Momentum}
-
-
-
-\subsection{Equity Multi-factor Investing}
-
-\subsection{Cross-Asset Risk Premia Portfolio}
-
-\subsection{Volatility Strategies}
-
-\subsection{Credit Strategies}
-
-\subsection{Dynamic Customization}
-
-\subsection{Hedging Strategies}
-
-
-
 \subsection{}
-
-value, momementum, quality, volatility, betaRM-RF  The return spread between the capitalization weighted stock market and cash.
-
-QUality Minus Junk (quanlity)
-
-SMB      The return spread of small minus large stocks (i.e., the size effect).
-
-HML      The return spread of cheap minus expensive stocks (i.e., the value effect).
-
-RMW     The return spread of the most profitable firms minus the least profitable.
-
-CMA      The return spread of firms that invest conservatively minus aggressively.
-
-UMD (momentum/trend) UMD is long winners and short losers and also from Ken French’s website)
-
-Carry  Vol Carry
-
-
-Special: liquidity premia 
-
-
-Market Ineffciency Analysis: funding constraint of financial institutions, grand move of large funds constraints
 
 \section{Market Anomalies}
 
@@ -838,9 +879,14 @@ intraday mean-reversion
 
 \begin{itemize}
 	\item Signal
-		\subitem Multi-signal mix: Multi-window
-		\subitem Signal Smoothing
+		\subitem Multi-signal mix: Multi-window， multi-signal
+		\subitem Signal Smoothing:
+			\subsubitem Exponential Decay, half-life length
+	\item Weighting and Rebalancing
+		\subitem Strategy Groups
+		\subitem Signal Speed: for example, for volatility carry strategies, drawdown recovers fast -Using Asset Stress Loss is more appropriate. For trend strategies, positive weight and negative weight changes fast, so use parity when put into top level. Inside the strategy group, use weight smoothing
 	\item Risk
+		\subitem Portfolio Volatility Control, Sub Portfolio Volatility Control 
 		\subitem Correlation
 		\subitem Leverage Control
 		\subitem Volatility Target
