@@ -6,6 +6,18 @@
 \usepackage{commath}
 \usepackage[sc,osf]{mathpazo}
 
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+% operators
+
 \let\oldnorm\norm   % <-- Store original \norm as \oldnorm
 \let\norm\undefined % <-- "Undefine" \norm
 \newcommand\tab[1][1cm]{\hspace*{#1}}
@@ -213,7 +225,10 @@ Valutaion fundamentals:
 	\item Free Cash Flow Calculation: EBIT - tax on EBIT (LT tax rate x EBIT) = NOPAT (net operating profit after tax )/EBIAT, Free Cash flow = NOPAT + D\&A - capex - increase in OWC + decrease in OWC - Increase in Other net operating assets + Decrease in other net operating assets -+ change in Long term tax liabilities
 	\item FCFF, FCFE 
 	\item Discount Rate- Weighted Average Cost of Capital (WACC) - CAPM / required rate of return, WACC = D/(D+E) cost of net debt x (1-t) + $(rf+(r_m-r_f)\times beta)\times E/(D+E)$, D is net debt
-	\item Gordon Growth Model
+	\item Equity Market Expectaion: Gordon Growth Model
+	$$ \E(R_e) = \frac{D_0(1+g)}{P_0}$$
+	Grinold-Kroner Model
+	$$ \E(R_e) \ \frac{D}{P} - \Delta S + i + g + \Delta PE$$
 	\item EV multipliers : EV/Sales, EV/EBIT，EV/EBITDA
 \end{itemize}
 
@@ -249,51 +264,6 @@ Management/Strategic Analysis(SWOT, Five forces etc), Industry/Region/ Sector An
     \end{itemize}
 \end{itemize}
 
-\section{Asset Management Overview}
-factor investors
-
-market - CAPM + APT
-
-value - HML
-  FX carry trade
-  commodity - roll returns
-  Fixed Income - riding the yield curve 
-  
-momentum 
-   UMD - up minus down
-   WML - winner minus losers
-
-size -SML 
-
-
-volatility risk premium ( a negative risk premium)
-illiquidity risk premium ‘
-
-
-alpha and active investing
-
-
-Fundamental Theorem of Active Management
-
-
-backtesting
-
-  surviorship bias
-  sample selection bias
-  infrequent trading (report same price/ missing price) 
-
-
-
-hedge fund strategies
-
-  merger/risk arbitrage
-
-   fixed income arbitrage
-       swap spread arbitrage
-       yield-curve spread arbitrage
-      mortgage spread arbitrage ( on prepayment rates)
-      capital structure/credit arbitrage 
-      volatility trading （interest cap vol) arbitrage
 \section{FX}
 
 Basic Concepts:
@@ -491,7 +461,7 @@ Financial Theories involved
 		\subitem  Stochastic and Dynamic Optimization
 \end{enumerate}
 
-\subsubsection{Mean-variance model}
+\subsection{Mean-variance model}
 
 \begin{itemize}
 	\item Optimization
@@ -553,7 +523,17 @@ Problems
 \begin{itemize}
 	\item Markowitz's Curse: Underperformance to market-cap weighted portfolio and concentration on assets.
 	\item Estimation of mean and covariance matrix
-	\item  allocating to less liquid asset class - (no investable benchmark)
+	\item  Allocating to less liquid asset class - (no investable benchmark)
+	\item Intergrality constraints: Problem becomes non-convex and difficult to solve
+		\subitem e.g.Using stocks to track benchmark index - need to be solved by heuristic approach
+		\begin{itemize}
+			\item Forward Selection: start with one, add at a time
+			\item Backward Selection: start with whole set, selecting one creating least loss
+			\item Clustering approach: pick q stocks from different clusters, start with benchmark weight, optimize
+			$$ \argmax _{\mathbf{x,y}} \sum_i \sum_j \rho_{ij} x_{ij}$$
+			$$ \sum_j y_j = q, \sum_j x_{ij} = 1$$
+			$$ x_{ij} \leq y_j $$ y is binary to indicates a stock is selected or not
+		\end{itemize}
 \end{itemize}
 
 Solutions
@@ -578,35 +558,78 @@ Solutions
 	$$\boldsymbol{P\mu} = q$$
      $\pi$ is market consensus returns, $\mathbf{Q} = \tau\mathbf{V}$
      \item Robust Estimatiors
-     \item  risk budgeting vs factor based asset allocation(risk parity) to maximize diversification
+     \item  Risk budgeting vs factor based asset allocation(risk parity) to maximize diversification
      \subitem Marginal Contribution to Risk $$MRC_i = \frac{\partial \sigma_p}{\partial x_i} = \frac{\boldsymbol{Vx}_i}{\sqrt{\mathbf{x^TVx}}}$$
      \subitem Risk Contribution $$ x_i \dot MRC_i = \frac{x_i \boldsymbol{Vx}_i}{\sqrt{\mathbf{x^TVx}}} = \frac{\sigma_p}{n}$$
+     \subitem Use Different Risk Measures
+      \begin{itemize}	
+      	\item Variance
+      	\item Mean Absolute Deviation $$MAD(r) = \E( |r-\mu|)$$ $$ MAD = \sqrt{\frac{2}{\pi}} \sigma $$ under Normal
+      			$$ \argmin_{\mathbf{x}} MAD(\mathbf{r^Tx})$$
+      			s.t. $\mathbf{x} \in \chi$ often solve by scenario optimization
+      	\item Value at Risk
+      	\item CVAR (Asset Stress Loss)
+      	$$ \E(Y| Y \geq VaR_{\alpha}(Y)) = min_{\gamma} (\gamma + \frac{1}{\alpha} \int_{-\infty}^{\infty} max(y - \gamma, 0) f(y) dy)$$
+      \end{itemize}
 \end{itemize}	
 
-\includegraphics[scale=0.5]{Cov.JPG}
+\subsection{Stochastic Optimization and Multi-Period Model}
 
-\section{Transaction Cost}
-\section{Tax}
-\section{Dynamic Portfolio Choice}
-\section{Covariance Matrix}
+\subsubsection{Kelly Crierion}
 
+The Kelly Criterion is well-known among gamblers as a way to decide how much to bet when the odds are in your favor. 
 
+The simple rule goes like this. Suppose that with probability p you will make a profit of b times what you bet, and otherwise you lose the bet. Then the optimal amount to bet is $\frac{pb−(1−p)}{b}$
 
+\subsubsection{Dynamic Portfolio Optimization}
 
-\section{Medium}
-\begin{enumerate}
-	\item Use coins to create probabilities : fair coin to create 1/3 probability - toss twice, one result is retoss
-unfair coin to create 1/3 probability - combine two toss as one
+Some random variables value will reveal during each stage. 
 
+\begin{itemize}
+	\item Simple case. Under log utility $U(W) = log(W)$ or i.i.d. return, a myopic policy is optimization. 
+\end{itemize}
 
- \end{enumerate}
- 
+Common Problems as
+\begin{itemize}
+	\item Mulit-stage optimization with income
+	\item Portfolio optimization with trading cost
+	\subitem Almgren-Chriss Model
+	$$ S_k = S_{k-1} + \sigma \xi_k - g(y_k), \tilde{S_k} = S_{k-1} - h(y_k)$$
+	$\xi_k$ is random shork, g and h are permanet and temporary market impact $\tilde{S}$ is captured price for trade y.
+	$$Cost(\mathbf{x}) = S_0 X - \sum_{k=1}^N \tilde{S}_k y_k$$
+	$$ \argmin_{\mathbf{x}} (\E(Cost(\mathbf{x}))- \lambda var( Cost(\mathbf{x})))$$
+	k is trading times, $t_k = k \tau$, $\mathbf{x} = (x_0,...x_N)$ is trading trajectory, $\mathbf{y}$ is "trade list", $y_k = x_k - x_{k-1}$
+	\item Sequential Decision Problem and Bellman's Optimality Principle
+	\subitem Solve 
+	$$ J(\mathbf{s}_0) = \argmax _{\mathbf{x_0},...,\mathbf{x_T}}[ \sum_{t=0}^N g_t(\mathbf{s}_t, \mathbf{x}_t) + g_{T+1}(\mathbf{s}_{T+1})]$$
+	by solving the value-to-go of the tail problem
+	$$ J(\mathbf{s}_t) = \argmax _{\mathbf{x_t}}[ g_t(\mathbf{s}_t, \mathbf{x}_t) + g_{t+1}(\mathbf{s}_{t+1})]= \argmax _{\mathbf{x_t}}[ g_t(\mathbf{s}_t, \mathbf{x}_t) + g_{t+1}(f_t(\mathbf{s}_t, \mathbf{x}_t)] $$
+	f is the law of motion, which is needed
+\end{itemize}
 
+\subsubsection{Garleanu-Pedersen's Model}
 
+Model of Dynamic Programming with predictable returns and t-costs
 
-Volatility Clustering and Leverage Effect 
+Problem
+\begin{itemize}
+	\item Minimize risk and transaction costs
+	\item Trading Speed trade-off: Trade a lot: more alpha, less risk, more t-costs 
+	\item ALpha (Decay) Speed: Fast and slow signals
+	\item Trade-off between tax costs and diversification benefits may depend on the age.
+\end{itemize}
 
-\chapter{Factor Investing}
+\section{Tax Management in Portfolio Optimization}
+
+set up
+
+\begin{itemize}
+	\item Capital gain tax depends on the holding period
+	\item Tax rebate on loss
+	\item Optimal tax trading: always realize loss, sometimes realize gains
+\end{itemize}
+
+\chapter{Factor Models}
 
 \section{Factor Models}
 
@@ -661,23 +684,63 @@ Factor Models plays a key role in all components of asset management
 	Example: the APT Model
 \end{itemize}
 
-\subsection{From a factor portfolio}
 
-\begin{itemize}
-	\item Signal portfolio: from factor signals, From a fractile(divide the universe to fractile, form equal weighed portfolios for each fractile) or long-short( long equal weight portfolio with high score, short with low score) (Fama-French's Approach)
-	\item Factor Mimicking Portfolios: with only exposure to one of alpha singal/factor attributes $\mathbf{a}$
-	$$ \min_{\mathbf{h}}  \mathbf{h}^T  \mathbf{V}  \mathbf{h}$$, $$ \mathbf{a}^T  \mathbf{h} = 1$$
-	$$ \mathbf{h} = \frac{1}{ \mathbf{a}^T \mathbf{V} \mathbf{a}} \mathbf{V}^{-1}a$$
-	in additional, be cash neutral or factor neutral
-	$$ \mathbf{1}T\mathbf{h} = 0$$ or $$\mathbf{B}^T \mathbf{h} = 0 $$
-\end{itemize}
+Sometimes, factor models will be used in a multi-layer fashion (eg. decompose return first be sectors, then style factors)
 
+\subsection{Factor portfolio}
+
+Two common approaches
+
+\subsubsection{Signal Portfolio Approach}
+
+This is the traditional portfolio construction approach
+
+\begin{enumerate}
+	\item From z score form the signal score (standardization, transformation, normalization)
+	\item Form the signal portfolio
+	\begin{itemize}
+		\item Long-short: Long equal-weight (or value-weight) portfolio with high signal and equal weight( or value-weight) portfolio with low signal
+		\item Ranking: use signal to rank securities. The construct a long-short portfolio with holdings
+		$$ w_i = c (rank(s_i) - \frac{\sum_i rank(s_i)}{N})$$
+		\item Sorting: two-fold or k-fold version of the above high-low long-short
+	\end{itemize}
+	\item Use signal portfolio to get expected returns($\alpha$), covariance matrix and constraints for the optimization
+\end{enumerate}
+
+After this, finalize the rebalancing frequency, investment universe etc.
+
+\subsubsection{Consistent Portfolio Construction Approach}
+
+By Axioma (2011)
+
+$$\mathbf{r} = \mathbf{Bf} + \mathbf{u} = \mathbf{B}_A\mathbf{f}_A + \mathbf{B}_F\mathbf{f}_F\mathbf{u} $$
+
+\begin{enumerate}	
+	\item Factor Mimicking Portfolios: with only exposure to one of alpha sigal/factor attributes $\mathbf{a}$
+	$$ \min_{\mathbf{h}}  \mathbf{h}^T  \mathbf{V}  \mathbf{h}$$, 
+	$$ \mathbf{B^T}_A \mathbf{h} = \mathbf{e}_j$$
+	$$ \mathbf{B^T}_R \mathbf{h} = \mathbf{0}$$
+	$$ \mathbf{h} = \frac{1}{ \mathbf{a}^T \mathbf{V} \mathbf{a}} \mathbf{{V}^{-1}a}$$
+	( or can be cash neutral instead of factor neutral)
+	$$ \mathbf{1}T\mathbf{h} = 0$$
+	$$ \E(\mathbf{f}_A) = \E (\mathbf H^T r), var(\mathbf{f}_A) = \mathbf{H^TVH}$$
+	$$ \mathbf{H} := [\mathbf{h}^1, ..., \mathbf{h}^m]$$, m factors
+	\item Combine to a target portfolio
+	$$ \mathbf{h^P} = \argmax_{\mathbf{h,w}} \E(\mathbf{f})^T \mathbf{w} - \frac{\gamma}{2} \mathbf{h^TVh}$$
+	$$ \mathbf{h} = \mathbf{Hw}$$
+	\item Find the acceptable portfolio that closest to target portfolio
+	$$ \min_{\mathbf{h}} (\boldsymbol{\alpha^P})^T \mathbf{h} -  \frac{\gamma}{2} \mathbf{h^TVh}$$
+	$$ \Leftrightarrow $$
+	$$ \min_{\mathbf{h}} \frac{1}{2} (\mathbf{h^P} - \gamma \mathbf{h})^T V (\mathbf{h^P} - \gamma \mathbf{h})$$
+	
+	
+\end{enumerate}
 
 \section{Alpha}
 
 \begin{itemize}
 \item alpha is from signal and based on benchmark/factor models. For example find some signal to score stocks, then compute alpha from z-scores (neutralize for risk factors)
-$$\mathbf{\alpha} = \mathbf{z} - (\mathbf{z^T}\mathbf{x}_B) \mathbf{\beta}$$
+$$\boldsymbol{\alpha} = \mathbf{z} - (\mathbf{z^T}\mathbf{x}_B) \mathbf{\beta}$$
 
 \item Information Coefficient(IC) : Correlation between factor score/prediction and actual outcome (realized return). IC $\geq$ 0.05 is considered good
 \item Grinold and Kahn’s rule of thumb (Alpha scaling)
@@ -718,32 +781,39 @@ convertible arbitrage
 
 \section{Risk Premia Factors}
 
+\subsection{Size}
 \begin{itemize}
-	\item Size
-		\subitem Small-Minus-Big factor in equity class
-		\subitem No longer significant as value
-		\subitem Structural Bias - Less information from smaller business 
-		\subitem Risk Sharing - Investor's Reluctance to invest in smaller firms
-	\item Value
-		\subitem High-Minus-Low 
-		\subitem Behavior Bias - Rebalancing Contrarian Timing Reversals
-		\begin{itemize}
+	\item Small-Minus-Big factor in equity clas
+	\item No longer significant as value
+	\item Structural Bias - Less information from smaller business
+	\item Risk Sharing - Investor's Reluctance to invest in smaller firms
+\end{itemize}
+
+
+\subsection{Value}
+\begin{itemize}
+	\item High-Minus-Low 
+	\item Behavior Bias - Rebalancing Contrarian Timing Reversals
+	\begin{itemize}
 			\item Over-extrapolation of past growth
 			\item Delayed overreaction to price trends
 			\item Discomfort with "dogs" and distress
 			\item generic risk premium (1/P)
 			\item rational based on distress risk, dynamic betas
 		\end{itemize}
-		\subitem Who is on the other side
-		\begin{itemize}
+	\item Who is on the other side
+	\begin{itemize}
 			\item Over-extrapolation or multi-year growth
 			\item Long Term overreactors( chasing returns at 3-5 yr when reversal dominate)
 			\item Managers attracted to glamor stocks
 			\item Investors averse to some risks in value stocks
 		\end{itemize}
-		\subitem in Equity and FX 
-	\item Momentum 
-		\subitem Behavior Bias 
+\end{itemize}
+
+\subsection{Momentum}
+
+\begin{itemize}
+	\item Behavior Bias 
 			\begin{itemize}
 				\item Herding, Confirmation Bias, Fund Flows
 				\item Under-reaction to public news
@@ -751,50 +821,71 @@ convertible arbitrage
 				\item Pro-cyclical risk tolerance or risk management
 				\item Disposition effect
 			\end{itemize}
-		\subitem Who is on the other side
+	 \item Who is on the other side
 			\begin{itemize} 
 			 \item Inattentioned, conservative, overconfident
 			 \item contrarians resisting the herd
 			 \item investors without stop-loss rules
 			 \item those handing on the losers
 			\end{itemize}
-	\item Carry
-		\subitem Behavior Bias
-		\begin{itemize}
+\end{itemize}
+\subsection{Carry}
+
+\begin{itemize}
+	\item Behavior Bias
+	\begin{itemize}
 			\item Skew/Tail Preference volatility jump premia
 			\item Overconfident expectations of capital losses (mkt moves) that would offset the carry trade non-profit-driven flows supporting high carry
 			\item generic risk premium(1/P)
 			\item liquidity needs, price pressure
-		\end{itemize}
-		\subitem Who is the other side
+	\end{itemize}
+	\item Who is the other side
 		\begin{itemize}
 			\item tail insurance buyers, skewness lovers, crash protection seekers
 			\item overconfident holders of salient macro views
 			\item non-profit driven actors(central banks)
 			\item Impatient/short-horizon investors, those needing immediacy in trading
 		\end{itemize}
-		\subitem Risk Sharing 
+	\item Risk Sharing 
 		\begin{itemize}
 			\item Options: Volatility Carry, Volatility Selling
 			\item Credit beta-neutral relative value trade, benefit from investor's portfolio limits(structural) providing market with insurance against credit(risk sharing)
 			\item CO Curve - provide liquidity to hedgers/producers (risk sharing), higher demand from investors on near dated contracts and supply from hedgers on far dated
 		\end{itemize}
-		\subitem Structural
+	\item Structural
 		\begin{itemize}
 			\item Commodity Carry: Imbalance in inventory levels and subsequent hedging pressure as reflected in time spreads (eg. contango suggests selling pressure due to inventory surplus with the expectation of future price depreciation)
 		\end{itemize}
-	\item Betting-against Beta: 
-		\subitem	
-		\begin{itemize}
+	\item Koijen el el(2013) Approach
+	$$ C_t = \frac{S_t - F_t}{X_t}$$ $$S_t:\text{Spot price},F_t:\text{Futures price},X_t:\text{Capital to finance futures contracts}$$
+	e.g
+	\subitem $$\text{Currency(CIP holds): }  \frac{S_t - F_t}{F_t} = \frac{r_t^{f,*} - r_t^f}{1+r_t^f} $$
+	\subitem $$\text{Equity: } \frac{S_t - F_t}{F_t} =(\frac{ \E(D_(t+1))}{S_t} - f_t^f) \frac{S_t}{F_t}$$ $$F_t = F_t(1+r_t^f) - \E(D_{t+1})$$
+	\subitem $$\text{Commodity(storage cost): } \frac{S_t - F_t}{F_t} = \frac{\delta_t - r^f_t}{1+r^f_t - \delta_t}$$ $$F_t = S_t(1+r_t^f - \delta_t)$$
+	\subitem $$\text{Zero-Coupon Bond: }\frac{f_t^{(n)} - r_t^f}{1+ r_t^f} $$
+	 $$S_t^{(n)} = \frac{1}{(1+y_t^{(n)})^n}, F_t^{(n)} = (1+r_t^f) S_t^{(n)} $$
+	 $$C_t \approx (y_t^{(n)} - r_t^f) - D^{mod}( y_t^{(n-1)} - y_t^{(n)})$$ (slope and roll-down)
+	 \subitem $$\text{Option Carry: }	 \frac{P_j(\tau -1, K, S_t, \sigma_{t,\tau-1})}{(1+r_f^t)P_j(\tau, K, S_t, \sigma_{t,\tau})} - 1 \approx \frac{-\theta_t^j + \nu_t^j(  \sigma_{t,\tau - 1} - \sigma_{t,\tau})}{(1+r_f^t)P_j(\tau, K, S_t, \sigma_{t,\tau})} - \frac{r^f_t}{1+r_t^f}$$
+	 Portfolio weights
+	 $$ w_i = z (rank(C_i) - \frac{N+1}{2})$$
+	 z is scalar makes long-short position equals 1, N is number of stocks
+	 $$ r_{t+1}^i = a^i + b_t + c C_t^i + \epsilon_{t+1}^i$$
+\end{itemize}
+
+\subsection{Betting-against Beta}
+
+\begin{itemize}
+	\item Behavior Bias
+	\begin{itemize}
 			\item Quality, Risk Parity
 			\item Behavior Bias
 			\item leverage aversion
 			\item lottery seeking
 			\item relative risk preferences, conventionality
 			\item active managers seeking maximal bang for the (unlevered) buck
-			\item underreaction to quality
+			\item Underreaction to quality
 		\end{itemize}
-		\subitem The other side
+	\item The other side
 		\begin{itemize}
 			\item constrained investors who avoid levering up low-risk opportunities with better SRs and instread choose concentrated high-risk exposures
 			\item investors who prefer lotteries and positive skewness
@@ -802,9 +893,9 @@ convertible arbitrage
 			\item overconfident and constrained active managers
 			\item inattentioned, story-telling investors
 		\end{itemize}
-		\subitem From Margin CAPM Model(Black): Security Market Line is flatter than it should be because of margin constraints of investors
-		\subitem Frazzini-Pedersen construction 
-		$$ \hat{\beta} = \hat{\beta}_i = \hat{\rho}_i \frac{\sigma_i}{\hat{\sigma}_M}, \beta_i = \omega + (1-\omega) \hat{\beta}_i$$
+	\item From Margin CAPM Model(Black): Security Market Line is flatter than it should be because of margin constraints of investors
+	\item Frazzini-Pedersen construction 
+	   $$ \hat{\beta} = \hat{\beta}_i = \hat{\rho}_i \frac{\sigma_i}{\hat{\sigma}_M}, \beta_i = \omega + (1-\omega) \hat{\beta}_i$$
 		$$ \boldsymbol{z} = rank(\boldsymbol{\beta}), \boldsymbol{\hat{z}} = \frac{\boldsymbol{1^Tz}}{n}\boldsymbol{1}$$
 		$$ w_{H/L} := \frac{1}{\boldsymbol{1^T}(\boldsymbol{z}-\boldsymbol{\hat{z}})^{+/-}}(\boldsymbol{z}-\boldsymbol{\hat{z}})^{+/-} $$ 
 		$$ r_{BAB,t} = \frac{1}{\beta_{L,t}}r_{L,t} -\frac{1}{\beta_{H,t}}r_{H,t}$$
@@ -813,24 +904,40 @@ convertible arbitrage
 		$$ m_i (\mathbf{P^0})^T \mathbf{x} \leq W_i$$
 		$$ \mathbf{x^*} = \frac{1}{\gamma}(\E(\mathbf{P^1}) - (1+\phi)\mathbf{P^0})$$
 		$$ \E(r_{BAB}) = \frac{\beta_H - \beta_L}{\beta_H \beta_L}$$
-		\subitem 
+	\item 
 			\begin{itemize}
 		 	\item Credit: Jump-to-Default
 		 	\item IR Curve/CR Curve - Benediting from the average investor's leverage constraints
-			\end{itemize}		
-	\item Volatility Carry
-		\subitem CVA Desk vs Real Trade
-	\item Liquidity Risk Premia 
-	\item Others
-		\subitem Five Factor Model by Fama-French: Profitability (RMW-robustness, high OP), Investment(CMA-conservative, low INV)
-		\subitem Seasonality: Benefiting from the market's ability to correctly estimate the seasonality of commodities (behavioral) and assume seasonality risk
-		\subitem: COT : benefiting from the market's inability to process positioning data (behavioral） and the average investor's constraints in positioning according to such data
-		\subitem Equity Intraday Momentum
+			\end{itemize}	
+\end{itemize}
+\subsection{Volatility Carry}
+\begin{itemize}
+	\item  CVA Desk vs Real Trade
 \end{itemize}
 
+\subsection{Factor Interactions}
+Value and Momentum are negatively correlated and provides diversification benefits ("Value and Momentum Everywhere" )
 
+\subsection{Others}
+\begin{itemize}
+	\item Liquidity Risk Premia 
+	\item Five Factor Model by Fama-French: Profitability (RMW-robustness, high OP), Investment(CMA-conservative, low INV)
+	\item Seasonality: Benefiting from the market's ability to correctly estimate the seasonality of commodities (behavioral) and assume seasonality risk
+	\item: COT : benefiting from the market's inability to process positioning data (behavioral） and the average investor's constraints in positioning according to such data
+	\item Equity Intraday Momentum
+\end{itemize}
 
-\subsection{}
+\section{Bond Factors}
+
+Some bond specific risk-premia study
+
+\begin{itemize}
+	\item Fama-Bliss(1987) and Cochrane-Piazzesi(2005) on excess log return and forward spread
+		$$rx_{t+1}^{(n)} = \alpha + \beta (f_t^{(n)} - y_t^{(1)}) + \varepsilon_{t+1}^n$$
+	\item Ludvingson-Ng (2009) form factor of macroeconomic variables
+	$$rx_{t+1}^{(n)} = \boldsymbol{\alpha^TF_t} + \boldsymbol{\beta^T Z_t} +\varepsilon_{t+1}$$
+\end{itemize}
+
 
 \section{Market Anomalies}
 
@@ -872,6 +979,16 @@ other: liquidity risk premia
 
 intraday mean-reversion
 
+hedge fund strategies
+
+  merger/risk arbitrage
+
+   fixed income arbitrage
+       swap spread arbitrage
+       yield-curve spread arbitrage
+      mortgage spread arbitrage ( on prepayment rates)
+      capital structure/credit arbitrage 
+      volatility trading （interest cap vol) arbitrage
 
 \chapter{Quantitative Trading Strategies}
 
@@ -894,6 +1011,13 @@ intraday mean-reversion
 	\item 
 \end{itemize}
 
+Special Concerns on the tradability/capacity of the strategy
+
+\begin{itemize}
+	\item Trading Cost and Market Impact : empirical analysis, trading cost models(quadratic impact) and rebalance frequency control
+	\item Tax, Tax-aware investing
+		\subitem Different rules applied to ordinary income, capital gains, capital losses. There are differences in the tax rates for long-term vs short capital gains. Wash-sale restrictions.
+\end{itemize}
 
 
 \section{Equity}
@@ -973,14 +1097,20 @@ Basic Assumptions: Most time should check implicit assumptions
 
 Data Problems
 \begin{itemize}
+ \item Financial Data, especially economic data can be series lagged. (important data can be officially reported/audited with a quarter lag, IMF reports some country data with 2 years lag)
+ \item Data Measurement errors and biases: transcription errors, survivorship bias(*), Appraisal Data (Smoothed data, which seriously influences volatility estimation, volatility factor is needed)
+ \item Sampling's interaction with market regime and non-stationarity
  \item return measured less than a year includes implicit extrapolation
  \item illiquid and infrequent priced assets may be priced with
  	\subitem Matrix pricing (common in bond market)
  	\subitem Consensus/Expert Data
+ 	\subitem Appraisal Data: without public information, risks is underestimated 
  \item Bonds: Recall, Termination (Aging), Exchanged
  \item Stock: Corporate Actions (Splits, Reverse Splits, Voting Rights, etc)
  \item Futures and Options: Termination and Rolling
  \item Currencies: Not Traded in centralized order book 
+ \item Different data collection principles and definitions, error rates in collection, change in calculation formula (eg. CPI, rescale of index), data re-scale ("rebase" of economic data)
+ \item Benchmark formormulation methods, liquidity, investability,
 \end{itemize}
 
 Signals
@@ -1000,7 +1130,14 @@ Signals
 
 \section{Data Labeling in Strategy Research}
 
+\section{Estimators}
 
+Distinguish between
+\begin{itemize}
+	\item Sample Estimator
+	\item Shrinkage Estimator
+	\item Factor Models(imposed factor structures/PCA Structures)
+\end{itemize}
 
 
 \chapter{ Trading System }
