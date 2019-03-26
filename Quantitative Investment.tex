@@ -55,17 +55,17 @@ GDP, Inflation and Unemployment:
     \item Unemployment: Frictional, Cyclical, Structural, Seasonal, Voluntary 
 \end{itemize}
 
-Economic Indicators: \\
 
-Leading Indicators: 
-
+Economic indicators(manufacturing, stock prices, money supply) leading, concident and lagging indicators(employment, labor, consumer market)：
 \begin{itemize}
-    \item PMI, Tanken Survey(Japan)
-    \item Capacity Utilisation 
-    \item Retail Sales
-    \item Consumer Sentiment/Confidence 
+	\item Leading Indicators \\
+	\begin{itemize}
+    	\item PMI, Tanken Survey(Japan)
+    	\item Capacity Utilisation 
+    	\item Retail Sales
+	\end{itemize}
+	 \item Consumer Sentiment/Confidence 
 \end{itemize}
-
 
 Market Data Release Time Schedule:
 
@@ -82,12 +82,6 @@ Market Data Release Time Schedule:
 \end{tabular}
 \end{center}
 
-\begin{itemize}
-    \item PMI 
-    \item Capacity Utilisation 
-    \item Retail Sales
-    \item Consumer Sentiment/Confidence 
-\end{itemize}
 Fiscal Policy and Monetary Policy:
 
 \begin{itemize}
@@ -104,15 +98,24 @@ According to Ray Dailo's Opinion, business cycles are created by credit (borrowi
 
 \begin{itemize}
 	\item Total output = Price $\times$ Quantity, while Price = Money + Credit
+		\subitem output gap
 	\item Long term debt cycle: 75 to 100 years. Short term debt cycle" 5-7 years
 	\item Key indicators Inflation, deflation, tax, government spending, unemployment (Government Action)
 	\item "Beautify Deleveraging": The phase total debt decreases. Needs: Spending cut, Debt Restructuring, Wealth transfer, Print Money (Government Debt increases, total debt decreases, if not carefully, lead to hyper-inflation
 	\item 2-3 years depression/deleveraging and 7-10 yeas "reflation"
+	\item Inventory Cycle and Business Cycle:
+	\subitem \begin{enumerate}
+		\item Initial Recovery: inflation still declining, fiscal stimulus, short rates low and decline, bond yields boom, stock prices rise, confidence rebound
+		\item Early upswing: inflation low and growth high, short rates move up, bound yield stable and up slightly, stock trending upward, high confidence
+		\item Late upswing: inflation pick up, fiscal policy restrictive, short rates rise, stock topping out, volatility could be high, confidence boom mentally
+		\item Slowdown: inflation accelerate, inventory correction begins, confidence drops, short-term interest rates peking, bond yields topping out and star to decline, stock decline
+		\item Recession: short rates decline, bond yields drop, stock bottoming and starting to rise
+	\end{enumerate}
+	\item How monetary policy works and Taylor's Rule, Kayesian Theory 
+	\item Growth theory: Capital, Technology and Population, Solow Growth model, total factor productivity 
+	\item Emerging market and country risk: fiscal and monetary policy, growth prospect, currency and external account (relies on the credit of foreign currency and foreign reserve), external debt and liquidity
 \end{itemize}
 
-Keysian Theory 
-
-stagflation and non zero inflation
 
 
 \section{Financial Economics}
@@ -270,7 +273,7 @@ Basic Concepts:
 \begin{itemize}
     \item FX Market is Extremely liquid (smaller bid ask spread on equity) 
     \item Market Size High to Low: USD, EUR, Cheap Currencies: JPY(safe currency), CHF, GBP, Rich(high rate) currencies: ZAR, MXN, AUD 
-    \item Uncovered Interest Rate Parity and Covered IRP
+    \item Uncovered Interest Rate Parity and Covered Interest Rate Parity
     \item Interest Rate Forward/Futures, Non-deliverable forwards(NDF)
     \item FX Drivers: Interest rate differential, inflation rate differential, Global M\&A/Capital Flows, Technical Drivers(Indicators), Central Bank Policies, Risk Appetite
     \item Purchasing Power Parity
@@ -910,9 +913,37 @@ convertible arbitrage
 		 	\item IR Curve/CR Curve - Benediting from the average investor's leverage constraints
 			\end{itemize}	
 \end{itemize}
+
 \subsection{Volatility Carry}
 \begin{itemize}
-	\item  CVA Desk vs Real Trade
+	\item Risk Sharing: Comes from supply and demand imbalance of options
+	\subitem Other explanations
+		\begin{itemize}
+		 \item sellers/buyers cannot hedge perfectly
+		 \item option sellers face capital market constraints
+		 \item limits to arbitrage
+		 \item compensation for positive correlation with bad times and market crash
+		 \item negative skewness of return
+		\end{itemize}
+	  \item Option supply/demand imbalances in different markets
+	  \subitem
+	  \begin{itemize}
+	  	\item Equity: SPX(SX5E, UKX, HIS, EEM, DAX, FTSE, NKY), VIX, 10Y US Treasury Futures - downside protection in equity market
+	  	\item Credit: risk management and load desks in bank are buyers. Sellers are asset managers/investors in credit market
+		\item Interest Rate: buyers are banks and mortgage hedgers (protection for negative convexity in portfolio). Supply from asset manager and institutional investors looking for extra yield
+		\item FX: demand from global funds to take views and hedge, supply from banks
+		\item CVA Desk vs Real Trade
+	  \end{itemize}
+\end{itemize}
+
+Special Considerations for volatility strategies
+
+\begin{itemize}
+	\item Volatility mark/data quality: eg. Using EEM US data to mark MXEF emerging market indices. Different trading hours, stale prices
+	\item Risk Management: e.g. if hedging with futures, need funding curve mark, dividend mark, etc
+	\item Hedging execution: Dealer products shorting vol(eg. CPPI, Variance Swaps, systematic selling) usually mark at close, additional Gamma position creates intraday momentum, hedging/developing strategy to monetize it. eg. For interest rate option, selection different expiries to smooth vega risk/ not fully hedge to monetize underlying mean-reversion
+	\item Early exercise of American Options and corporate actions
+	\item Market impact and capacity analysis
 \end{itemize}
 
 \subsection{Factor Interactions}
@@ -927,7 +958,27 @@ Value and Momentum are negatively correlated and provides diversification benefi
 	\item Equity Intraday Momentum
 \end{itemize}
 
+\subsection{Practical Issues}
+
+\begin{itemize}
+	\item Universe: small stocks may have information/liquidity issues, in the same time potentially they bring more profit
+	\item Bottom-Up vs Top-down approach of portfolio construction: See "Factor Portfolio" part. In practice, more constraints in the process (short transaction cost, short selling index vs short selling stocks
+	\item Long-only implementation and long-short implementation
+	\item Factor Sensitivity Control $\frac{\sigma_j w_j}{\sum \sigma_k w_k}$
+	\item Factor Signal Processing: Mutli-window, exponential smoothing. etc
+\end{itemize}
 \section{Bond Factors}
+
+common risk Premia in bonds
+
+\begin{itemize}
+	\item Carry: Term Structure of yield curve. (Compensation for bearing duration, inflation and illiquidity risk (long riskier assets))
+	\item Trend: Over/underreaction
+	\item Value: Yield - Inflation Expectation. (10y futures across G8, inflation consensus, as a compensation beyond expected rates path) Bond Risk Premium as compensation beyond expected rates path
+	\item Volatility Selling - Demands on US IR Vol Surface are driven by different factors (expiry, tenors
+	\item "Betting Against Beta" - DVO1 neutral steepener in credit CDS/Itrixx index(high beta is longer dated assets)
+	\item Credit Market : beta and spread has "regime dependency" for term-structure carry. "Squeeze Sensitivity" and "Sensitivity to constituents" to 
+\end{itemize}
 
 Some bond specific risk-premia study
 
@@ -992,6 +1043,7 @@ hedge fund strategies
 
 \chapter{Quantitative Trading Strategies}
 
+
 \section{Strategy Toolbox List}
 
 \begin{itemize}
@@ -999,9 +1051,15 @@ hedge fund strategies
 		\subitem Multi-signal mix: Multi-window， multi-signal
 		\subitem Signal Smoothing:
 			\subsubitem Exponential Decay, half-life length
-	\item Weighting and Rebalancing
+	\item Weighting and Rebalancing Methods
 		\subitem Strategy Groups
-		\subitem Signal Speed: for example, for volatility carry strategies, drawdown recovers fast -Using Asset Stress Loss is more appropriate. For trend strategies, positive weight and negative weight changes fast, so use parity when put into top level. Inside the strategy group, use weight smoothing
+		\subitem e.g.
+		\begin{itemize}
+			\item Recovery: For volatility carry strategies, drawdown recovers fast -Using tail risk measure(Asset Stress Loss, CVar)/Long-term Based Fixed Weight is more appropriate. For trend strategies, positive weight and negative weight changes fast, so use parity when put into top level. Inside the strategy group, use weight smoothing
+			\item Signal Speed: For time-series momentum strategies, correlations signals varies a a lot - using Risk Parity (ignore the correlations)/max trend exposure with volatility control
+			\item For equities, constraints such on single stocks, regions, sectors, and tracking errors vs benchmarks need to be imposed as model insurance/risk controller.
+			\item Additional risk-level control on beta(bond/equity), control sensitivities to certain risk factor (eg. Size and Value have high sensitivities to equity benchmarks in a cross-asset portfolio)
+		\end{itemize}
 	\item Risk
 		\subitem Portfolio Volatility Control, Sub Portfolio Volatility Control 
 		\subitem Correlation
@@ -1083,6 +1141,18 @@ Some Major Challenges:
 
 
 \chapter{Financial Data Modeling}
+
+
+"Garbage-in, Garbage-out". Data is the most important element. Common pitfalls as
+
+\begin{itemize}
+	\item Surviorship bias and failure to ensure non-anticipative trading
+	\item Bid and Ask Spreads
+	\item Transaction costs and liquidity
+	\item Paper Statistical validation (backtesting set up and validation, statistical test on back-test result is a big topic)
+\end{itemize}
+
+can typically happen. 
 
 \section{Financial Data Structure}
 
