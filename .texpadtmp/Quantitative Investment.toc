@@ -66,37 +66,39 @@
 \contentsline {chapter}{\numberline {8}Quant Strategies and Long-short Strategies}{47}
 \contentsline {part}{III\hspace {1em}Quantitative Modeling and Strategies Implementation}{48}
 \contentsline {chapter}{\numberline {9}Strategy Development Overview}{49}
-\contentsline {chapter}{\numberline {10}Financial Data Modeling}{51}
-\contentsline {section}{\numberline {10.1}Financial Data Structure}{51}
-\contentsline {section}{\numberline {10.2}Financial Data Sampling}{53}
-\contentsline {subsection}{\numberline {10.2.1}Data Sampling Methods}{53}
-\contentsline {subsection}{\numberline {10.2.2}Data Sampling Weights}{53}
-\contentsline {section}{\numberline {10.3}Time-series Data Modeling}{53}
-\contentsline {section}{\numberline {10.4}Data Labeling in Strategy Research}{53}
-\contentsline {section}{\numberline {10.5}Estimators}{53}
-\contentsline {chapter}{\numberline {11} Trading System }{54}
-\contentsline {section}{\numberline {11.1} Strategy Development Pipeline(Single/Linear Strategy) }{55}
-\contentsline {subsection}{\numberline {11.1.1}Basic Architecture/System}{55}
-\contentsline {subsection}{\numberline {11.1.2}Data}{58}
-\contentsline {subsection}{\numberline {11.1.3}Backtester/Simulator}{58}
-\contentsline {subsection}{\numberline {11.1.4}Trade Record and Money Management}{59}
-\contentsline {subsection}{\numberline {11.1.5}Analytics}{59}
-\contentsline {subsubsection}{\numberline {11.1.5.1} Strategy Management }{59}
-\contentsline {subsubsection}{\numberline {11.1.5.2}Execution Analysis and Cost}{59}
-\contentsline {subsection}{\numberline {11.1.6}Research Team}{59}
-\contentsline {subsubsection}{\numberline {11.1.6.1}Parameter Optmization and Control}{60}
-\contentsline {subsubsection}{\numberline {11.1.6.2}Signal Indicator Design}{60}
-\contentsline {subsubsection}{\numberline {11.1.6.3}Integration of single indicators and portfolio theory}{65}
-\contentsline {subsubsection}{\numberline {11.1.6.4}Strategy Risk Management and Money management}{65}
-\contentsline {section}{\numberline {11.2}Backtesting}{66}
-\contentsline {chapter}{\numberline {12}Portfolio Risk Management}{67}
-\contentsline {section}{\numberline {12.1}Key Questions}{67}
-\contentsline {section}{\numberline {12.2}Derivatives and Hedging Strategies}{67}
-\contentsline {section}{\numberline {12.3}FX risk management}{69}
-\contentsline {chapter}{\numberline {13}Monitoring and Performance Evaluation}{70}
-\contentsline {section}{\numberline {13.1}Monitoring}{70}
-\contentsline {section}{\numberline {13.2}Performance Analysis}{70}
-\contentsline {subsection}{\numberline {13.2.1}Performance Attribution and Style Analysis}{71}
-\contentsline {subsection}{\numberline {13.2.2}Measure Performance}{72}
-\contentsline {chapter}{\numberline {14}Alternative Data and General Machine Learning}{74}
-\contentsline {chapter}{\numberline {15}E-trading and Execution}{75}
+\contentsline {section}{\numberline {9.1}What a Quant Asset Management Team is Like}{49}
+\contentsline {section}{\numberline {9.2}Strategy Research Overview}{50}
+\contentsline {chapter}{\numberline {10}Financial Data Modeling}{52}
+\contentsline {section}{\numberline {10.1}Financial Data Structure}{52}
+\contentsline {section}{\numberline {10.2}Financial Data Sampling}{54}
+\contentsline {subsection}{\numberline {10.2.1}Data Sampling Methods}{54}
+\contentsline {subsection}{\numberline {10.2.2}Data Sampling Weights}{54}
+\contentsline {section}{\numberline {10.3}Time-series Data Modeling}{54}
+\contentsline {section}{\numberline {10.4}Data Labeling in Strategy Research}{54}
+\contentsline {section}{\numberline {10.5}Estimators}{54}
+\contentsline {chapter}{\numberline {11} Trading System }{55}
+\contentsline {section}{\numberline {11.1} Strategy Development Pipeline(Single/Linear Strategy) }{56}
+\contentsline {subsection}{\numberline {11.1.1}Basic Architecture/System}{56}
+\contentsline {subsection}{\numberline {11.1.2}Data}{59}
+\contentsline {subsection}{\numberline {11.1.3}Backtester/Simulator}{59}
+\contentsline {subsection}{\numberline {11.1.4}Trade Record and Money Management}{60}
+\contentsline {subsection}{\numberline {11.1.5}Analytics}{60}
+\contentsline {subsubsection}{\numberline {11.1.5.1} Strategy Management }{60}
+\contentsline {subsubsection}{\numberline {11.1.5.2}Execution Analysis and Cost}{60}
+\contentsline {subsection}{\numberline {11.1.6}Research Team}{60}
+\contentsline {subsubsection}{\numberline {11.1.6.1}Parameter Optmization and Control}{61}
+\contentsline {subsubsection}{\numberline {11.1.6.2}Signal Indicator Design}{61}
+\contentsline {subsubsection}{\numberline {11.1.6.3}Integration of single indicators and portfolio theory}{66}
+\contentsline {subsubsection}{\numberline {11.1.6.4}Strategy Risk Management and Money management}{66}
+\contentsline {section}{\numberline {11.2}Backtesting}{67}
+\contentsline {chapter}{\numberline {12}Portfolio Risk Management}{68}
+\contentsline {section}{\numberline {12.1}Key Questions}{68}
+\contentsline {section}{\numberline {12.2}Derivatives and Hedging Strategies}{68}
+\contentsline {section}{\numberline {12.3}FX risk management}{70}
+\contentsline {chapter}{\numberline {13}Monitoring and Performance Evaluation}{71}
+\contentsline {section}{\numberline {13.1}Monitoring}{71}
+\contentsline {section}{\numberline {13.2}Performance Analysis}{71}
+\contentsline {subsection}{\numberline {13.2.1}Performance Attribution and Style Analysis}{72}
+\contentsline {subsection}{\numberline {13.2.2}Measure Performance}{73}
+\contentsline {chapter}{\numberline {14}Alternative Data and General Machine Learning}{75}
+\contentsline {chapter}{\numberline {15}E-trading and Execution}{76}

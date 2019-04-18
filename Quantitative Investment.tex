@@ -313,6 +313,15 @@ Calculations
     \item Spot yield, par yield, forward rate, Bootstrapping
 \end{itemize}
 
+
+Key Features
+
+\begin{itemize}
+	\item Liquidity
+	\item Risk-sharing: eg. Credit Index (CDX, ITRX) forward is often higher than realized spot because of the risk premia. So drift-adjusted delta-hedging for credit options yields better performance.
+\end{itemize}
+
+
 \section{Commodities}
 
 \begin{itemize}
@@ -1110,6 +1119,8 @@ Stat Arb (typically high volume), Merger Arb, Relative Value, IntraCap Pairs
 
 \chapter{Strategy Development Overview}
 
+\section{What a Quant Asset Management Team is Like}
+
 Typically, need the sub functions/sub teams including:
 
 \begin{enumerate}
@@ -1139,6 +1150,29 @@ Some Major Challenges:
  \item "Backtest overfitting": Without limitation on number of trials, Sharpe ratio in back test could be very high. 
 \end{enumerate}
 
+\section{Strategy Research Overview}
+
+Traditionally, Research Processes are formed from signal to portfolio
+
+\begin{enumerate}
+	\item Alpha Signal/Factor Research
+	\item Securities Selection: Select investment universe from signals
+	\item Weight Allocation: from signals
+	\item Specific sub-component or sub-module building: e.g.) the delta hedging part of an option strategy can include
+		\begin{itemize}
+			\item Delta hedging mechanism and methods: intraday vs eod? corridor? use Black-Scholes or other models (add drifts)
+			\item Parameters to tune/research including window, volume, drift, etc.
+		\end{itemize}
+	\item Tune General Parameters such as lookback window, smoothing, etc.
+		\begin{itemize}
+			\item Combine with market research/analytics: liquidity, common factor sensitivities(eg. shape+slope+curvature, carry, greeks)
+			\item Combine performance attribution (to factors, sectors, etc)
+			\item Stress Testing, draw down, CVAR, defensiveness
+			\item Correlation and interaction with whole portfolio
+		\end{itemize}
+\end{enumerate}
+
+In modern days, the above process become more and more consistent and integrated.
 
 \chapter{Financial Data Modeling}
 
