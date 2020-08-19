@@ -39,9 +39,9 @@
 \tableofcontents                        % Print table of contents
 \mainmatter                             % only in book class (arabic page #s)
 
-\part{Financial Market and Investment Tools}
+\part{Financial Markets and Investment Tools}
 
-\chapter{Economics}
+\chapter{Economics and Finance Theories}
 
 \section{Macroeconomics} 
 
@@ -139,6 +139,15 @@ According to Ray Dailo's Opinion, business cycles are created by credit (borrowi
     \item Rationality. Utility Theroy, Indifference Curve, Risk Aversion. Participants are perfect optimizers with perfect Bayesian Information
     \item Efficient Market Hypothesis : 3 Forms
     \item Market Anomalies: Fundamental Anomalies (Factor), Technical Anomalies, Calendar Anomalies, Limits to Arbitrage 
+    \item Sources of Market Inefficiencies - Why active investors make money
+    	\begin{itemize}
+			\item capital structure and funding friction (vs. Modigliani-Miller theorem)
+			\item investors hold different portfolio (vs. two-fund theorem)
+			\item liquidity risk and funding constraints
+			\item arbitrage opportunities (supply and demand of derivative opportunities)
+			\item credit cycles and liquidity spirals (vs fundamental business cycle)
+			\item monetary policy (vs Taylor rule)
+    	\end{itemize}
 \end{itemize}
 
 \section{Behavioral Finance}
@@ -189,6 +198,44 @@ Asset Owners(Real Money): From conservative to active: Banks, Insurance Company,
 
 Hedge Funds(Fast Money)
 
+Hedge Fund Strategies 
+
+\begin{itemize}
+	\item Equity Strategies
+	\begin{itemize}
+			\item discretionary long-short
+		\item short bias
+		\item quantitative equity
+	\end{itemize}
+
+	\item Macro strategies
+	\begin{itemize}
+		\item global macro
+		\item managed futures
+	\end{itemize}
+
+	\item Arbitrage Strategies
+	\begin{itemize}
+		\item Fixed income arbitrage
+		\item convertible bond arbitrage
+		\item event-driven arbitrage
+		\item statistical arbitrage
+	\end{itemize}
+\end{itemize}
+
+The reason why hedge fund make money
+\begin{itemize}
+	\item compensation for risk
+	\subitem tail risk
+		\subsubitem volatility trading strategies
+	\subitem funding liquidity risk and market liquidity risk
+		\subsubitem fixed-income arbitrage (on-the run rates, credit strategies)
+		\subsubitem market making
+	\item information processing
+		\subitem hidden information and market inefficiencies
+		\subitem faster process of information
+\end{itemize}
+
 Investment Purpose Statement(IPS): Consider Return, Risk, Time Horizon, Tax, Liquidity, Legal and Unique. 
 
 
@@ -196,7 +243,7 @@ Fundamental Analysis, Company Analysis and Value Investing
 
 Management/Strategic Analysis(SWOT, Five forces etc), Industry/Region/ Sector Analysis + competitor Analysis 
 
-\section{ Real-life trading}
+\section{Real-life trading}
 
 \begin{itemize}
     \item Shorting a Stock: achieved by a stock-loan process of broker/dealer: broker need to borrow and put colleteral, during borrow agreement, any dividend is passed (synthetically) from the borrower to the beneficial owner. Corporate actions: borrower vote as in lender's proxy. 
@@ -490,7 +537,7 @@ Credit Value Adjustment(CVA)
 
 commodity, real-estate, Private Equity, Hedge Fund, Managed Futures, Distressed Securties
 
-\part{Quantitative Investment Theories}
+\part{Quantitative Investment}
 
 \chapter{Quantitative Portfolio Mangement}
 
@@ -768,7 +815,27 @@ Factor Models plays a key role in all components of asset management
 	$$(\mathbf{a,Z}) = \argmin \E( \norm{\mathbf{a} + \mathbf{BZ} - \mathbf{X}}^2_{\Delta^{-1}})$$
 	$$ Z = (\mathbf{B}^T \mathbf{\Delta}^{-1} \mathbf{B})^{-1} \mathbf{B}^T \mathbf{\Delta}^{-1} \mathbf{X}, a = \E(\mathbf{X} - \mathbf{B}\E(\mathbf{Z}))$$
 	$\mathbf{\Delta}$ is often diagonal - associated to preassumed residual sizes.
-	Example: most common models, and risk models such as Aximoa and Barra $\mathbf{r} = \mathbf{Bf} + \mathbf{u}$, use time series data of r to compute time series data of f
+	
+	\subitem Example: most common models, and risk models such as (Aximoa, Barra, Northfield, Bloomberg) $$\mathbf{r} = \mathbf{Bf} + \mathbf{u}$$, use time series data of r to compute time series data of f
+	
+		$$f = (\mathbf{B}^T \mathbf{\Delta}^{-1} \mathbf{B})^{-1} \mathbf{B}^T \mathbf{\Delta}^{-1} r$$
+		ideally, we should use $\Delta=var(u)$, but we don't know that yet. The popular choice to to use a diagonal matrix as proxy, the above will yield time series data f and u. Then estimate their variance
+		
+		\subitem Enhancements
+		
+		For var(f)
+		\begin{itemize}
+			\item Use exponential smoothing
+			\item Use GARCH or Bayesian Models
+			\item Use random matrix theory to filter out noise
+		\end{itemize}
+		
+		For var(u)
+		\begin{itemize}
+			\item Assume they are idiosyncratic and var(u) is diagonal
+			\item Model each non-factor risk as
+				$$var(u_i) = \omega(1 + v_i)$$ $\omega$ and v are modelled separately
+		\end{itemize}
 	
 	\item Principal Components Model
 	$$ \mathbf{X} =  \mathbf{a} +  \mathbf{BZ} +  \mathbf{U}$$
@@ -793,7 +860,7 @@ Factor Models plays a key role in all components of asset management
 	$$ \mathbf{X} =  \mathbf{a} +  \mathbf{BZ} +  \mathbf{U}$$ 
 	want $cov(\mathbf{Z}, \mathbf{U})$ to be 0 and $var(U) = \Delta$ diagonal,
 	want $\mathbf{V} = var(\mathbf{X}) = \mathbf{B}^T var(\mathbf{Z}) \mathbf{B}^T + \mathbf{\Delta}$
-	Example: the APT Model
+	\subitem Example: the APT Model
 \end{itemize}
 
 
@@ -814,6 +881,16 @@ This is the traditional portfolio construction approach
 		\item Long-short: Long equal-weight (or value-weight) portfolio with high signal and equal weight( or value-weight) portfolio with low signal
 		\item Ranking: use signal to rank securities. The construct a long-short portfolio with holdings
 		$$ w_i = c (rank(s_i) - \frac{\sum_i rank(s_i)}{N})$$
+		Example: MSCI approach - combine z-scores for risk-adjusted 12-month and 6-month price momentum
+		
+		$$\text{signal score}=
+		\left\{
+			\begin{aligned}
+			1+z, z > 0\\
+			\frac{1}{1-z}, z \leq 0 \\
+			\end{aligned}
+		\right.$$
+		
 		\item Sorting: two-fold or k-fold version of the above high-low long-short
 	\end{itemize}
 	\item Use signal portfolio to get expected returns($\alpha$), covariance matrix and constraints for the optimization
