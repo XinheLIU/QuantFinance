@@ -77,3 +77,40 @@ John Wiley & Sons.
   * In fact, lower frequency estimator is a better estimation for higher frequency volatility than vice versa, see
     * Corsi, F. 2009. ‘‘*A Simple Long Memory Model of Realized Volatility.*’’ Journal of Financial Econometrics 7:174–196
     * Lynch, P., and G. Zumbach. 2003. ‘‘*Market Heterogeneities and the Causal Structure of Volatility.*’’ Quantitative Finance 3:320–331.
+
+## Model Volatility
+
+### "Stylized facts" about Volatility
+
+Survey
+
+* Cont, R. 2001. ‘‘*Empirical Properties of Asset Returns: Stylized Facts and
+Statistical Issues.*’’ Quantitative Finance 1:223–236.
+
+Some observed feature about volatility, robust with different measure include
+
+* [**Volatility Clustering**](https://en.wikipedia.org/wiki/Volatility_clustering)
+  * clustering tends to be longer in developed markets
+  * larger and faster decaying autocorrelation in bear market/market crash
+* mean-reverting
+  * but the mean moves
+  * Test mean-reverting: variance ratio test
+    * Campbell, J., A. Lo, and A. MacKinlay. 1997. *The Econometrics of Financial Markets*. Princeton, NJ: Princeton University Press.
+* Asymetry 
+  * The distribution of return is skewed (with excess kurtosis, most from overnight return moves), it has fat tails
+* **Leverage Effect** - Volatility increases more when price declines
+  * Studies
+    * Black, F. 1976. ‘‘Studies of Stock Price Volatility Changes.’’ Proceedings of the Meetings of the American Statistical Association, Business and Economics Section, Chicago, 177–181.
+    * Christie, A. 1982. ‘‘The Stochastic Behavior of Common Stock Variances: Value, Leverage and Interest Rate Effects.’’ Journal of Financial Economics 10:407–432
+    * Edderington, L., and W. Guan. 2010. ‘‘How Asymmetric Is U.S. Stock Market Volatility?’’ Journal of Financial Markets 13:225–248
+    * Abura, S., and N. Wagner. 2010. ‘‘Extreme Asymmetric Volatility, Leverage, Feedback and Asset Prices.’’ Universite de Paris Dauphine working paper.
+    * Jensen, M., A. Johansen, and I. Simonsen. 2003. ‘‘Inverse Fractal Statis- tics in Turbulence and Finance.’’International Journal of Modern Physics B 17: 4003–4012.
+      * Other measures show same broader effects
+* Correlated with Volume (spikes)
+  * Tauchen, G., and M. Pitts. 1983. ‘‘*The Price Variability-Volume Relationship on Speculative Markets.*’’ Econometrica 51:485–505.
+  * Andersen, T. 1996. ‘‘*Return Volatility and Trading Volume: An Information Flow Interpretation of Stochastic Volatility.*’’ Journal of Finance 51:169–204.
+* Distribution of Volatility
+  * Log-normal with fat tail (could be modelled by power law distributions), heavily skewed to the right
+  * Studies
+    * Cizeau, P., Y. Liu, M. Meyer, C. Peng, and H. Stanley. 1997. ‘‘Volatility Distribution in the S&P500 Stock Index.’’ Physica A 245:441–445.
+    * Andersen, T., T. Bollerslev, F. Diebold, and H. Ebbens. 2001. ‘‘The Distribution of Stock Return Volatility.’’ Journal of Financial Economics 61:43–76.
