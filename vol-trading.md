@@ -114,3 +114,64 @@ Some observed feature about volatility, robust with different measure include
   * Studies
     * Cizeau, P., Y. Liu, M. Meyer, C. Peng, and H. Stanley. 1997. ‘‘Volatility Distribution in the S&P500 Stock Index.’’ Physica A 245:441–445.
     * Andersen, T., T. Bollerslev, F. Diebold, and H. Ebbens. 2001. ‘‘The Distribution of Stock Return Volatility.’’ Journal of Financial Economics 61:43–76.
+
+### Volatility Forecasting
+
+The reason traders build volatility forecasting models is they belief it's more efficient than spot market because of
+
+* Transaction cost and complexity of option products
+  * eg.
+    * capital structure arbitrage - equity option + credit products to implement
+    * index vs component options - complicated to implement
+* Options contains inside informations 
+  * Bradley, D., B. Cline, and Q. Lian. 2009. ‘‘*Do Insiders Practice What They Preach? Informed Option Exercises around Acquisitions.*’’ Available at www.ssrn.com, SSRN-id1364787.
+  * Arnold, T., G. Erwin, L. Nail, and T. Bos. 2000. ‘‘*Speculation or Insider Trading in Option Markets Preceding Tender Offer Announcements.*’’ University of Alabama at Birmingham working paper. Available at http://ssrn.com/ abstract=234797.
+
+#### Forecasting Models
+
+Time-series models
+
+  * [EWMA ](https://www.investopedia.com/articles/07/ewma.asp) Models
+    * [Half-life](https://quant.stackexchange.com/questions/46194/half-life-of-exponetial-weighted-moving-average#:~:text=The%20half%2Dlife%20is%20the,(12)1%CF%84.)
+    * Drawbacks: did not take in consideration of the effect of mean-reverting
+  * GARCH Family
+    * GARCH
+      * $$\sigma^2_{t+\tau} = \gamma V + \alpha r^2_{t+\\tau-1} + \beta \sigma^2_{t+\\tau-1} $$
+      * $$\sigma^2_{t+\tau} -V = (\alpha + \beta)E[\sigma^2_{t+\\tau-1} - V]$$
+      * The long-term variance $\omega = \gamma V$ is usually set to be $(1-\alpha\\beta)$ times sample variance
+    * Other extensions see
+      * Hansen, P. R., and A. Lunde. 2005. ‘‘*A Comparison of Volatility Models: Does Anything Beat a GARCH (1,1)?*’’ Journal of Applied Econometrics 20:873–889.
+        * EGARCH, GJR-GARCH, IGARCH, TGARCH, AGARCH, CGARCH, etc
+      * Sato, A. H., and H. Takayasu. 2002. ‘‘*Derivation of ARCH(1) Process from Market Price Changes Based on Deterministic Microscopic Multi-Agent.*’’ In Empirical Science of Financial Fluctuations, edited by H. Takayasu, 172–178. Tokyo: Springer.
+
+[Volatility Cone](https://www.globalcapital.com/article/k6b8kytp99dk/volatility-cones)
+
+* A comparison vs historical volatility
+* a rough teller of the edge you have, but must consider other factors (eg. single name bet could be easier than index options)
+  
+* Hodges, S., and R. Tompkins. 2002. ‘‘*Volatility Cones and Their Sampling
+Properties.*’’ Journal of Derivatives 10:27–42.
+
+Fundamental information based forecasters
+
+* Sridharan, S. 2012. ‘‘Volatility Forecasting Using Financial Statement Informa-
+tion.’’ Stanford University Graduate School of Business working paper. Available
+at www.ssrn.com, SSRN-id 1984324.
+
+## Implied Volatility
+
+### [Variance Risk Premium](https://en.wikipedia.org/wiki/Variance_risk_premium#:~:text=Variance%20risk%20premium%20is%20a,the%20realized%20variance%20on%20average.&text=The%20amount%20that%20the%20buyer,as%20the%20variance%20risk%20premium.)
+
+* Selling volatility is like selling insurance, but not likely to be profitable because
+  * insurance companies profit by investing the premium, this is not the case for option traders who usually bears a funding cost
+  * tail risk is hard to price accurately and tail events can hurt a lot
+
+Relevant Academic works
+
+* Bakshi, G., & Kapadia, N. \(2003\). *Volatility Risk Premiums Embedded in Individual Equity Options. The Journal Of Derivatives*, 11\(1\), 45-54. doi: 10.3905/jod.2003.319210
+* Bakshi, G., and N. Kapadia. 2003. ‘‘*Delta-Hedged Gains and the Negative Market Volatility Premium.*’’ Review of Financial Studies 16:527–566.
+*  Bakshi, G., and D. Madan. 2006. ‘‘*A Theory of Volatility Spreads.*’’ Management Science 52:1945–1956.
+* Bollen, N., & Whaley, R. \(2002\). *Does Net Buying Pressure Affect the Shape of Implied Volatility Functions?*. SSRN Electronic Journal. doi: 10.2139/ssrn.319261
+* Bondarenko, O. \(2003\). Why are Put Options So Expensive?. SSRN Electronic Journal. doi: 10.2139/ssrn.375784
+* Broadie, M., Johannes, M., & Chernov, M. \(2007\). *Understanding Index Option Returns. SSRN Electronic Journal*. doi: 10.2139/ssrn.965739
+* Garleanu, N., Pedersen, L., & Poteshman, A. \(2005\). *Demand-Based Option Pricing. *SSRN Electronic Journal. doi: 10.2139/ssrn.676501
