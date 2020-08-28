@@ -49,7 +49,7 @@ Deal with B-S Assumptions
 
 ### Common Types of Volatility Estimators
 
-See summaries in 
+See summaries in
 
 Poon, S. 2005. A Practical Guide to Forecasting Financial Market Volatility. London:
 John Wiley & Sons.
@@ -96,7 +96,7 @@ Some observed feature about volatility, robust with different measure include
   * but the mean moves
   * Test mean-reverting: variance ratio test
     * Campbell, J., A. Lo, and A. MacKinlay. 1997. *The Econometrics of Financial Markets*. Princeton, NJ: Princeton University Press.
-* Asymetry 
+* Asymetry
   * The distribution of return is skewed (with excess kurtosis, most from overnight return moves), it has fat tails
 * **Leverage Effect** - Volatility increases more when price declines
   * Studies
@@ -123,15 +123,15 @@ The reason traders build volatility forecasting models is they belief it's more 
   * eg.
     * capital structure arbitrage - equity option + credit products to implement
     * index vs component options - complicated to implement
-* Options contains inside informations 
+* Options contains inside informations
   * Bradley, D., B. Cline, and Q. Lian. 2009. ‘‘*Do Insiders Practice What They Preach? Informed Option Exercises around Acquisitions.*’’ Available at www.ssrn.com, SSRN-id1364787.
-  * Arnold, T., G. Erwin, L. Nail, and T. Bos. 2000. ‘‘*Speculation or Insider Trading in Option Markets Preceding Tender Offer Announcements.*’’ University of Alabama at Birmingham working paper. Available at http://ssrn.com/ abstract=234797.
+  * Arnold, T., G. Erwin, L. Nail, and T. Bos. 2000. ‘‘*Speculation or Insider Trading in Option Markets Preceding Tender Offer Announcements.*’’ University of Alabama at Birmingham working paper. Available at <http://ssrn.com/> abstract=234797.
 
 #### Forecasting Models
 
 Time-series models
 
-* [EWMA ](https://www.investopedia.com/articles/07/ewma.asp) Models
+* [EWMA](https://www.investopedia.com/articles/07/ewma.asp) Models
   * [Half-life](https://quant.stackexchange.com/questions/46194/half-life-of-exponetial-weighted-moving-average#:~:text=The%20half%2Dlife%20is%20the,(12)1%CF%84.)
   * Drawbacks: did not take in consideration of the effect of mean-reverting
 * GARCH Family
@@ -254,3 +254,82 @@ Model instaneous and forward volatility. In practice, the change in back-month c
 
 * Stein, J. 1989. ‘‘Overreactions in the Options Market.’’ Journal of Finance 44:
 1011–1023.
+
+## Delta Hedging
+
+Ad-hoc Hedging Approaches
+
+* Hedging in fixed time-intervals
+* Hedging to a Delta Banand
+* Hedging based on Underlying changes
+
+Utility Functin based, Systematic Approch - equilibrium at indifference of risk of unhedged position and cost for hedging. eg.
+
+### Hodges-Neuberger Approach
+
+* Leland, H. 1985. ‘‘Option Pricing and Replication with Transaction Costs.’’ Journal of Finance 40:1283–1302.
+* Hodges, S., and A. Neuberger. 1989. ‘‘Optimal Replication of Contingent Claims Under Transaction Costs.’’ Review of Futures Markets 8:222–239.
+* Davis, M. H. A., V. G. Panas, and T. Zariphopoulou. 1993. ‘‘European Option Pricing with Transaction Costs.’’ Society for Industrial and Applied Mathematics,Journal of Control and Optimisation 31:470–493.
+* Andersen, E. D., and A. Damgaard. 1999. ‘‘Utility Based Option Pricing with Proportional Transaction Costs and Diversification Problems: An Interior-Point
+Optimization Approach.’’ Applied Numerical Mathematics 29:395–422.
+
+Properties
+
+* Solved Numerically
+* This results a hedging band, BSM Delta is not spanned by the band
+* Short and long positions hedged differently. Short band narrower
+  * because of cumulative effect and bid ask spreads
+  * adjusted volatility for long and short is $\hat{sigma} = \sigma \sqrt{1 \mp \frac{lambda}{\sigma}\sqrt{\frac{8}{\pi \Delta t}}}$
+* Extendable to American options
+
+#### Asymptotic Solution by Whalley and Wilmott
+
+* Whalley, A. E., and P. Wilmott. 1993. ‘‘An Asymptotic Analysis of the Davis, Panas and Zariphopoulou Model for Option Pricing with Transaction Costs.’’ Working paper, Oxford Centre for Industrial and Applied Mathematics.
+* Whalley, A. E., and P. Wilmott. 1994. ‘‘Optimal Hedging of Options with Small but Arbitrary Transaction Cost Structure.’’ Working paper, Oxford Centre for Industrial and Applied Mathematics.
+
+* Analytical solution available
+* As transaction cost decrease, hedging bandwidth decreases
+* As risks aversion increase, the bandwidth decreases
+* The asymmetry is lost
+* Usable in practice
+  * it's not clear to raise bid ask spread(pure cost) or implied volatility marks(risk with rewards)
+  * possible to separately estimate transaction cost (past data +  microstructure models)
+
+#### Dououble Asympotic Method of Zakamouline
+
+Risher(2004) and Zaakamouline proposed functional form of optimial delta hedgine to be closer to HN Results
+
+* Zakamouline, V. 2005. ‘‘Dynamic Hedging of Complex Option Positions with Transaction Costs.’’ Working paper, Bodo Graduate School of Business, Norway.
+* Zakamouline, V. 2006a. ‘‘Optimal Hedging of Option Portfolios with Transaction Costs.’’ Working paper, Faculty of Economics, Agder University College, Norway.271
+* Zakamouline, V. 2006b. ‘‘Efficient Analytic Approximation of the Optimal Hedg- ing Strategy for a European Call Option with Transaction Costs.’’ Quantitative Finance 6:435–445.
+* Zakamouline, V. 2006c. ‘‘European Option Pricing and Hedging with both Fixed and Proportional Transaction Costs.’’ Journal of Economic Dynamics and Control 30:1–25.
+* Martellini, L., and P. Priaulet. 2002. ‘‘Competing Methods for Option Hedging in the Presence of Transaction Costs.’’ Journal of Derivatives 9:26–38. Risher, B. 2004. Working paper, Bear Stearns.
+
+### In Practice
+
+Static Hedgging
+
+* We should consider the global gamma profile
+* We should hedge as much volatility exposure by trading other options as possible
+  * static hedge almost always cheaper
+    * Baird, A. J. 1992. Option Market Making: Trading and Risk Analysis for the Financial and Commodity Option Markets. New York: John Wiley & Sons.
+    * Taleb, N. N. 1997. Dynamic Hedging: Managing Vanilla and Exotic Options. New York: John Wiley & Sons.
+    * Hua, P., and P. Wilmott. 1999. ‘‘Crash Modeling, Value at Risk and Optimal Hedging.’’ OFRC Working Paper Series, Oxford Financial Research Centrer
+    * Carr, P., K. Ellis, and V. Gupta. 1998. ‘‘Static Hedging of Exotic Options.’’ Journal of Finance 53:1165–1190.263
+
+Estimation of Transaction Costs
+
+Micro-structure models to capture the speed of change in liquidity and the link between volume and volatility, eg $\alpha = \frac{\sigma_t}{\mu_t}$
+
+Hasbrouck, J. 1991. ‘‘Measuring the Information Content of Stock Trades.’’ Journal of Finance 46:179–207.
+Madhavan, A., and S. Smidt. 1991. ‘‘A Bayesian Model of Intraday Specialist Pricing.’’ Journal of Financial Economics 30:99–134.
+BARRA. 1997. Market Impact Model Handbook. Berkeley: BARRA Inc.
+
+Aggregation of options of different underlyings
+
+* Aggregation is a key for lowering costs
+* Cross-hedge (using index ETF) is common
+  * $\Gamma_l = (\beta \frac{S_a}{S_l})^2 \Gamma_a$
+  * Estimating beta could be harder than estimating volatilities, here we have linkage to **factor risk models** (APT，BARRA, etc)
+  * hedging bills, bonds, notes might be clear, but whether to aggregate MSFT and GOOG is not
+  * correlation risk needs to be considered
