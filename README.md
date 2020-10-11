@@ -10,14 +10,14 @@ While this "quant" is an inter-displinary and fast changing occupation, some "mu
   - Macroeconomics
   - Corporate Finance
 - Investment Basics
-  - [Portfolio Management](./portfolio-management)
+  - [Portfolio Management](./portfolio-management.md)
   - Derivatives Pricing and Risk Management
 - Quantitative Investing
-  - [Factor Investing](./factor-investing)
-  - [Statistical Arbitrage](./statistical-arbitrage)
+  - [Factor Investing](./factor-investing.md)
+  - [Statistical Arbitrage](./statistical-arbitrage.md)
   - [Execution and e-Tradin](./execution.md)
 - Quantitative Methods
-  - [Machine Learning and Data Analysis](./machine-learning-in-finance)
+  - [Machine Learning and Data Analysis](./machine-learning-in-finance.md)
   - Numerical Methods
   - Optimization
   - [Back-testing](./backtesting.md)
