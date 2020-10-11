@@ -1,5 +1,11 @@
 # Application of Machine Learning in Finance
 
+## Recommended Readings
+
+- [Advances in Financial Machine Learning\(Course\)](http://www.quantresearch.org/Lectures.htm)
+- [Advances in Financial Machine Learning](https://www.amazon.com/Advances-Financial-Machine-Learning-Marcos/dp/1119482089/ref=pd_bxgy_img_2/135-6445280-8934461?_encoding=UTF8&pd_rd_i=1119482089&pd_rd_r=fc9db682-7dce-4526-8ae8-4f973d4b466a&pd_rd_w=RaRsQ&pd_rd_wg=NDtW2&pf_rd_p=4e3f7fc3-00c8-46a6-a4db-8457e6319578&pf_rd_r=36KPG2961YA4J9M0NH0W&psc=1&refRID=36KPG2961YA4J9M0NH0W)
+- [Machine Learning for Asset Managers \(Elements in Quantitative Finance\)](https://www.amazon.com/dp/1108792898/ref=sspa_dk_detail_0?psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyVzBVS0E3TFlOOUNMJmVuY3J5cHRlZElkPUEwNDA0NjQyMjU3VkdKQlQ0OTI4QyZlbmNyeXB0ZWRBZElkPUExMDQxODQyM1VMNEhFMEVDTE1URiZ3aWRnZXROYW1lPXNwX2RldGFpbCZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)
+
 Use User-specific/demographic data
 
 * Credit Checks
@@ -133,6 +139,3 @@ Extended Comparison [here](https://www.quantopian.com/posts/hierarchical-risk-pa
 ### Reference
 
 * Building Diversified Portfolios that Outperform Out-of-Sample
-
-
-
