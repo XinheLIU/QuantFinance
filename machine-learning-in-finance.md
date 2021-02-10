@@ -1,4 +1,4 @@
-# Application of Machine Learning in Finance
+# Applications of Machine Learning in Finance
 
 - [Application of Machine Learning in Finance](#application-of-machine-learning-in-finance)
   - [Automation](#automation)
@@ -83,9 +83,14 @@ Papers
 
 The most state-of-the-art application of big data and machine learning in the financial area.
 
+Most financial data is non-numeric or unstructured: categorical, text, images, recordings, etc.
+
+Financial datasets tend to be high-dimensional, with many variables and few observations
+
 Alternative data include
 
 - textual data from social media
+  - eg. positive comment - negative comment = sentiment imbalance
 - satellite imagery
 - credit card logs (to predict sales)
 - earning reports (financial statements)
@@ -146,5 +151,23 @@ Some application examples include
 
 The earliest and probably widest application would be the indirect application of machine learning methods, such as model training, model selection and cross-validation methods. These methods can be used on traditional quantitative financial models for improvements and expansion to online learning/big data application settings.
 
+Machine Learning has tremendous advantages over econometrics in a sense of testing econometric strategies
+
+- Econometric models generally
+  - rely on p-values, or so-called “statistical significance,” in violation of ASA protocols
+  - are designed to adjudicate variance in-sample (not forecast values out-of-sample)
+  - rely on strong assumptions that are not satisfied by financial phenomena
+  - do not disentangle the specification search from the variable search
+  - pay little or no attention to both forms of overfitting: training set and testing set
+- While Machine Learning
+  - usually use Out-of-Sample performance as the most important criteria, pay less attention to assumptions and frameworks
+
+
+Readings
+
 - Arnott, Rob, Campbell R Harvey, and Harry Markowitz. 2019. “A Backtesting Protocol in the Era of Machine Learning.” Journal of Financial Data Science 1 (1): 64–74.
 - Wolpert, David H. 1992a. “On the Connection Between in-Sample Testing and Generalization Error.” Complex Systems 6 (1): 47.
+- https://amstat.tandfonline.com/doi/pdf/10.1080/00031305.2016.1154108?needAccess=true&
+
+## Chellenges Not Solved by Machine Learning
+
